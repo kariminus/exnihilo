@@ -5,6 +5,9 @@ ex_nihilo_platform:
 ex_nihilo_user:
     resource: "@ExNihiloUserBundle/Resources/config/routing.yml"
 
+ex_nihilo_blog:
+    resource: "@ExNihiloBlogBundle/Resources/config/routing.yml"
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 

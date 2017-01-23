@@ -1,0 +1,4 @@
+ex_nihilo_article_admin_article:
+    resource: "@ExNihiloBlogBundle/Resources/config/routing/article.yml"
+    prefix:   /admin/article
+

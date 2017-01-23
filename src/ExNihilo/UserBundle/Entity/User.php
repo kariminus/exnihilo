@@ -5,7 +5,6 @@ namespace ExNihilo\UserBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use ExNihilo\PlatformBundle\Entity\Classe;
 use ExNihilo\PlatformBundle\Entity\Race;
-use ExNihilo\PlatformBundle\ExNihiloPlatformBundle;
 use FOS\UserBundle\Model\User as BaseUser;
 use Symfony\Component\Validator\Constraints as Assert;
 

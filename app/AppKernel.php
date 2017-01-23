@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new ExNihilo\PlatformBundle\ExNihiloPlatformBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new ExNihilo\UserBundle\ExNihiloUserBundle(),
+            new ExNihilo\BlogBundle\ExNihiloBlogBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
