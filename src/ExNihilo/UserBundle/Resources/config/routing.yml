@@ -1,3 +1,7 @@
+ex_nihilo_user_admin_user:
+    resource: "@ExNihiloUserBundle/Resources/config/routing/user.yml"
+    prefix:   /admin/user
+
 ex_nihilo_user_homepage:
     path:     /
     defaults: { _controller: ExNihiloUserBundle:Default:index }
