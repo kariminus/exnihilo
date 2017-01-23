@@ -1,0 +1,3 @@
+ex_nihilo_platform_blog:
+    path:     /
+    defaults: { _controller: ExNihiloPlatformBundle:Blog:index }
