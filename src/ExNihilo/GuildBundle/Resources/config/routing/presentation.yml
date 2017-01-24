@@ -1,0 +1,24 @@
+admin_presentation_index:
+    path:     /
+    defaults: { _controller: "ExNihiloGuildBundle:Presentation:index" }
+    methods:  GET
+
+admin_presentation_show:
+    path:     /{id}/show
+    defaults: { _controller: "ExNihiloGuildBundle:Presentation:show" }
+    methods:  GET
+
+admin_presentation_new:
+    path:     /new
+    defaults: { _controller: "ExNihiloGuildBundle:Presentation:new" }
+    methods:  [GET, POST]
+
+admin_presentation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ExNihiloGuildBundle:Presentation:edit" }
+    methods:  [GET, POST]
+
+admin_presentation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ExNihiloGuildBundle:Presentation:delete" }
+    methods:  DELETE

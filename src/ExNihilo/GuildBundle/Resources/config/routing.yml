@@ -1,0 +1,4 @@
+ex_nihilo_guild_admin_presentation:
+    resource: "@ExNihiloGuildBundle/Resources/config/routing/presentation.yml"
+    prefix:   /admin/presentation
+

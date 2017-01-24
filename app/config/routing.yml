@@ -1,3 +1,7 @@
+ex_nihilo_guild:
+    resource: "@ExNihiloGuildBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ex_nihilo_event:
     resource: "@ExNihiloEventBundle/Resources/config/routing.yml"
     prefix:   /

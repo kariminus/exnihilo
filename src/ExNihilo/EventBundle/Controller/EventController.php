@@ -64,7 +64,7 @@ class EventController extends Controller
     public function deleteAction(Request $request, Event $event)
     {
         $manageEvent = $this->get('manage_event');
-        $manageEvent->articleDelete($request, $event);
+        $manageEvent->eventDelete($request, $event);
 
         return $this->redirectToRoute('admin_event_index');
     }
