@@ -5,6 +5,7 @@ namespace ExNihilo\BlogBundle\Controller;
 use ExNihilo\BlogBundle\Entity\Comment;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use ExNihilo\BlogBundle\Form\CommentType;
 
 /**
  * Comment controller.
@@ -35,6 +36,7 @@ class CommentController extends Controller
             'form'   => $array[1]->createView()
         ));
     }
+
 
 
     public function showAction(Comment $comment)

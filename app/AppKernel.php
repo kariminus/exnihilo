@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new ExNihilo\UserBundle\ExNihiloUserBundle(),
             new ExNihilo\BlogBundle\ExNihiloBlogBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new ExNihilo\EventBundle\ExNihiloEventBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -1,3 +1,7 @@
+ex_nihilo_event:
+    resource: "@ExNihiloEventBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ex_nihilo_platform:
     resource: "@ExNihiloPlatformBundle/Resources/config/routing.yml"
     prefix:   /

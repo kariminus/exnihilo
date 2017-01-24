@@ -50,6 +50,7 @@ class ManageComment
         return [$comment, $form];
     }
 
+
     /**
      * Finds and displays a comment entity.
      *

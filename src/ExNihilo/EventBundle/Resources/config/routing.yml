@@ -1,0 +1,3 @@
+ex_nihilo_event_admin_event:
+    resource: "@ExNihiloEventBundle/Resources/config/routing/event.yml"
+    prefix:   /admin/event

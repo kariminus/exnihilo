@@ -1,0 +1,24 @@
+admin_event_index:
+    path:     /
+    defaults: { _controller: "ExNihiloEventBundle:Event:index" }
+    methods:  GET
+
+admin_event_show:
+    path:     /{id}/show
+    defaults: { _controller: "ExNihiloEventBundle:Event:show" }
+    methods:  GET
+
+admin_event_new:
+    path:     /new
+    defaults: { _controller: "ExNihiloEventBundle:Event:new" }
+    methods:  [GET, POST]
+
+admin_event_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ExNihiloEventBundle:Event:edit" }
+    methods:  [GET, POST]
+
+admin_event_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ExNihiloEventBundle:Event:delete" }
+    methods:  DELETE

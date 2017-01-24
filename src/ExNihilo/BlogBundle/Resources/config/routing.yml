@@ -5,4 +5,3 @@ ex_nihilo_article_admin_article:
 ex_nihilo_comment_admin_comment:
     resource: "@ExNihiloBlogBundle/Resources/config/routing/comment.yml"
     prefix:   /admin/comment
-
