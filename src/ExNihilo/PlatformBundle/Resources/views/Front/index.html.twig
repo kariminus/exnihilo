@@ -1,6 +1,11 @@
-{% extends "::base.html.twig" %}
-
+{% extends '::base.html.twig' %}
 
 {% block body %}
-    <p>Ex Nihilo Blog</p>
+    {% for article in articles %}
+        <div class="page">
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.content|slice(0,100) }}...
+                <a href="{{ path('article_view', {id: article.id }) }}">read more</a></p>
+        </div>
+    {% endfor %}
 {% endblock %}

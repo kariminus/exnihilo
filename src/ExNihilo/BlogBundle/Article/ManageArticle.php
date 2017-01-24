@@ -58,6 +58,14 @@ class ManageArticle
         return [$article, $deleteForm];
     }
 
+    public function articleView ($id)
+    {
+
+        $article = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id);
+
+        return $article;
+    }
+
     /**
      * Deletes a article entity.
      *
