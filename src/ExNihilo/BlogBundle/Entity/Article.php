@@ -3,6 +3,7 @@
 namespace ExNihilo\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -45,6 +46,12 @@ class Article
      * @ORM\Column(type="datetime")
      */
     protected $createdAt;
+
+    /**
+     * @ORM\OneToOne(targetEntity="ExNihilo\BlogBundle\Entity\Image", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    private $image;
 
 
 
@@ -141,6 +148,15 @@ class Article
     public function addComment(Comment $comments)
     {
         $this->comments[] = $comments;
+    }
+
+    public function setImage(Image $image = null)
+    {
+        $this->image = $image;
+    }
+    public function getImage()
+    {
+        return $this->image;
     }
 
 }

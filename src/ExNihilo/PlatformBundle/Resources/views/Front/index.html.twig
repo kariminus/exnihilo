@@ -3,6 +3,13 @@
 {% block body %}
     {% for article in articles %}
         <div class="page">
+            {% if article.image is not null %}
+                <img
+                        src="{{ asset(article.image.webPath) }}"
+                        alt="{{ article.image.alt }}"
+                        height="60"
+                />
+            {% endif %}
             <h1>{{ article.title }}</h1>
             <p>{{ article.content|slice(0,100) }}...
                 <a href="{{ path('article_view', {id: article.id }) }}">read more</a></p>

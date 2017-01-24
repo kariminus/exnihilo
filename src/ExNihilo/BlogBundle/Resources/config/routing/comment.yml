@@ -8,11 +8,6 @@ admin_comment_show:
     defaults: { _controller: "ExNihiloBlogBundle:Comment:show" }
     methods:  GET
 
-admin_article_new:
-    path:     /new/{articleId}
-    defaults: { _controller: "ExNihiloBlogBundle:Comment:new" }
-    methods:  [GET, POST]
-
 admin_comment_edit:
     path:     /{id}/edit
     defaults: { _controller: "ExNihiloBlogBundle:Comment:edit" }

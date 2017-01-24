@@ -16,7 +16,8 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('content', CkeditorType::class);
+            ->add('content', CkeditorType::class)
+            ->add('image',     ImageType::class);
     }
     
     /**

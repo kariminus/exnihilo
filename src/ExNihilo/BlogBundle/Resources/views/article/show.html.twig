@@ -10,6 +10,16 @@
                 <td>{{ article.id }}</td>
             </tr>
             <tr>
+                <th>Image</th>
+                <td>
+                    <img
+                            src="{{ asset(article.image.webPath) }}"
+                            alt="{{ article.image.alt }}"
+                            height="60"
+                    />
+                </td>
+            </tr>
+            <tr>
                 <th>Title</th>
                 <td>{{ article.title }}</td>
             </tr>
