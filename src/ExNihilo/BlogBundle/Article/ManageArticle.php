@@ -58,6 +58,7 @@ class ManageArticle
         return [$article, $deleteForm];
     }
 
+
     public function articleView ($id)
     {
 

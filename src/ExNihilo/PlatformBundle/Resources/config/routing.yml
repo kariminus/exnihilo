@@ -1,3 +1,7 @@
 ex_nihilo_platform_blog:
     path:     /
     defaults: { _controller: ExNihiloPlatformBundle:Blog:index }
+
+article_view:
+    path:     /{id}/view
+    defaults: { _controller: "ExNihiloBlogBundle:Article:view" }

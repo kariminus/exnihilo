@@ -19,7 +19,7 @@ class BlogController extends Controller
     public function viewAction($id) {
 
         $manageArticle = $this->get('manage_article');
-        $article = $manageArticle->ArticleShow($id);
+        $article = $manageArticle->ArticleView($id);
 
         return $this->render('ExNihiloBlogBundle:article:view.html.twig', array(
             'article' => $article,

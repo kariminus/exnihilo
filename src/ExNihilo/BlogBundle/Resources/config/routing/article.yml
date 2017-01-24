@@ -8,10 +8,6 @@ admin_article_show:
     defaults: { _controller: "ExNihiloBlogBundle:Article:show" }
     methods:  GET
 
-article_view:
-    path:     /{id}/view
-    defaults: { _controller: "ExNihiloBlogBundle:Article:view" }
-
 admin_article_new:
     path:     /new
     defaults: { _controller: "ExNihiloBlogBundle:Article:new" }
