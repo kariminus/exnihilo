@@ -3,4 +3,14 @@
 {% block body %}
     <h1>{{ article.title }}</h1>
     <p>{{ article.content }}</p>
+
+    <section>
+        <h3>Commentaires</h3>
+        {% include 'ExNihiloBlogBundle:Comment:view.html.twig' with { 'comments': comments } %}
+    </section>
+
+    <section>
+
+
+    </section>
 {% endblock %}

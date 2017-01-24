@@ -8,6 +8,7 @@ ex_nihilo_user:
 ex_nihilo_blog:
     resource: "@ExNihiloBlogBundle/Resources/config/routing.yml"
 
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 

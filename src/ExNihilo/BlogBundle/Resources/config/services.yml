@@ -3,3 +3,8 @@ services:
         class:        ExNihilo\BlogBundle\Article\ManageArticle
         arguments:
             ["@doctrine.orm.entity_manager", "@form.factory", "@router"]
+
+    manage_comment:
+        class:        ExNihilo\BlogBundle\Comment\ManageComment
+        arguments:
+            ["@doctrine.orm.entity_manager", "@form.factory", "@router"]

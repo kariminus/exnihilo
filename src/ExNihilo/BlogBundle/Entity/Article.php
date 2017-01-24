@@ -3,6 +3,7 @@
 namespace ExNihilo\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Article
@@ -35,7 +36,24 @@ class Article
      */
     private $content;
 
+    /**
+     * @ORM\OneToMany(targetEntity="ExNihilo\BlogBundle\Entity\Comment", mappedBy="article")
+     */
+    protected $comments;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $createdAt;
+
+
+
+    public function __construct()
+    {
+        $this->comments = new ArrayCollection();
+
+        $this->createdAt = new \DateTime();
+    }
 
     /**
      * Get id
@@ -94,5 +112,36 @@ class Article
     {
         return $this->content;
     }
+
+
+    /**
+     * Set createdAt
+     *
+     * @param \datetime $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+    /**
+     * Get createdAt
+     *
+     * @return \datetime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Add comments
+     *
+     * @param Comment $comments
+     */
+    public function addComment(Comment $comments)
+    {
+        $this->comments[] = $comments;
+    }
+
 }
 

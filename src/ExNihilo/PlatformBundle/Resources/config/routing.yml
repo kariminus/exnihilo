@@ -5,3 +5,4 @@ ex_nihilo_platform_blog:
 article_view:
     path:     /{id}/view
     defaults: { _controller: "ExNihiloBlogBundle:Article:view" }
+

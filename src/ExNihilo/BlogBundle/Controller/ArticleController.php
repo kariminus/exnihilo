@@ -50,10 +50,11 @@ class ArticleController extends Controller
     public function viewAction($id)
     {
         $manageArticle = $this->get('manage_article');
-        $article = $manageArticle->ArticleView($id);
+        $array = $manageArticle->ArticleView($id);
 
         return $this->render('ExNihiloBlogBundle:article:view.html.twig', array(
-            'article' => $article,
+            'article' => $array[0],
+            'comments' => $array[1],
         ));
     }
 

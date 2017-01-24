@@ -64,7 +64,11 @@ class ManageArticle
 
         $article = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id);
 
-        return $article;
+        $comments = $this->em->getRepository('ExNihiloBlogBundle:Comment')
+            ->getCommentsForArticle($article->getId());
+
+
+        return [$article, $comments];
     }
 
     /**
