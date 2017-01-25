@@ -58,6 +58,14 @@ class ManageEvent
         return [$event, $deleteForm];
     }
 
+    public function eventView ($id)
+    {
+
+        $event = $this->em->getRepository('ExNihiloEventBundle:Event')->find($id);
+
+        return $event;
+    }
+
 
     /**
      * Deletes an event entity.

@@ -47,6 +47,16 @@ class EventController extends Controller
         ));
     }
 
+    public function viewAction($id)
+    {
+        $manageEvent = $this->get('manage_event');
+        $event = $manageEvent->EventView($id);
+
+        return $this->render('ExNihiloEventBundle:event:view.html.twig', array(
+            'event' => $event,
+        ));
+    }
+
 
     public function editAction(Request $request, Event $event)
     {

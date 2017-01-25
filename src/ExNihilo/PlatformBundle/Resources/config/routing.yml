@@ -2,7 +2,23 @@ ex_nihilo_platform_blog:
     path:     /
     defaults: { _controller: ExNihiloPlatformBundle:Blog:index }
 
+ex_nihilo_platform_presentation:
+    path:     /presentation
+    defaults: { _controller: ExNihiloPlatformBundle:Presentation:index }
+
+ex_nihilo_platform_members:
+    path:     /members
+    defaults: { _controller: ExNihiloPlatformBundle:Members:index }
+
+ex_nihilo_platform_events:
+    path:     /events
+    defaults: { _controller: ExNihiloPlatformBundle:Events:index }
+
 article_view:
-    path:     /{id}/view
-    defaults: { _controller: "ExNihiloBlogBundle:Article:view" }
+    path:     /article/{id}/view
+    defaults: { _controller: ExNihiloBlogBundle:Article:view }
+
+event_view:
+    path:     /event/{id}/view
+    defaults: { _controller: ExNihiloEventBundle:Event:view }
 

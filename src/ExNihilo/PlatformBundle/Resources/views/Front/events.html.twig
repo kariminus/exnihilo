@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <table style="width:100%">
+    <tr>
+        <th>Date</th>
+        <th>Titre</th>
+        <th>Résumé</th>
+        <th></th>
+    </tr>
+    {% for event in events %}
+                <tr>
+                    <td>{{ event.date | date }}</td>
+                    <td>{{ event.title }}</td>
+                    <td>{{ event.content|slice(0,100) }}...</td>
+                    <td><a href="{{ path('event_view', {id: event.id }) }}">read more</a></td>
+                </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
