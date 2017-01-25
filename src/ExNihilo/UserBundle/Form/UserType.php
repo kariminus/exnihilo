@@ -16,31 +16,40 @@ class UserType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('classe', EntityType::class, array(
+        $builder
+            ->add('classe', EntityType::class, array(
             'class' => 'ExNihiloPlatformBundle:Classe',
             'query_builder' => function (EntityRepository $er) {
                 return $er->createQueryBuilder('n')
                     ->orderBy('n.name', 'ASC');
             },
             'choice_label' => 'name',
-        ));
-        $builder->add('race', EntityType::class, array(
-            'class' => 'ExNihiloPlatformBundle:Race',
-            'query_builder' => function (EntityRepository $er) {
-                return $er->createQueryBuilder('n')
-                    ->orderBy('n.name', 'ASC');
-            },
-            'choice_label' => 'name',
-        ));
-        $builder->add('gender', ChoiceType::class, array(
-            'choices'  => array(
-                'Homme' => true,
-                'Femme' => false,
-            ),
-        ));
-        $builder->add('isGuildMember');
+            ))
+            ->add('race', EntityType::class, array(
+                'class' => 'ExNihiloPlatformBundle:Race',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('n')
+                        ->orderBy('n.name', 'ASC');
+                },
+                'choice_label' => 'name',
+            ))
+            ->add('gender', ChoiceType::class, array(
+                'choices'  => array(
+                    'Homme' => true,
+                    'Femme' => false,
+                ),
+            ))
+            ->add('isGuildMember');
     }
-    
+
+    public function getParent()
+    {
+        return 'FOS\UserBundle\Form\Type\RegistrationFormType';
+
+        // Or for Symfony < 2.8
+        // return 'fos_user_registration';
+    }
+
     /**
      * {@inheritdoc}
      */
