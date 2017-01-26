@@ -47,32 +47,6 @@ class ManagePresentation
         return [$presentation, $form];
     }
 
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function presentationShow ($presentation)
-    {
-        $deleteForm = $this->createDeleteForm($presentation);
-
-        return [$presentation, $deleteForm];
-    }
-
-
-    /**
-     * Deletes a presentation entity.
-     *
-     */
-    public function presentationDelete ($request, $presentation)
-    {
-        $form = $this->createDeleteForm($presentation);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->remove($presentation);
-            $em = $this->em->flush($presentation);
-        }
-    }
 
     /**
      * Displays a form to edit an existing presentation entity.
@@ -81,32 +55,16 @@ class ManagePresentation
     public function presentationEdit ($request, $presentation)
     {
 
-        $deleteForm = $this->createDeleteForm($presentation);
-        $editForm = $this->formFactory->create('ExNihilo\GuildBundle\Form\PresentationType', $presentation);
-        $editForm->handleRequest($request);
+        $form = $this->formFactory->create('ExNihilo\GuildBundle\Form\PresentationType', $presentation);
+        $form->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
+
             $this->em->flush();
         }
 
-        return [$presentation, $editForm, $deleteForm];
+        return [$presentation, $form];
 
     }
 
-
-    /**
-     * Creates a form to delete a presentation entity.
-     *
-     * @param Presentation $presentation The presentation entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Presentation $presentation)
-    {
-        return $this->formFactory->createBuilder()
-            ->setAction($this->router->generate('admin_presentation_delete', array('id' => $presentation->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
-    }
 }

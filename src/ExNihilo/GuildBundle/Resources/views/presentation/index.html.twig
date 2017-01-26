@@ -7,15 +7,12 @@
         <tbody>
         {% for presentation in presentations %}
             <tr>
-                <td><a href="{{ path('admin_presentation_show', { 'id': presentation.id }) }}">{{ presentation.id }}</a></td>
+                <td>{{ presentation.id }}</td>
                 <td>{{ presentation.content }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_presentation_show', { 'id': presentation.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('admin_presentation_edit', { 'id': presentation.id }) }}">edit</a>
+                            <a href="{{ path('admin_presentation_edit', { 'id': presentation.id }) }}">modifier</a>
                         </li>
                     </ul>
                 </td>

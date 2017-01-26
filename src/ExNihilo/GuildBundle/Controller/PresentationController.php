@@ -36,18 +36,6 @@ class PresentationController extends Controller
     }
 
 
-    public function showAction(Presentation $presentation)
-    {
-        $managePresentation = $this->get('manage_presentation');
-        $array = $managePresentation->PresentationShow($presentation);
-
-        return $this->render('ExNihiloGuildBundle:presentation:show.html.twig', array(
-            'presentation' => $array[0],
-            'delete_form' => $array[1]->createView(),
-        ));
-    }
-
-
     public function editAction(Request $request, Presentation $presentation)
     {
 
@@ -57,16 +45,8 @@ class PresentationController extends Controller
         return $this->render('ExNihiloGuildBundle:presentation:edit.html.twig', array(
             'presentation' => $array[0],
             'edit_form' => $array[1]->createView(),
-            'delete_form' => $array[2]->createView(),
         ));
     }
 
-    public function deleteAction(Request $request, Presentation $presentation)
-    {
-        $managePresentation = $this->get('manage_presentation');
-        $managePresentation->presentationDelete($request, $presentation);
-
-        return $this->redirectToRoute('admin_presentation_index');
-    }
 
 }
