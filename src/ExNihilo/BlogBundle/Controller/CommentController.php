@@ -39,18 +39,6 @@ class CommentController extends Controller
 
 
 
-    public function showAction(Comment $comment)
-    {
-        $manageComment = $this->get('manage_comment');
-        $array = $manageComment->commentShow($comment);
-
-        return $this->render('ExNihiloBlogBundle:comment:show.html.twig', array(
-            'comment' => $array[0],
-            'delete_form' => $array[1]->createView(),
-        ));
-    }
-
-
     public function editAction(Request $request, Comment $comment)
     {
 
@@ -60,15 +48,14 @@ class CommentController extends Controller
         return $this->render('ExNihiloBlogBundle:comment:edit.html.twig', array(
             'comment' => $array[0],
             'edit_form' => $array[1]->createView(),
-            'delete_form' => $array[2]->createView(),
         ));
     }
 
 
-    public function deleteAction(Request $request, Comment $comment)
+    public function deleteAction($id)
     {
         $manageComment = $this->get('manage_comment');
-        $manageComment->commentDelete($request, $comment);
+        $manageComment->commentDelete($id);
 
         return $this->redirectToRoute('admin_comment_index');
     }

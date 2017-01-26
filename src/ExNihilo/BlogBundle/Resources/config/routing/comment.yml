@@ -3,11 +3,6 @@ admin_comment_index:
     defaults: { _controller: "ExNihiloBlogBundle:Comment:index" }
     methods:  GET
 
-admin_comment_show:
-    path:     /{id}/show
-    defaults: { _controller: "ExNihiloBlogBundle:Comment:show" }
-    methods:  GET
-
 admin_comment_edit:
     path:     /{id}/edit
     defaults: { _controller: "ExNihiloBlogBundle:Comment:edit" }
@@ -16,4 +11,9 @@ admin_comment_edit:
 admin_comment_delete:
     path:     /{id}/delete
     defaults: { _controller: "ExNihiloBlogBundle:Comment:delete" }
-    methods:  DELETE
+    methods:  GET
+
+admin_article_new:
+    path:     /new/{articleId}
+    defaults: { _controller: "ExNihiloBlogBundle:Comment:new" }
+    methods:  [GET, POST]

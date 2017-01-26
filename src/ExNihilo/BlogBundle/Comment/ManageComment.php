@@ -51,30 +51,24 @@ class ManageComment
     }
 
 
-    /**
-     * Finds and displays a comment entity.
-     *
-     */
-    public function commentShow ($comment)
-    {
-        $deleteForm = $this->createDeleteForm($comment);
-
-        return [$comment, $deleteForm];
-    }
 
     /**
      * Deletes a comment entity.
      *
      */
-    public function commentDelete ($request, $comment)
+    public function commentDelete ($id)
     {
-        $form = $this->createDeleteForm($comment);
-        $form->handleRequest($request);
+        $comment = $this->em->getRepository('ExNihiloBlogBundle:Comment')->find($id);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->remove($comment);
-            $em = $this->em->flush($comment);
+        if ($comment === null) {
+
+            return $this->router->generate('admin_comment_index');
         }
+
+        $this->em->remove($comment);
+        $this->em->flush();
+
+        return $this->router->generate('admin_comment_index');
     }
 
     /**
@@ -84,32 +78,16 @@ class ManageComment
     public function commentEdit ($request, $comment)
     {
 
-        $deleteForm = $this->createDeleteForm($comment);
-        $editForm = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
-        $editForm->handleRequest($request);
+        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
+        $form->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
+
             $this->em->flush();
         }
 
-        return [$comment, $editForm, $deleteForm];
+        return [$comment, $form];
 
-    }
-
-    /**
-     * Creates a form to delete a comment entity.
-     *
-     * @param Comment $comment The comment entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Comment $comment)
-    {
-        return $this->formFactory->createBuilder()
-            ->setAction($this->router->generate('admin_comment_delete', array('id' => $comment->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
     }
 
     protected function getArticle($articleId)
