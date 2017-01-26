@@ -36,17 +36,6 @@ class ArticleController extends Controller
     }
 
 
-    public function showAction(Article $article)
-    {
-        $manageArticle = $this->get('manage_article');
-        $array = $manageArticle->ArticleShow($article);
-
-        return $this->render('ExNihiloBlogBundle:article:show.html.twig', array(
-            'article' => $array[0],
-            'delete_form' => $array[1]->createView(),
-        ));
-    }
-
     public function viewAction($id)
     {
         $manageArticle = $this->get('manage_article');
@@ -68,14 +57,13 @@ class ArticleController extends Controller
         return $this->render('ExNihiloBlogBundle:article:edit.html.twig', array(
             'article' => $array[0],
             'edit_form' => $array[1]->createView(),
-            'delete_form' => $array[2]->createView(),
         ));
     }
 
-    public function deleteAction(Request $request, Article $article)
+    public function deleteAction($id)
     {
         $manageArticle = $this->get('manage_article');
-        $manageArticle->articleDelete($request, $article);
+        $manageArticle->articleDelete($id);
 
         return $this->redirectToRoute('admin_article_index');
     }

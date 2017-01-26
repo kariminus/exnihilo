@@ -3,11 +3,6 @@ admin_article_index:
     defaults: { _controller: "ExNihiloBlogBundle:Article:index" }
     methods:  GET
 
-admin_article_show:
-    path:     /{id}/show
-    defaults: { _controller: "ExNihiloBlogBundle:Article:show" }
-    methods:  GET
-
 admin_article_new:
     path:     /new
     defaults: { _controller: "ExNihiloBlogBundle:Article:new" }
@@ -21,4 +16,4 @@ admin_article_edit:
 admin_article_delete:
     path:     /{id}/delete
     defaults: { _controller: "ExNihiloBlogBundle:Article:delete" }
-    methods:  DELETE
+    methods:  GET

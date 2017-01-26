@@ -4,6 +4,7 @@ namespace ExNihilo\BlogBundle\Article;
 
 use Doctrine\ORM\EntityManager;
 use ExNihilo\BlogBundle\Entity\Article;
+use ExNihilo\BlogBundle\Form\ArticleType;
 
 class ManageArticle
 {
@@ -27,9 +28,7 @@ class ManageArticle
      */
     public function articleIndex()
     {
-        $articles = $this->em->getRepository('ExNihiloBlogBundle:Article')->findAll();
-
-        return $articles;
+        return $this->em->getRepository('ExNihiloBlogBundle:Article')->findAll();
 
     }
 
@@ -47,18 +46,6 @@ class ManageArticle
         return [$article, $form];
     }
 
-    /**
-     * Finds and displays a article entity.
-     *
-     */
-    public function articleShow ($article)
-    {
-        $deleteForm = $this->createDeleteForm($article);
-
-        return [$article, $deleteForm];
-    }
-
-
     public function articleView ($id)
     {
 
@@ -75,15 +62,19 @@ class ManageArticle
      * Deletes a article entity.
      *
      */
-    public function articleDelete ($request, $article)
+    public function articleDelete ($id)
     {
-        $form = $this->createDeleteForm($article);
-        $form->handleRequest($request);
+        $article = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->remove($article);
-            $em = $this->em->flush($article);
+        if ($article === null) {
+
+            return $this->router->generate('admin_article_index');
         }
+
+        $this->em->remove($article);
+        $this->em->flush();
+
+        return $this->router->generate('admin_article_index');
     }
 
     /**
@@ -92,33 +83,16 @@ class ManageArticle
      */
     public function articleEdit ($request, $article)
     {
+        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\ArticleType', $article);
+        $form->handleRequest($request);
 
-        $deleteForm = $this->createDeleteForm($article);
-        $editForm = $this->formFactory->create('ExNihilo\BlogBundle\Form\ArticleType', $article);
-        $editForm->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->em->flush();
         }
 
-        return [$article, $editForm, $deleteForm];
+        return [$article, $form];
 
     }
 
-
-    /**
-     * Creates a form to delete a article entity.
-     *
-     * @param Article $article The article entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Article $article)
-    {
-        return $this->formFactory->createBuilder()
-            ->setAction($this->router->generate('admin_article_delete', array('id' => $article->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
-    }
 }

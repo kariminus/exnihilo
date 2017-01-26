@@ -15,16 +15,16 @@
         <tbody>
         {% for comment in comments %}
             <tr>
-                <td><a href="{{ path('admin_comment_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>
+                <td>{{ comment.id }}</td>
                 <td>{{ comment.author }}</td>
                 <td>{{ comment.content }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_comment_show', { 'id': comment.id }) }}">show</a>
+                            <a href="{{ path('admin_comment_edit', { 'id': comment.id }) }}">modifier</a>
                         </li>
                         <li>
-                            <a href="{{ path('admin_comment_edit', { 'id': comment.id }) }}">edit</a>
+                            <a href="{{ path('admin_comment_delete', { 'id': comment.id }) }}">supprimer</a>
                         </li>
                     </ul>
                 </td>
