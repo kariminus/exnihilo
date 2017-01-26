@@ -70,7 +70,6 @@ class ManageArticle
 
             return $this->router->generate('admin_article_index');
         }
-
         $this->em->remove($article);
         $this->em->flush();
 

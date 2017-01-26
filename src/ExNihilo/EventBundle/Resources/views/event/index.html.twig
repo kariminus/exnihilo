@@ -15,16 +15,16 @@
         <tbody>
         {% for event in events %}
             <tr>
-                <td><a href="{{ path('admin_event_show', { 'id': event.id }) }}">{{ event.id }}</a></td>
+                <td>{{ event.id }}</td>
                 <td>{{ event.title }}</td>
                 <td>{{ event.content | slice(0,60)}}...</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_event_show', { 'id': event.id }) }}">show</a>
+                            <a href="{{ path('admin_event_edit', { 'id': event.id }) }}">modifier</a>
                         </li>
                         <li>
-                            <a href="{{ path('admin_event_edit', { 'id': event.id }) }}">edit</a>
+                            <a href="{{ path('admin_event_delete', { 'id': event.id }) }}">supprimer</a>
                         </li>
                     </ul>
                 </td>

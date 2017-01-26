@@ -71,50 +71,35 @@ class ManageEvent
      * Deletes an event entity.
      *
      */
-    public function eventDelete ($request, $event)
+    public function eventDelete ($id)
     {
-        $form = $this->createDeleteForm($event);
-        $form->handleRequest($request);
+        $event = $this->em->getRepository('ExNihiloEventBundle:Event')->find($id);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->remove($event);
-            $em = $this->em->flush($event);
+        if ($event === null) {
+
+            return $this->router->generate('admin_event_index');
         }
+
+        $this->em->remove($event);
+        $this->em->flush();
+
+        return $this->router->generate('admin_event_index');
     }
 
-    /**
-     * Displays a form to edit an existing event entity.
-     *
-     */
+
     public function eventEdit ($request, $event)
     {
 
-        $deleteForm = $this->createDeleteForm($event);
-        $editForm = $this->formFactory->create('ExNihilo\EventBundle\Form\EventType', $event);
-        $editForm->handleRequest($request);
+        $form = $this->formFactory->create('ExNihilo\EventBundle\Form\EventType', $event);
+        $form->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
+
             $this->em->flush();
         }
 
-        return [$event, $editForm, $deleteForm];
+        return [$event, $form];
 
     }
 
-
-    /**
-     * Creates a form to delete a event entity.
-     *
-     * @param Event $event The article entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Event $event)
-    {
-        return $this->formFactory->createBuilder()
-            ->setAction($this->router->generate('admin_event_delete', array('id' => $event->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
-    }
 }

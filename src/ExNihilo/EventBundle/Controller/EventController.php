@@ -36,17 +36,6 @@ class EventController extends Controller
     }
 
 
-    public function showAction(Event $event)
-    {
-        $manageEvent = $this->get('manage_event');
-        $array = $manageEvent->EventShow($event);
-
-        return $this->render('ExNihiloEventBundle:event:show.html.twig', array(
-            'event' => $array[0],
-            'delete_form' => $array[1]->createView(),
-        ));
-    }
-
     public function viewAction($id)
     {
         $manageEvent = $this->get('manage_event');
@@ -65,16 +54,15 @@ class EventController extends Controller
         $array = $manageEvent->eventEdit($request, $event);
 
         return $this->render('ExNihiloEventBundle:event:edit.html.twig', array(
-            'event' => $array[0],
+            'article' => $array[0],
             'edit_form' => $array[1]->createView(),
-            'delete_form' => $array[2]->createView(),
         ));
     }
 
-    public function deleteAction(Request $request, Event $event)
+    public function deleteAction($id)
     {
         $manageEvent = $this->get('manage_event');
-        $manageEvent->eventDelete($request, $event);
+        $manageEvent->eventDelete($id);
 
         return $this->redirectToRoute('admin_event_index');
     }
