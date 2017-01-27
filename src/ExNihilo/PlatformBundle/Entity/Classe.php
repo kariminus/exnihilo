@@ -29,14 +29,6 @@ class Classe
     private $name;
 
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="logoUrl", type="string")
-     */
-    private $logoUrl;
-
-
 
     /**
      * Get id
@@ -72,28 +64,5 @@ class Classe
         return $this->name;
     }
 
-    /**
-     * Set logoUrl
-     *
-     * @param string $logoUrl
-     *
-     * @return Classe
-     */
-    public function setLogoUrl($logoUrl)
-    {
-        $this->logoUrl = $logoUrl;
-
-        return $this;
-    }
-
-    /**
-     * Get logoUrl
-     *
-     * @return string
-     */
-    public function getLogoUrl()
-    {
-        return $this->logoUrl;
-    }
 }
 

@@ -6,7 +6,7 @@ use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use ExNihilo\PlatformBundle\Entity\Classe;
 
-class LoadSkill implements FixtureInterface
+class LoadClasse implements FixtureInterface
 {
     public function load(ObjectManager $manager)
     {

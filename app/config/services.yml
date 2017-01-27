@@ -7,3 +7,9 @@ services:
     app.security.login_form_authenticator:
             class: ExNihilo\UserBundle\Security\LoginFormAuthenticator
             autowire: true
+
+    app.doctrine.hash_password_listener:
+            class: ExNihilo\UserBundle\Doctrine\HashPasswordListener
+            autowire: true
+            tags:
+                - { name: doctrine.event_subscriber }

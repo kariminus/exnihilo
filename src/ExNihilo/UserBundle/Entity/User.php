@@ -37,6 +37,20 @@ class User implements UserInterface
     private $email;
 
     /**
+     *
+     * @ORM\Column(type="string")
+     */
+    private $password;
+
+    /**
+     *
+     * @var string
+     */
+    private $plainPassword;
+
+
+
+    /**
      * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\Classe", cascade={"persist", "remove"})
      *
      * @Assert\NotBlank(message="Veuillez saisir votre classe")
@@ -101,8 +115,30 @@ class User implements UserInterface
 
     public function getPassword()
     {
-
+        return $this->password;
     }
+
+
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
+        $this->password = null;
+    }
+
 
     public function getSalt()
     {
@@ -111,7 +147,7 @@ class User implements UserInterface
 
     public function eraseCredentials()
     {
-
+        $this->plainPassword = null;
     }
 
     public function setClasse(Classe $classe)
