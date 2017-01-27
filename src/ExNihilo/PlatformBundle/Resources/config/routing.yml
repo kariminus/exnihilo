@@ -22,6 +22,7 @@ ex_nihilo_platform_events:
     path:     /events
     defaults: { _controller: ExNihiloPlatformBundle:Events:index }
 
+
 article_view:
     path:     /article/{id}/view
     defaults: { _controller: ExNihiloBlogBundle:Article:view }

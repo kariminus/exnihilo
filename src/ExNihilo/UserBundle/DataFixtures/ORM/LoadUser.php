@@ -24,6 +24,7 @@ class LoadUser implements FixtureInterface
         $user1->setEmail("kachmir@gmail.com");
         $user1->setPassword("iliketurtles");
         $user1->setPlainPassword("iliketurtles");
+        $user1->setRoles(['ROLE_ADMIN']);
         $user1->setClasse($classe);
         $user1->setRace($race);
         $user1->setGender(0);
