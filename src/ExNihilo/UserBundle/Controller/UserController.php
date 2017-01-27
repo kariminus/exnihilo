@@ -13,6 +13,16 @@ use Symfony\Component\HttpFoundation\Request;
 class UserController extends Controller
 {
 
+    public function registerAction(Request $request)
+    {
+
+        $manageUser = $this->get('manage_user')->userRegister();
+
+        return $this->render('ExNihiloUserBundle:user:register.html.twig', [
+            'form' => $manageUser->createView()
+        ]);
+    }
+
     public function indexAction()
     {
 
@@ -26,18 +36,6 @@ class UserController extends Controller
     }
 
 
-    public function showAction(User $user)
-    {
-        $manageUser = $this->get('manage_user');
-        $array = $manageUser->userShow($user);
-
-        return $this->render('ExNihiloUserBundle:user:show.html.twig', array(
-            'user' => $array[0],
-            'delete_form' => $array[1]->createView(),
-        ));
-    }
-
-
     public function editAction(Request $request, User $user)
     {
 
@@ -47,15 +45,14 @@ class UserController extends Controller
         return $this->render('ExNihiloUserBundle:user:edit.html.twig', array(
             'user' => $array[0],
             'edit_form' => $array[1]->createView(),
-            'delete_form' => $array[2]->createView(),
         ));
     }
 
 
-    public function deleteAction(Request $request, User $user)
+    public function deleteAction($id)
     {
         $manageUser = $this->get('manage_user');
-        $manageUser->userDelete($request, $user);
+        $manageUser->userDelete($id);
 
         return $this->redirectToRoute('admin_user_index');
     }

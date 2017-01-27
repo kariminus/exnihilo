@@ -31,8 +31,8 @@ class RegistrationType extends AbstractType
             ))
             ->add('gender', ChoiceType::class, array(
                 'choices' => array(
-                    'Homme' => true,
-                    'Femme' => false,
+                    'Homme' => 0,
+                    'Femme' => 1,
                 ),
             ))
             ->add('isGuildMember');

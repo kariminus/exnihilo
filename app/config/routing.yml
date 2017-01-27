@@ -12,7 +12,10 @@ ex_nihilo_platform:
 
 ex_nihilo_user:
     resource: "@ExNihiloUserBundle/Resources/config/routing.yml"
+    prefix:   /
 
 ex_nihilo_blog:
     resource: "@ExNihiloBlogBundle/Resources/config/routing.yml"
+    prefix:  /
+
 

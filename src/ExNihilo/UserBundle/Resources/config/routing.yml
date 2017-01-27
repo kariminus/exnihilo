@@ -2,3 +2,4 @@ ex_nihilo_user_admin_user:
     resource: "@ExNihiloUserBundle/Resources/config/routing/user.yml"
     prefix:   /admin/user
 
+

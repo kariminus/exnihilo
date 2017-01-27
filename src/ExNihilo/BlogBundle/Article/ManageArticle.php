@@ -30,6 +30,7 @@ class ManageArticle
     {
         return $this->em->getRepository('ExNihiloBlogBundle:Article')->findAll();
 
+
     }
 
     public function articleNew($request)

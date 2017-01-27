@@ -13,7 +13,7 @@ admin_comment_delete:
     defaults: { _controller: "ExNihiloBlogBundle:Comment:delete" }
     methods:  GET
 
-admin_article_new:
+admin_comment_new:
     path:     /new/{articleId}
     defaults: { _controller: "ExNihiloBlogBundle:Comment:new" }
     methods:  [GET, POST]

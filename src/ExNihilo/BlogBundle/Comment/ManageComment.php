@@ -27,9 +27,8 @@ class ManageComment
      */
     public function commentIndex ()
     {
-        $comments = $this->em->getRepository('ExNihiloBlogBundle:Comment')->findAll();
+        return $this->em->getRepository('ExNihiloBlogBundle:Comment')->findAll();
 
-        return $comments;
     }
 
     public function commentNew($request, $articleId)

@@ -4,6 +4,7 @@ namespace ExNihilo\UserBundle\User;
 
 use Doctrine\ORM\EntityManager;
 use ExNihilo\UserBundle\Entity\User;
+use ExNihilo\UserBundle\Form\UserType;
 
 class ManageUser
 {
@@ -27,36 +28,33 @@ class ManageUser
      */
     public function userIndex ()
     {
-        $users = $this->em->getRepository('ExNihiloUserBundle:User')->findAll();
+        return $this->em->getRepository('ExNihiloUserBundle:User')->findAll();
 
-        return $users;
     }
 
-
-    /**
-     * Finds and displays a user entity.
-     *
-     */
-    public function userShow ($user)
+    public function userRegister ()
     {
-        $deleteForm = $this->createDeleteForm($user);
+        return $this->formFactory->create('ExNihilo\UserBundle\Form\UserRegistrationForm');
 
-        return [$user, $deleteForm];
     }
+
 
     /**
      * Deletes a user entity.
      *
      */
-    public function userDelete ($request, $user)
+    public function userDelete ($id)
     {
-        $form = $this->createDeleteForm($user);
-        $form->handleRequest($request);
+        $user = $this->em->getRepository('ExNihiloUserBundle:User')->find($id);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->remove($user);
-            $em = $this->em->flush($user);
+        if ($user === null) {
+
+            return $this->router->generate('admin_user_index');
         }
+        $this->em->remove($user);
+        $this->em->flush();
+
+        return $this->router->generate('admin_user_index');
     }
 
     /**
@@ -66,31 +64,16 @@ class ManageUser
     public function userEdit ($request, $user)
     {
 
-        $deleteForm = $this->createDeleteForm($user);
-        $editForm = $this->formFactory->create('ExNihilo\UserBundle\Form\UserType', $user);
-        $editForm->handleRequest($request);
+        $form = $this->formFactory->create('ExNihilo\UserBundle\Form\UserRegistrationForm', $user);
+        $form->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
+
             $this->em->flush();
         }
 
-        return [$user, $editForm, $deleteForm];
+        return $form;
 
     }
 
-    /**
-     * Creates a form to delete a user entity.
-     *
-     * @param User $user The user entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(User $user)
-    {
-        return $this->formFactory->createBuilder()
-            ->setAction($this->router->generate('admin_user_delete', array('id' => $user->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
-    }
 }

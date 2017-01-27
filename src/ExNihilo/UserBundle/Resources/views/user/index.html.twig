@@ -14,15 +14,15 @@
         <tbody>
         {% for user in users %}
             <tr>
-                <td><a href="{{ path('admin_user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.id }}</td>
                 <td>{{ user.username }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_user_show', { 'id': user.id }) }}">show</a>
+                            <a href="{{ path('admin_user_edit', { 'id': user.id }) }}">modifier</a>
                         </li>
                         <li>
-                            <a href="{{ path('admin_user_edit', { 'id': user.id }) }}">edit</a>
+                            <a href="{{ path('admin_user_delete', { 'id': user.id }) }}">supprimer</a>
                         </li>
                     </ul>
                 </td>
