@@ -8,12 +8,15 @@ use ExNihilo\PlatformBundle\Entity\Race;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="ExNihilo\UserBundle\Repository\UserRepository")
+ * @UniqueEntity(fields={"email"}, message="Ce mail est déjà utilisé")
+ * @UniqueEntity(fields={"username"}, message="Ce membre existe déjà")
  */
 class User implements UserInterface
 {
@@ -28,11 +31,14 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", unique=true)
+     * @Assert\NotBlank()
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", unique=true)
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $email;
 
@@ -45,6 +51,7 @@ class User implements UserInterface
     /**
      *
      * @var string
+     * @Assert\NotBlank(groups={"Registration"})
      */
     private $plainPassword;
 

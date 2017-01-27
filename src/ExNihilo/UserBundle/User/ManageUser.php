@@ -33,24 +33,6 @@ class ManageUser
 
     }
 
-    public function userRegister ($request)
-    {
-       $form = $this->formFactory->create('ExNihilo\UserBundle\Form\UserRegistrationForm');
-
-       $form->handleRequest($request);
-
-       if ($form->isValid()) {
-
-           $user = $form->getData();
-           $this->em->persist($user);
-           $this->em->flush();
-
-
-        }
-
-        return $form;
-    }
-
 
     /**
      * Deletes a user entity.
