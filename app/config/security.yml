@@ -8,10 +8,11 @@ security:
             ROLE_ADMIN:       ROLE_USER
             ROLE_SUPER_ADMIN: ROLE_ADMIN
 
+
     # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         main:
-            id: fos_user.user_provider.username
+            entity: { class: ExNihiloUserBundle:User, property: username }
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -20,19 +21,17 @@ security:
             security: false
 
         main:
-            pattern:        ^/
-            anonymous:      true
-            provider:       main
-            form_login:
-                login_path: fos_user_security_login
-                check_path: fos_user_security_check
+            anonymous:  true
+            provider:   main
+            guard:
+                authenticators:
+                    - app.security.login_form_authenticator
             logout:
-                path:       fos_user_security_logout
-                target:     /
-
+                path: /logout
 
     access_control:
-            - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-            - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-            - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-            - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+

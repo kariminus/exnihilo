@@ -2,6 +2,14 @@ ex_nihilo_platform_blog:
     path:     /
     defaults: { _controller: ExNihiloPlatformBundle:Blog:index }
 
+security_login:
+    path:     /login
+    defaults: { _controller: ExNihiloUserBundle:Security:login }
+
+security_logout:
+    path:     /logout
+    defaults: { _controller: ExNihiloUserBundle:Security:logout }
+
 ex_nihilo_platform_presentation:
     path:     /presentation
     defaults: { _controller: ExNihiloPlatformBundle:Presentation:index }

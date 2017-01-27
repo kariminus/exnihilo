@@ -11,12 +11,10 @@
 <div id="container">
     <div id="header">
         <p id="logo">Ex Nihilo</p>
-        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-            Connecté en tant que {{ app.user.username }}
-            -
-            <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+        {% if is_granted('ROLE_USER') %}
+            <li><a href="{{ path('security_logout') }}">Deconnexion</a></li>
         {% else %}
-            <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+            <li><a href="{{ path('security_login') }}">Connexion</a></li>
         {% endif %}
         <div id="nav">
             <a href="{{ path('ex_nihilo_platform_blog') }}">Blog</a>
