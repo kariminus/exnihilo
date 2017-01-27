@@ -2,15 +2,16 @@
 
 namespace ExNihilo\UserBundle\Form;
 
-use Doctrine\ORM\EntityRepository;
-use Symfony\Component\Form\AbstractType;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use ExNihilo\UserBundle\Entity\User;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Doctrine\ORM\EntityRepository;
 
 class RegistrationType extends AbstractType
 {
@@ -19,8 +20,7 @@ class RegistrationType extends AbstractType
         $builder
             ->add('username', TextType::class)
             ->add('email', EmailType::class)
-            ->add('password', PasswordType::class, [
-            ])
+            ->add('plainPassword', PasswordType::class)
             ->add('classe', EntityType::class, array(
                 'class' => 'ExNihiloPlatformBundle:Classe',
                 'query_builder' => function (EntityRepository $er) {
@@ -57,13 +57,9 @@ class RegistrationType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ExNihilo\UserBundle\Entity\User'
+            'data_class' => User::class,
         ));
     }
 
-    public function getBlockPrefix()
-    {
-        return 'exnihilo_userbundle_user';
-    }
 
 }
