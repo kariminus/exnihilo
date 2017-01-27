@@ -5,7 +5,8 @@ namespace ExNihilo\UserBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use ExNihilo\PlatformBundle\Entity\Classe;
 use ExNihilo\PlatformBundle\Entity\Race;
-use FOS\UserBundle\Model\User as BaseUser;
+use Symfony\Component\Security\Core\Role\Role;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -14,7 +15,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="ExNihilo\UserBundle\Repository\UserRepository")
  */
-class User extends BaseUser
+class User implements UserInterface
 {
     /**
      * @var int
@@ -26,25 +27,35 @@ class User extends BaseUser
     protected $id;
 
     /**
+     * @ORM\Column(type="string", unique=true)
+     */
+    private $username;
+
+    /**
+     * @ORM\Column(type="string", unique=true)
+     */
+    private $email;
+
+    /**
      * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\Classe", cascade={"persist", "remove"})
      *
-     * @Assert\NotBlank(message="Veuillez saisir votre classe", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Veuillez saisir votre classe")
      */
     protected $classe;
 
     /**
      * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\Race", cascade={"persist", "remove"})
      *
-     * @Assert\NotBlank(message="Veuillez saisir votre race", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Veuillez saisir votre race")
      */
     protected $race;
 
     /**
-     * @var string
+     * @var boolean
      *
-     * @ORM\Column(name="gender", type="string")
+     * @ORM\Column(name="gender", type="boolean")
      *
-     * @Assert\NotBlank(message="Veuillez saisir votre genre", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Veuillez saisir votre genre")
      */
     protected $gender;
 
@@ -57,6 +68,51 @@ class User extends BaseUser
      */
     protected $isGuildMember;
 
+
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+
+
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+    }
+
+    public function getPassword()
+    {
+
+    }
+
+    public function getSalt()
+    {
+
+    }
+
+    public function eraseCredentials()
+    {
+
+    }
 
     public function setClasse(Classe $classe)
     {
@@ -79,6 +135,12 @@ class User extends BaseUser
         return $this->race;
     }
 
+    /**
+     * Set gender
+     *
+     * @param boolean $gender
+     *
+     */
     public function setGender($gender)
     {
         $this->gender = $gender;
@@ -87,7 +149,7 @@ class User extends BaseUser
     /**
      * Get gender
      *
-     * @return string
+     * @return boolean
      */
     public function getGender()
     {
