@@ -16,7 +16,7 @@ class UserController extends Controller
     public function registerAction(Request $request)
     {
 
-        $manageUser = $this->get('manage_user')->userRegister();
+        $manageUser = $this->get('manage_user')->userRegister($request);
 
         return $this->render('ExNihiloUserBundle:user:register.html.twig', [
             'form' => $manageUser->createView()
@@ -44,7 +44,7 @@ class UserController extends Controller
 
         return $this->render('ExNihiloUserBundle:user:edit.html.twig', array(
             'user' => $array[0],
-            'edit_form' => $array[1]->createView(),
+            'form' => $array[1]->createView(),
         ));
     }
 

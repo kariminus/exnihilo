@@ -4,7 +4,7 @@ namespace ExNihilo\UserBundle\User;
 
 use Doctrine\ORM\EntityManager;
 use ExNihilo\UserBundle\Entity\User;
-use ExNihilo\UserBundle\Form\UserType;
+use ExNihilo\UserBundle\Form\RegistrationType;
 
 class ManageUser
 {
@@ -14,6 +14,7 @@ class ManageUser
     private $formFactory;
 
     private $router;
+
 
     public function __construct(EntityManager $em, $formFactory, $router)
     {
@@ -32,10 +33,22 @@ class ManageUser
 
     }
 
-    public function userRegister ()
+    public function userRegister ($request)
     {
-        return $this->formFactory->create('ExNihilo\UserBundle\Form\UserRegistrationForm');
+       $form = $this->formFactory->create('ExNihilo\UserBundle\Form\UserRegistrationForm');
 
+       $form->handleRequest($request);
+
+       if ($form->isValid()) {
+
+           $user = $form->getData();
+           $this->em->persist($user);
+           $this->em->flush();
+
+
+        }
+
+        return $form;
     }
 
 
@@ -64,7 +77,7 @@ class ManageUser
     public function userEdit ($request, $user)
     {
 
-        $form = $this->formFactory->create('ExNihilo\UserBundle\Form\UserRegistrationForm', $user);
+        $form = $this->formFactory->create('ExNihilo\UserBundle\Form\RegistrationType', $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
