@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5727993f-889d-4395-af31-9467c03366e9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/User/ManageUser.php" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/User/ManageUser.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,13 +22,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Controller/UserController.php">
+      <file leaf-file-name="ManageArticle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Article/ManageArticle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+            <state relative-caret-position="1221">
+              <caret line="85" column="8" lean-forward="false" selection-start-line="85" selection-start-column="8" selection-end-line="93" selection-end-column="33" />
               <folding>
-                <element signature="e#50#86#0#PHP" expanded="true" />
+                <element signature="e#47#78#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,38 +37,33 @@
       <file leaf-file-name="ManageUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/User/ManageUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="1145">
+              <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding>
                 <element signature="e#44#75#0#PHP" expanded="true" />
-                <marker date="1485544156901" expanded="true" signature="177:1432" ph="{...}" />
-                <marker date="1485544156901" expanded="true" signature="626:669" ph=" Deletes a user entity. ..." />
-                <marker date="1485544156901" expanded="true" signature="708:1029" ph="{...}" />
-                <marker date="1485544156901" expanded="true" signature="825:899" ph="..." />
-                <marker date="1485544156901" expanded="true" signature="1038:1107" ph=" Displays a form to edit an existing user entity. ..." />
-                <marker date="1485544156901" expanded="true" signature="1156:1429" ph="{...}" />
-                <marker date="1485544156901" expanded="true" signature="1356:1398" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/config/services.yml">
+      <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Controller/ArticleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="1112">
+              <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="59" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="914">
+              <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+              <folding>
+                <element signature="e#50#86#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegistrationType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1574">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#44#100#0#PHP" expanded="true" />
               </folding>
@@ -130,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="825">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -207,11 +201,11 @@
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/register.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/UserRegistrationForm.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/User/ManageUser.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php" />
       </list>
     </option>
   </component>
@@ -520,54 +514,6 @@
               <option name="myItemId" value="ExNihilo" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExNihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlatformBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExNihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -728,7 +674,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96132000" />
+    <option name="totallyTimeSpent" value="96428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
@@ -932,6 +878,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -946,20 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Controller/ArticleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1706">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Article/ManageArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1069,33 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/User/ManageUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#75#0#PHP" expanded="true" />
-            <marker date="1485544156901" expanded="true" signature="177:1432" ph="{...}" />
-            <marker date="1485544156901" expanded="true" signature="626:669" ph=" Deletes a user entity. ..." />
-            <marker date="1485544156901" expanded="true" signature="708:1029" ph="{...}" />
-            <marker date="1485544156901" expanded="true" signature="825:899" ph="..." />
-            <marker date="1485544156901" expanded="true" signature="1038:1107" ph=" Displays a form to edit an existing user entity. ..." />
-            <marker date="1485544156901" expanded="true" signature="1156:1429" ph="{...}" />
-            <marker date="1485544156901" expanded="true" signature="1356:1398" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1108,14 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="23" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1148,13 +1046,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Article/ManageArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1221">
+          <caret line="85" column="8" lean-forward="false" selection-start-line="85" selection-start-column="8" selection-end-line="93" selection-end-column="33" />
+          <folding>
+            <element signature="e#47#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/User/ManageUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1145">
+          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="e#44#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Controller/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1112">
+          <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="59" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="e#50#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1574">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#44#100#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

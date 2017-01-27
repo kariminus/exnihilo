@@ -67,7 +67,7 @@ class ManageUser
             $this->em->flush();
         }
 
-        return $form;
+        return [$user, $form];
 
     }
 
