@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5727993f-889d-4395-af31-9467c03366e9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/User/ManageUser.php" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/User/ManageUser.php" />
-    </list>
+    <list default="true" id="5727993f-889d-4395-af31-9467c03366e9" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -674,7 +670,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96428000" />
+    <option name="totallyTimeSpent" value="96449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
