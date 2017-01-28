@@ -30,7 +30,6 @@ class ManageClasse
     {
         return $this->em->getRepository('ExNihiloPlatformBundle:Classe')->findAll();
 
-
     }
 
     public function classeNew($request)

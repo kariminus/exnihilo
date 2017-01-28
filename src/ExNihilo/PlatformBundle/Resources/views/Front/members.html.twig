@@ -1,5 +1,8 @@
-{% extends '::base.html.twig' %}
-
-{% block body %}
-
-{% endblock %}
+<tr>
+    <td>{{ user.username }}</td>
+    <td><img
+                src="{{ asset(user.classe.imageClasse.webPath) }}"
+                alt="{{ user.classe.imageClasse.alt }}"
+                height="20"
+        /></td>
+</tr>

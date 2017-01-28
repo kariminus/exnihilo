@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for classe in classes %}
+        <li>
+            <table>
+                <tbody>
+                <tr>
+                    <td><img
+                                src="{{ asset(classe.imageClasse.webPath) }}"
+                                alt="{{ classe.imageClasse.alt }}"
+                                height="60"
+                        /></td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+
+    {% endfor %}
+{%  endblock %}

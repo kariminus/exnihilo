@@ -71,4 +71,10 @@ class ManageUser
 
     }
 
+    public function getGuildMembers()
+    {
+
+
+    }
+
 }

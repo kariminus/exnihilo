@@ -2,6 +2,8 @@
 
 namespace ExNihilo\UserBundle\Repository;
 
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\QueryBuilder;
 /**
  * UserRepository
  *
@@ -10,4 +12,8 @@ namespace ExNihilo\UserBundle\Repository;
  */
 class UserRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findGuildMembers()
+    {
+
+    }
 }
