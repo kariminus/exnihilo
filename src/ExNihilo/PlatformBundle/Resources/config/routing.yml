@@ -36,3 +36,6 @@ event_view:
     defaults: { _controller: ExNihiloEventBundle:Event:view }
 
 
+ex_nihilo_article_admin_classe:
+    resource: "@ExNihiloPlatformBundle/Resources/config/routing/classe.yml"
+    prefix:   /admin/classe

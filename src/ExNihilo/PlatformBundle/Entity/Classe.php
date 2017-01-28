@@ -3,6 +3,7 @@
 namespace ExNihilo\PlatformBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class
@@ -28,6 +29,11 @@ class Classe
      */
     private $name;
 
+    /**
+     * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\ImageClasse", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    private $imageClasse;
 
 
     /**
@@ -62,6 +68,15 @@ class Classe
     public function getName()
     {
         return $this->name;
+    }
+
+    public function setImageClasse(ImageClasse $imageClasse = null)
+    {
+        $this->imageClasse = $imageClasse;
+    }
+    public function getImageClasse()
+    {
+        return $this->imageClasse;
     }
 
 }

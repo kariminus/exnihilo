@@ -1,0 +1,19 @@
+admin_classe_index:
+    path:     /
+    defaults: { _controller: "ExNihiloPlatformBundle:Classe:index" }
+    methods:  GET
+
+admin_classe_new:
+    path:     /new
+    defaults: { _controller: "ExNihiloPlatformBundle:Classe:new" }
+    methods:  [GET, POST]
+
+admin_classe_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ExNihiloPlatformBundle:Classe:edit" }
+    methods:  [GET, POST]
+
+admin_classe_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ExNihiloPlatformBundle:Classe:delete" }
+    methods:  GET
