@@ -31,14 +31,22 @@ class ManageComment
 
     }
 
-    public function commentNew($request, $articleId)
+    public function commentNew($articleId)
     {
         $article = $this->getArticle($articleId);
-
         $comment = new Comment();
         $comment->setArticle($article);
-        $form   = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
+        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
 
+        return [$comment, $form];
+    }
+
+    public function commentCreate($request, $articleId)
+    {
+        $article = $this->getArticle($articleId);
+        $comment = new Comment();
+        $comment->setArticle($article);
+        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -48,8 +56,6 @@ class ManageComment
 
         return [$comment, $form];
     }
-
-
 
     /**
      * Deletes a comment entity.

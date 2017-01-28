@@ -5,3 +5,14 @@ ex_nihilo_article_admin_article:
 ex_nihilo_comment_admin_comment:
     resource: "@ExNihiloBlogBundle/Resources/config/routing/comment.yml"
     prefix:   /admin/comment
+
+comment_new:
+    path:     /new/{articleId}
+    defaults: { _controller: "ExNihiloBlogBundle:Comment:new" }
+    methods:  GET
+
+ExNihiloBlogBundle_comment_create:
+    path:  /comment/{articleId}
+    defaults: { _controller: "ExNihiloBlogBundle:Comment:create" }
+    methods: POST
+

@@ -4,7 +4,9 @@ namespace ExNihilo\BlogBundle\Article;
 
 use Doctrine\ORM\EntityManager;
 use ExNihilo\BlogBundle\Entity\Article;
+use ExNihilo\BlogBundle\Entity\Comment;
 use ExNihilo\BlogBundle\Form\ArticleType;
+use ExNihilo\BlogBundle\Form\CommentType;
 
 class ManageArticle
 {
@@ -47,16 +49,28 @@ class ManageArticle
         return [$article, $form];
     }
 
-    public function articleView ($id)
+    public function articleView ($request, $id)
     {
 
         $article = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id);
+
+        $comment = new Comment();
+        $comment->setArticle($article);
+        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->em->persist($comment);
+            $em = $this->em->flush($comment);
+        }
 
         $comments = $this->em->getRepository('ExNihiloBlogBundle:Comment')
             ->getCommentsForArticle($article->getId());
 
 
-        return [$article, $comments];
+
+
+        return [$article, $comments, $form];
     }
 
     /**

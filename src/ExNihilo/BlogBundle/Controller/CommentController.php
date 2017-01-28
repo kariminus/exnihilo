@@ -26,17 +26,27 @@ class CommentController extends Controller
     }
 
 
-    public function newAction(Request $request, $articleId)
+    public function newAction($articleId)
     {
         $manageComment = $this->get('manage_comment');
-        $array = $manageComment->commentNew($request, $articleId);
+        $array = $manageComment->commentNew($articleId);
 
-        return $this->render('ExNihiloBlogBundle:Comment:new.html.twig', array(
+        return $this->render('ExNihiloBlogBundle:Comment:form.html.twig', array(
             'comment' => $array[0],
             'form'   => $array[1]->createView()
         ));
     }
 
+    public function createAction(Request $request, $articleId)
+    {
+        $manageComment = $this->get('manage_comment');
+        $array = $manageComment->commentNew($request, $articleId);
+
+        return $this->render('ExNihiloBlogBundle:Comment:create.html.twig', array(
+            'comment' => $array[0],
+            'form'   => $array[1]->createView()
+        ));
+    }
 
 
     public function editAction(Request $request, Comment $comment)
@@ -58,5 +68,19 @@ class CommentController extends Controller
         $manageComment->commentDelete($id);
 
         return $this->redirectToRoute('admin_comment_index');
+    }
+
+    protected function getArticle($articleId)
+    {
+        $em = $this->getDoctrine()
+            ->getEntityManager();
+
+        $article = $em->getRepository('ExNihiloBlogBundle:Article')->find($articleId);
+
+        if (!$article) {
+            throw $this->createNotFoundException('Article introuvable');
+        }
+
+        return $article;
     }
 }
