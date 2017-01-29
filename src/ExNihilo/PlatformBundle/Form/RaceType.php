@@ -37,5 +37,4 @@ class RaceType extends AbstractType
         return 'exnihilo_platformbundle_race';
     }
 
-
 }

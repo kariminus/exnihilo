@@ -1,5 +1,18 @@
 {% for user in users %}
-<tr>
-    <td>{{ user.username }}</td>
-</tr>
+    <tr>
+        <td>{{ user.username }}</td>
+        {% if user.gender == 0 %}
+            <td><img
+                        src="{{ asset(user.race.imageRaceHomme.webPath) }}"
+                        alt="{{ user.race.imageRaceHomme.alt }}"
+                        height="20"
+                /></td>
+        {% else %}
+            <td><img
+                        src="{{ asset(user.race.imageRaceFemme.webPath) }}"
+                        alt="{{ user.race.imageRaceFemme.alt }}"
+                        height="20"
+                /></td>
+        {% endif %}
+    </tr>
 {% endfor %}
