@@ -27,9 +27,9 @@ class ManagePresentation
      */
     public function presentationIndex()
     {
-        $presentations = $this->em->getRepository('ExNihiloGuildBundle:Presentation')->findAll();
+        $presentation = $this->em->getRepository('ExNihiloGuildBundle:Presentation')->find(1);
 
-        return $presentations;
+        return $presentation;
 
     }
 

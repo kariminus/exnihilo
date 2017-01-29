@@ -1,0 +1,35 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div>
+        {{ presentation.content }}
+    </div>
+    <div>
+        <img
+                src="{{ asset(presentation.guildImage1.image.webPath) }}"
+                alt="{{ presentation.guildImage1.image.alt }}"
+                height="100"
+        />
+    </div>
+    <div>
+        <img
+                src="{{ asset(presentation.guildImage2.image.webPath) }}"
+                alt="{{ presentation.guildImage2.image.alt }}"
+                height="100"
+        />
+    </div>
+    <div>
+        <img
+                src="{{ asset(presentation.guildImage3.image.webPath) }}"
+                alt="{{ presentation.guildImage3.image.alt }}"
+                height="100"
+        />
+    </div>
+    <div>
+        <img
+                src="{{ asset(presentation.guildImage4.image.webPath) }}"
+                alt="{{ presentation.guildImage4.image.alt }}"
+                height="100"
+        />
+    </div>
+{% endblock %}

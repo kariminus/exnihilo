@@ -5,9 +5,7 @@
 
     <table>
         <tbody>
-        {% for presentation in presentations %}
             <tr>
-                <td>{{ presentation.id }}</td>
                 <td>{{ presentation.content }}</td>
                 <td>
                     <ul>
@@ -17,7 +15,6 @@
                     </ul>
                 </td>
             </tr>
-        {% endfor %}
         </tbody>
     </table>
 

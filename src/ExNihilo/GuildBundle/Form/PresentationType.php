@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use ExNihilo\BlogBundle\Form\ImageType;
 
 class PresentationType extends AbstractType
 {
@@ -16,10 +17,10 @@ class PresentationType extends AbstractType
     {
         $builder
             ->add('content',         CkeditorType::class)
-            ->add('guildImage1',     GuildImage1Type::class)
-            ->add('guildImage2',     GuildImage2Type::class)
-            ->add('guildImage3',     GuildImage3Type::class)
-            ->add('guildImage4',     GuildImage4Type::class);
+            ->add('guildImage1',     ImageType::class)
+            ->add('guildImage2',     ImageType::class)
+            ->add('guildImage3',     ImageType::class)
+            ->add('guildImage4',     ImageType::class);
     }
     
     /**

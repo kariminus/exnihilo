@@ -15,11 +15,9 @@ class PresentationController extends Controller
 
     public function indexAction()
     {
-        $managePresentation = $this->get('manage_presentation');
-        $presentations = $managePresentation->PresentationIndex();
 
         return $this->render('ExNihiloGuildBundle:presentation:index.html.twig', array(
-            'presentations' => $presentations,
+            'presentation' => $this->get('manage_presentation')->PresentationIndex(),
         ));
     }
 
