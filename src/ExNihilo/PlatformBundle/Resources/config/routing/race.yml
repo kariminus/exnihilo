@@ -1,0 +1,19 @@
+admin_race_index:
+    path:     /
+    defaults: { _controller: "ExNihiloPlatformBundle:Race:index" }
+    methods:  GET
+
+admin_race_new:
+    path:     /new
+    defaults: { _controller: "ExNihiloPlatformBundle:Race:new" }
+    methods:  [GET, POST]
+
+admin_race_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ExNihiloPlatformBundle:Race:edit" }
+    methods:  [GET, POST]
+
+admin_race_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ExNihiloPlatformBundle:Race:delete" }
+    methods:  GET

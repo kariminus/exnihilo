@@ -3,6 +3,7 @@
 namespace ExNihilo\PlatformBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Race
@@ -28,6 +29,17 @@ class Race
      */
     private $name;
 
+    /**
+     * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\ImageRaceHomme", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    private $imageRaceHomme;
+
+    /**
+     * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\ImageRaceFemme", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    private $imageRaceFemme;
 
     /**
      * Get id
@@ -61,6 +73,24 @@ class Race
     public function getName()
     {
         return $this->name;
+    }
+
+    public function setImageRaceHomme(ImageRaceHomme $imageRaceHomme = null)
+    {
+        $this->imageRaceHomme = $imageRaceHomme;
+    }
+    public function getImageRaceHomme()
+    {
+        return $this->imageRaceHomme;
+    }
+
+    public function setImageRaceFemme(ImageRaceFemme $imageRaceFemme = null)
+    {
+        $this->imageRaceFemme = $imageRaceFemme;
+    }
+    public function getImageRaceFemme()
+    {
+        return $this->imageRaceFemme;
     }
 }
 

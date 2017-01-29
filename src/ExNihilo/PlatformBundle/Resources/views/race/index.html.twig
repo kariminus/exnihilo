@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des races</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for race in races %}
+            <tr>
+                <td>{{ race.id }}</td>
+                <td>{{ race.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_race_edit', { 'id': race.id }) }}">modifier</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_race_delete', { 'id': race.id }) }}">supprimer</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_race_new') }}">Creer une nouvelle race</a>
+        </li>
+    </ul>
+{% endblock %}
