@@ -3,33 +3,27 @@
 namespace ExNihilo\GuildBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use ExNihilo\BlogBundle\Form\ImageType;
 
 class PresentationType extends AbstractType
 {
-    /**
-     * {@inheritdoc}
-     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('content',         CkeditorType::class)
-            ->add('guildImage1',     ImageType::class)
-            ->add('guildImage2',     ImageType::class)
-            ->add('guildImage3',     ImageType::class)
-            ->add('guildImage4',     ImageType::class);
+            ->add('content',                CkeditorType::class)
+            ->add('imagePresentation',      ImagePresentationType::class)
+            ->add('image2Presentation',     Image2PresentationType::class)
+            ->add('image3Presentation',     Image3PresentationType::class)
+            ->add('image4Presentation',     Image4PresentationType::class);
     }
-    
-    /**
-     * {@inheritdoc}
-     */
+
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ExNihilo\GuildBundle\Entity\Presentation'
+            'data_class' => 'ExNihilo\guildBundle\Entity\Presentation'
         ));
     }
 
@@ -40,6 +34,4 @@ class PresentationType extends AbstractType
     {
         return 'exnihilo_guildbundle_presentation';
     }
-
-
 }

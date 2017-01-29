@@ -4,47 +4,55 @@ namespace ExNihilo\GuildBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use ExNihilo\BlogBundle\Entity\Image;
 
 /**
- * Presentation
+ * Race
+ *
+ * @ORM\Table(name="presentation")
+ * @ORM\Entity(repositoryClass="ExNihilo\GuildBundle\Repository\PresentationRepository")
  */
 class Presentation
 {
     /**
      * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="content", type="text")
      */
     private $content;
 
     /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\BlogBundle\Entity\Image", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="ExNihilo\GuildBundle\Entity\ImagePresentation", cascade={"persist", "remove"})
      * @Assert\Valid()
      */
-    private $guildImage1;
-
-
-    /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\BlogBundle\Entity\Image", cascade={"persist", "remove"})
-     * @Assert\Valid()
-     */
-    private $guildImage2;
+    private $imagePresentation;
 
     /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\BlogBundle\Entity\Image", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="ExNihilo\GuildBundle\Entity\Image2Presentation", cascade={"persist", "remove"})
      * @Assert\Valid()
      */
-    private $guildImage3;
+    private $image2Presentation;
 
     /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\BlogBundle\Entity\Image", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="ExNihilo\GuildBundle\Entity\Image3Presentation", cascade={"persist", "remove"})
      * @Assert\Valid()
      */
-    private $guildImage4;
+    private $image3Presentation;
+
+    /**
+     * @ORM\OneToOne(targetEntity="ExNihilo\GuildBundle\Entity\Image4Presentation", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    private $image4Presentation;
+
 
     /**
      * Get id
@@ -66,7 +74,6 @@ class Presentation
     public function setContent($content)
     {
         $this->content = $content;
-
         return $this;
     }
 
@@ -80,43 +87,39 @@ class Presentation
         return $this->content;
     }
 
-
-    public function setGuildImage1(Image $image = null)
+    public function setImagePresentation(ImagePresentation $imagePresentation = null)
     {
-        $this->guildImage1 = $image;
+        $this->imagePresentation = $imagePresentation;
     }
-    public function getGuildImage1()
+    public function getImagePresentation()
     {
-        return $this->guildImage1;
-    }
-
-    public function setGuildImage2(Image $image = null)
-    {
-        $this->guildImage2 = $image;
-    }
-    public function getGuildImage2()
-    {
-        return $this->guildImage2;
+        return $this->imagePresentation;
     }
 
-    public function setGuildImage3(Image $image = null)
+    public function setImage2Presentation(Image2Presentation $image2Presentation = null)
     {
-        $this->guildImage3 = $image;
+        $this->image2Presentation = $image2Presentation;
+    }
+    public function getImage2Presentation()
+    {
+        return $this->image2Presentation;
     }
 
-    public function getGuildImage3()
+    public function setImage3Presentation(Image3Presentation $image3Presentation = null)
     {
-        return $this->guildImage3;
+        $this->image3Presentation = $image3Presentation;
+    }
+    public function getImage3Presentation()
+    {
+        return $this->image3Presentation;
     }
 
-    public function setGuildImage4(Image $image = null)
+    public function setImage4Presentation(Image4Presentation $image4Presentation = null)
     {
-        $this->guildImage4 = $image;
+        $this->image4Presentation = $image4Presentation;
     }
-    public function getGuildImage4()
+    public function getImage4Presentation()
     {
-        return $this->guildImage4;
+        return $this->image4Presentation;
     }
-
 }
-
