@@ -71,9 +71,9 @@ class ManageUser
 
     }
 
-    public function getGuildMembers()
+    public function getUsers($id)
     {
-
+        return $this->em->getRepository('ExNihiloUserBundle:User')->getGuildMembers($id);
 
     }
 

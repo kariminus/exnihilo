@@ -11,6 +11,12 @@
                                 alt="{{ classe.imageClasse.alt }}"
                                 height="60"
                         /></td>
+                    <td>
+                        {{ render(controller(
+                        'ExNihiloPlatformBundle:Members:getUsers',
+                        { 'id': classe.id }
+                        )) }}
+                    </td>
                 </tr>
                 </tbody>
             </table>

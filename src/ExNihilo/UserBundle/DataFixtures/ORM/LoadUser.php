@@ -13,11 +13,6 @@ class LoadUser implements FixtureInterface
     public function load(ObjectManager $manager)
     {
 
-        $classe = new Classe();
-        $classe->setName("moine");
-
-        $race = new Race();
-        $race->setName("orc");
 
         $user1 = new User();
         $user1->setUsername("admin");
@@ -25,8 +20,6 @@ class LoadUser implements FixtureInterface
         $user1->setPassword("admin");
         $user1->setPlainPassword("admin");
         $user1->setRoles(['ROLE_ADMIN']);
-        $user1->setClasse($classe);
-        $user1->setRace($race);
         $user1->setGender(0);
         $user1->setIsGuildMember(0);
 

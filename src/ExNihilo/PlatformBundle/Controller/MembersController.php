@@ -18,4 +18,13 @@ class MembersController extends Controller
             'classes' => $classes,
         ));
     }
+
+    public function getUsersAction($id)
+    {
+        return $this->render(
+            'ExNihiloPlatformBundle:Front:members.html.twig',
+            array('users' => $this->get('manage_user')->getUsers($id))
+        );
+
+    }
 }

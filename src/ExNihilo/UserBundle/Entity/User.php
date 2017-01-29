@@ -61,16 +61,14 @@ class User implements UserInterface
     private $roles = [];
 
     /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\Classe", cascade={"persist", "remove"})
-     *
-     * @Assert\NotBlank(message="Veuillez saisir votre classe")
+     * @ORM\ManyToOne(targetEntity="ExNihilo\PlatformBundle\Entity\Classe", inversedBy="users")
+     * @ORM\JoinColumn(name="classe_id", referencedColumnName="id")
      */
-    protected $classe;
+    private $classe;
 
     /**
      * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\Race", cascade={"persist", "remove"})
      *
-     * @Assert\NotBlank(message="Veuillez saisir votre race")
      */
     protected $race;
 
@@ -79,7 +77,6 @@ class User implements UserInterface
      *
      * @ORM\Column(name="gender", type="boolean")
      *
-     * @Assert\NotBlank(message="Veuillez saisir votre genre")
      */
     protected $gender;
 
@@ -88,7 +85,6 @@ class User implements UserInterface
      *
      * @ORM\Column(name="isGuildMember", type="boolean")
      *
-     * (groups={"Registration", "Profile"})
      */
     protected $isGuildMember;
 

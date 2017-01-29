@@ -12,8 +12,19 @@ use Doctrine\ORM\QueryBuilder;
  */
 class UserRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findGuildMembers()
+
+    public function getGuildMembers($classeId)
     {
 
+        $qb = $this->createQueryBuilder('u')
+            ->select('u')
+            ->where('u.classe = :classeId')
+            ->andWhere('u.isGuildMember = :isGuildMember')
+            ->addOrderBy('u.username')
+            ->setParameter('classeId', $classeId)
+            ->setParameters(array('isGuildMember' => 1, 'classeId' => $classeId));
+
+        return $qb->getQuery()
+            ->getResult();
     }
 }

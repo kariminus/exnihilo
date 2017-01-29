@@ -4,6 +4,8 @@ namespace ExNihilo\PlatformBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
+use ExNihilo\UserBundle\Entity\User;
 
 /**
  * Class
@@ -35,6 +37,17 @@ class Classe
      */
     private $imageClasse;
 
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="ExNihilo\UserBundle\Entity\User", mappedBy="classe")
+     */
+    private $users;
+
+
+    public function __construct() {
+
+        $this->users = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -77,6 +90,31 @@ class Classe
     public function getImageClasse()
     {
         return $this->imageClasse;
+    }
+
+    /**
+     * @param User $user
+     */
+    public function addUser(User $user)
+    {
+        $this->users[] = $user;
+        // On lie l'annonce à la candidature
+        $user->setClasse($this);
+    }
+    /**
+     * @param User $user
+     */
+    public function removeUser(User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsers()
+    {
+        return $this->users;
     }
 
 }
