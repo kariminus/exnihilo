@@ -3,6 +3,8 @@
 namespace ExNihilo\EventBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use ExNihilo\UserBundle\Entity\User;
 
 /**
  * Event
@@ -41,6 +43,17 @@ class Event
      * @ORM\Column(name="content", type="text")
      */
     private $content;
+
+    // ...
+    /**
+     * @ORM\ManyToMany(targetEntity="ExNihilo\UserBundle\Entity\User", mappedBy="events")
+     */
+    private $users;
+
+    public function __construct() {
+
+        $this->users = new ArrayCollection();
+    }
 
 
     /**
@@ -123,6 +136,28 @@ class Event
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * @param User $user
+     */
+    public function addUser(User $user)
+    {
+        $this->users[] = $user;
+    }
+    /**
+     * @param User $user
+     */
+    public function removeEvent(User $user)
+    {
+        $this->users->removeElement($user);
+    }
+    /**
+     * @return ArrayCollection
+     */
+    public function getUsers()
+    {
+        return $this->users;
     }
 }
 

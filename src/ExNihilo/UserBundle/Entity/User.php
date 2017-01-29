@@ -5,10 +5,12 @@ namespace ExNihilo\UserBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use ExNihilo\PlatformBundle\Entity\Classe;
 use ExNihilo\PlatformBundle\Entity\Race;
+use ExNihilo\EventBundle\Entity\Event;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * User
@@ -88,8 +90,15 @@ class User implements UserInterface
      */
     protected $isGuildMember;
 
-    public function __construct()
-    {
+    /**
+     * @ORM\ManyToMany(targetEntity="ExNihilo\EventBundle\Entity\Event", inversedBy="users")
+     * @ORM\JoinTable(name="users_events")
+     */
+    private $events;
+
+    public function __construct() {
+
+        $this->events = new ArrayCollection();
         $this->setRoles(['ROLE_USER']);
     }
 
@@ -244,6 +253,28 @@ class User implements UserInterface
     public function getIsGuildMember()
     {
         return $this->isGuildMember;
+    }
+
+    /**
+     * @param Event $event
+     */
+    public function addEvent(Event $event)
+    {
+        $this->events[] = $event;
+    }
+    /**
+     * @param Event $event
+     */
+    public function removeEvent(Event $event)
+    {
+        $this->events->removeElement($event);
+    }
+    /**
+     * @return ArrayCollection
+     */
+    public function getEvents()
+    {
+        return $this->events;
     }
 
 }
