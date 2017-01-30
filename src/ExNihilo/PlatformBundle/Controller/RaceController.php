@@ -13,10 +13,22 @@ use Symfony\Component\HttpFoundation\Request;
 class RaceController extends Controller
 {
 
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        $races = $this->get('manage_race')->raceIndex();
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator  = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $races,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 10)
+
+        );
+
         return $this->render('ExNihiloPlatformBundle:race:index.html.twig', array(
-            'races' => $this->get('manage_race')->raceIndex(),
+            'races' => $result,
         ));
     }
 

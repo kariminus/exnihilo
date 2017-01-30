@@ -38,4 +38,8 @@
             <a href="{{ path('admin_article_new') }}">Create a new article</a>
         </li>
     </ul>
+
+    <div class="navigation">
+        {{ knp_pagination_render(articles) }}
+    </div>
 {% endblock %}

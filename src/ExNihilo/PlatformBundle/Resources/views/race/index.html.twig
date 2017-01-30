@@ -36,4 +36,8 @@
             <a href="{{ path('admin_race_new') }}">Creer une nouvelle race</a>
         </li>
     </ul>
+
+    <div class="navigation">
+        {{ knp_pagination_render(races) }}
+    </div>
 {% endblock %}

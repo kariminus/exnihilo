@@ -28,6 +28,7 @@ class ManageClasse
      */
     public function classeIndex()
     {
+
         return $this->em->getRepository('ExNihiloPlatformBundle:Classe')->findAll();
 
     }

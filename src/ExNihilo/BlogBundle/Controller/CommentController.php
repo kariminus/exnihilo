@@ -13,14 +13,24 @@ use ExNihilo\BlogBundle\Form\CommentType;
  */
 class CommentController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
 
-        $manageComment = $this->get('manage_comment');
-        $comments = $manageComment->commentIndex();
+        $comments = $this->get('manage_comment')->commentIndex();
+
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator  = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $comments,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 10)
+
+        );
 
         return $this->render('ExNihiloBlogBundle:comment:index.html.twig', array(
-            'comments' => $comments,
+            'comments' => $result,
         ));
 
     }

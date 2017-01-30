@@ -15,4 +15,7 @@
                 <a href="{{ path('article_view', {id: article.id }) }}">read more</a></p>
         </div>
     {% endfor %}
+    <div class="navigation">
+        {{ knp_pagination_render(articles) }}
+    </div>
 {% endblock %}

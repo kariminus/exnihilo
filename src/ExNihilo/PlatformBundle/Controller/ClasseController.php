@@ -13,12 +13,23 @@ use Symfony\Component\HttpFoundation\Request;
 class ClasseController extends Controller
 {
 
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $manageClasse = $this->get('manage_classe');
+        $classes = $this->get('manage_classe')->classeIndex();
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator  = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $classes,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 10)
+
+        );
+
 
         return $this->render('ExNihiloPlatformBundle:classe:index.html.twig', array(
-            'classes' => $manageClasse->classeIndex(),
+            'classes' => $result,
         ));
     }
 

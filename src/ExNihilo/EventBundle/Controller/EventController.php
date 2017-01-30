@@ -14,13 +14,22 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class EventController extends Controller
 {
 
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $manageEvent = $this->get('manage_event');
-        $events = $manageEvent->eventIndex();
+        $events = $this->get('manage_event')->eventIndex();
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator  = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $events,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 10)
+
+        );
 
         return $this->render('ExNihiloEventBundle:event:index.html.twig', array(
-            'events' => $events,
+            'events' => $result,
         ));
     }
 

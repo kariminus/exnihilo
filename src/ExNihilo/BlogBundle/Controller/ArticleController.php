@@ -13,13 +13,23 @@ use Symfony\Component\HttpFoundation\Request;
 class ArticleController extends Controller
 {
 
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $manageArticle = $this->get('manage_article');
-        $articles = $manageArticle->articleIndex();
+        $articles = $this->get('manage_article')->articleIndex();
+
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator  = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $articles,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 10)
+
+        );
 
         return $this->render('ExNihiloBlogBundle:article:index.html.twig', array(
-            'articles' => $articles,
+            'articles' => $result,
         ));
     }
 
