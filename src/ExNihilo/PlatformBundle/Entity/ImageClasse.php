@@ -106,7 +106,7 @@ class ImageClasse
     public function getUploadDir()
     {
         // On retourne le chemin relatif vers l'image pour un navigateur (relatif au répertoire /web donc)
-        return 'uploads/img';
+        return 'uploads/img/classes/';
     }
 
     protected function getUploadRootDir()

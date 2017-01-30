@@ -98,7 +98,6 @@ class Classe
     public function addUser(User $user)
     {
         $this->users[] = $user;
-        // On lie l'annonce à la candidature
         $user->setClasse($this);
     }
     /**
