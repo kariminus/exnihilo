@@ -29,17 +29,6 @@ class Race
      */
     private $name;
 
-    /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\ImageRaceHomme", cascade={"persist", "remove"})
-     * @Assert\Valid()
-     */
-    private $imageRaceHomme;
-
-    /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\ImageRaceFemme", cascade={"persist", "remove"})
-     * @Assert\Valid()
-     */
-    private $imageRaceFemme;
 
     /**
      * Get id
@@ -75,22 +64,5 @@ class Race
         return $this->name;
     }
 
-    public function setImageRaceHomme(ImageRaceHomme $imageRaceHomme = null)
-    {
-        $this->imageRaceHomme = $imageRaceHomme;
-    }
-    public function getImageRaceHomme()
-    {
-        return $this->imageRaceHomme;
-    }
-
-    public function setImageRaceFemme(ImageRaceFemme $imageRaceFemme = null)
-    {
-        $this->imageRaceFemme = $imageRaceFemme;
-    }
-    public function getImageRaceFemme()
-    {
-        return $this->imageRaceFemme;
-    }
 }
 

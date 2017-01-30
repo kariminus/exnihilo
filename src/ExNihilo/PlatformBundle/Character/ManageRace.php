@@ -35,12 +35,13 @@ class ManageRace
     public function raceNew($request)
     {
         $race = new Race();
-        $form = $this->formFactory->create('ExNihilo\PlatformBundle\Form\RaceType', $race);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\PlatformBundle\Form\RaceType', $race)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->persist($race);
-            $em = $this->em->flush($race);
+            $this->em->persist($race);
+            $this->em->flush();
         }
 
         return [$race, $form];
@@ -48,9 +49,7 @@ class ManageRace
 
     public function raceView ($id)
     {
-
         return $this->em->getRepository('ExNihiloPlatformBundle:Race')->find($id);
-
     }
 
     /**
@@ -77,8 +76,9 @@ class ManageRace
      */
     public function raceEdit ($request, $race)
     {
-        $form = $this->formFactory->create('ExNihilo\PlatformBundle\Form\RaceType', $race);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\PlatformBundle\Form\RaceType', $race)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 

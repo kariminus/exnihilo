@@ -38,8 +38,7 @@ class CommentController extends Controller
 
     public function newAction($articleId)
     {
-        $manageComment = $this->get('manage_comment');
-        $array = $manageComment->commentNew($articleId);
+        $array = $this->get('manage_comment')->commentNew($articleId);
 
         return $this->render('ExNihiloBlogBundle:Comment:form.html.twig', array(
             'comment' => $array[0],
@@ -49,8 +48,7 @@ class CommentController extends Controller
 
     public function createAction(Request $request, $articleId)
     {
-        $manageComment = $this->get('manage_comment');
-        $array = $manageComment->commentNew($request, $articleId);
+        $array = $this->get('manage_comment')->commentNew($request, $articleId);
 
         return $this->render('ExNihiloBlogBundle:Comment:create.html.twig', array(
             'comment' => $array[0],
@@ -61,9 +59,7 @@ class CommentController extends Controller
 
     public function editAction(Request $request, Comment $comment)
     {
-
-        $manageComment = $this->get('manage_comment');
-        $array = $manageComment->commentEdit($request, $comment);
+        $array = $this->get('manage_comment')->commentEdit($request, $comment);
 
         return $this->render('ExNihiloBlogBundle:comment:edit.html.twig', array(
             'comment' => $array[0],
@@ -74,8 +70,7 @@ class CommentController extends Controller
 
     public function deleteAction($id)
     {
-        $manageComment = $this->get('manage_comment');
-        $manageComment->commentDelete($id);
+        $this->get('manage_comment')->commentDelete($id);
 
         return $this->redirectToRoute('admin_comment_index');
     }

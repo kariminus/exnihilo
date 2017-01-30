@@ -29,30 +29,6 @@ class Presentation
      */
     private $content;
 
-    /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\GuildBundle\Entity\ImagePresentation", cascade={"persist", "remove"})
-     * @Assert\Valid()
-     */
-    private $imagePresentation;
-
-    /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\GuildBundle\Entity\Image2Presentation", cascade={"persist", "remove"})
-     * @Assert\Valid()
-     */
-    private $image2Presentation;
-
-    /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\GuildBundle\Entity\Image3Presentation", cascade={"persist", "remove"})
-     * @Assert\Valid()
-     */
-    private $image3Presentation;
-
-    /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\GuildBundle\Entity\Image4Presentation", cascade={"persist", "remove"})
-     * @Assert\Valid()
-     */
-    private $image4Presentation;
-
 
     /**
      * Get id
@@ -85,41 +61,5 @@ class Presentation
     public function getContent()
     {
         return $this->content;
-    }
-
-    public function setImagePresentation(ImagePresentation $imagePresentation = null)
-    {
-        $this->imagePresentation = $imagePresentation;
-    }
-    public function getImagePresentation()
-    {
-        return $this->imagePresentation;
-    }
-
-    public function setImage2Presentation(Image2Presentation $image2Presentation = null)
-    {
-        $this->image2Presentation = $image2Presentation;
-    }
-    public function getImage2Presentation()
-    {
-        return $this->image2Presentation;
-    }
-
-    public function setImage3Presentation(Image3Presentation $image3Presentation = null)
-    {
-        $this->image3Presentation = $image3Presentation;
-    }
-    public function getImage3Presentation()
-    {
-        return $this->image3Presentation;
-    }
-
-    public function setImage4Presentation(Image4Presentation $image4Presentation = null)
-    {
-        $this->image4Presentation = $image4Presentation;
-    }
-    public function getImage4Presentation()
-    {
-        return $this->image4Presentation;
     }
 }

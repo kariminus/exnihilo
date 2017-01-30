@@ -14,9 +14,7 @@ class RaceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('imageRaceHomme',     ImageRaceHommeType::class)
-            ->add('imageRaceFemme',     ImageRaceFemmeType::class);
+            ->add('name');
     }
 
     /**

@@ -41,12 +41,13 @@ class ManageEvent
     public function eventNew($request)
     {
         $event = new Event();
-        $form = $this->formFactory->create('ExNihilo\EventBundle\Form\EventType', $event);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\EventBundle\Form\EventType', $event)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->persist($event);
-            $em = $this->em->flush($event);
+            $this->em->persist($event);
+            $this->em->flush($event);
         }
 
         return [$event, $form];
@@ -58,9 +59,8 @@ class ManageEvent
      */
     public function eventShow ($event)
     {
-        $deleteForm = $this->createDeleteForm($event);
 
-        return [$event, $deleteForm];
+        return [$event, $this->createDeleteForm($event)];
     }
 
     public function eventView ($id, User $user)
@@ -108,8 +108,9 @@ class ManageEvent
     public function eventEdit ($request, $event)
     {
 
-        $form = $this->formFactory->create('ExNihilo\EventBundle\Form\EventType', $event);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\EventBundle\Form\EventType', $event)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 

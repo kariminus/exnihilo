@@ -27,7 +27,6 @@ class ClasseController extends Controller
 
         );
 
-
         return $this->render('ExNihiloPlatformBundle:classe:index.html.twig', array(
             'classes' => $result,
         ));
@@ -36,8 +35,7 @@ class ClasseController extends Controller
 
     public function newAction(Request $request)
     {
-        $manageClasse = $this->get('manage_classe');
-        $array = $manageClasse->classeNew($request);
+        $array = $this->get('manage_classe')->classeNew($request);
 
         return $this->render('ExNihiloPlatformBundle:classe:new.html.twig', array(
             'classe' => $array[0],
@@ -48,10 +46,9 @@ class ClasseController extends Controller
 
     public function viewAction($id)
     {
-        $manageClasse = $this->get('manage_classe');
 
         return $this->render('ExNihiloplatformBundle:classe:view.html.twig', array(
-            'classe' => $manageClasse->classeView($id),
+            'classe' => $this->get('manage_classe')->classeView($id),
         ));
     }
 
@@ -59,8 +56,7 @@ class ClasseController extends Controller
     public function editAction(Request $request, Classe $classe)
     {
 
-        $manageClasse = $this->get('manage_classe');
-        $array = $manageClasse->classeEdit($request, $classe);
+        $array = $this->get('manage_classe')->classeEdit($request, $classe);
 
         return $this->render('ExNihiloPlatformBundle:classe:edit.html.twig', array(
             'classe' => $array[0],
@@ -70,8 +66,7 @@ class ClasseController extends Controller
 
     public function deleteAction($id)
     {
-        $manageClasse = $this->get('manage_classe');
-        $manageClasse->classeDelete($id);
+        $this->get('manage_classe')->classeDelete($id);
 
         return $this->redirectToRoute('admin_classe_index');
     }

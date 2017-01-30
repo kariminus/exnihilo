@@ -36,8 +36,7 @@ class ArticleController extends Controller
 
     public function newAction(Request $request)
     {
-        $manageArticle = $this->get('manage_article');
-        $array = $manageArticle->articleNew($request);
+        $array = $this->get('manage_article')->articleNew($request);
 
         return $this->render('ExNihiloBlogBundle:article:new.html.twig', array(
             'article' => $array[0],
@@ -48,8 +47,7 @@ class ArticleController extends Controller
 
     public function viewAction(Request $request, $id)
     {
-        $manageArticle = $this->get('manage_article');
-        $array = $manageArticle->ArticleView($request, $id);
+        $array = $this->get('manage_article')->ArticleView($request, $id);
 
         return $this->render('ExNihiloBlogBundle:article:view.html.twig', array(
             'article'  => $array[0],
@@ -62,8 +60,7 @@ class ArticleController extends Controller
     public function editAction(Request $request, Article $article)
     {
 
-        $manageArticle = $this->get('manage_article');
-        $array = $manageArticle->articleEdit($request, $article);
+        $array = $this->get('manage_article')->articleEdit($request, $article);
 
         return $this->render('ExNihiloBlogBundle:article:edit.html.twig', array(
             'article' => $array[0],
@@ -73,8 +70,7 @@ class ArticleController extends Controller
 
     public function deleteAction($id)
     {
-        $manageArticle = $this->get('manage_article');
-        $manageArticle->articleDelete($id);
+        $this->get('manage_article')->articleDelete($id);
 
         return $this->redirectToRoute('admin_article_index');
     }

@@ -36,8 +36,7 @@ class EventController extends Controller
 
     public function newAction(Request $request)
     {
-        $manageEvent = $this->get('manage_event');
-        $array = $manageEvent->eventNew($request);
+        $array = $this->get('manage_event')->eventNew($request);
 
         return $this->render('ExNihiloEventBundle:event:new.html.twig', array(
             'event' => $array[0],
@@ -49,8 +48,7 @@ class EventController extends Controller
     public function viewAction($id, UserInterface $user)
     {
         $user = $this->get('security.token_storage')->getToken()->getUser();
-        $manageEvent = $this->get('manage_event');
-        $array = $manageEvent->EventView($id, $user);
+        $array = $this->get('manage_event')->EventView($id, $user);
 
         return $this->render('ExNihiloEventBundle:event:view.html.twig', array(
             'event' => $array[0],
@@ -61,9 +59,7 @@ class EventController extends Controller
 
     public function editAction(Request $request, Event $event)
     {
-
-        $manageEvent = $this->get('manage_event');
-        $array = $manageEvent->eventEdit($request, $event);
+        $array = $this->get('manage_event')->eventEdit($request, $event);
 
         return $this->render('ExNihiloEventBundle:event:edit.html.twig', array(
             'article' => $array[0],
@@ -73,16 +69,14 @@ class EventController extends Controller
 
     public function deleteAction($id)
     {
-        $manageEvent = $this->get('manage_event');
-        $manageEvent->eventDelete($id);
+        $this->get('manage_event')->eventDelete($id);
 
         return $this->redirectToRoute('admin_event_index');
     }
 
     public function bookingAction()
     {
-        $manageEvent = $this->get('manage_event');
-        $manageEvent->eventBooking();
+        $this->get('manage_event')->eventBooking();
 
         return $this->redirectToRoute('event_view');
     }

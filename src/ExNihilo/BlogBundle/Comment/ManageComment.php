@@ -33,9 +33,8 @@ class ManageComment
 
     public function commentNew($articleId)
     {
-        $article = $this->getArticle($articleId);
         $comment = new Comment();
-        $comment->setArticle($article);
+        $comment->setArticle($this->getArticle($articleId));
         $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
 
         return [$comment, $form];
@@ -43,15 +42,15 @@ class ManageComment
 
     public function commentCreate($request, $articleId)
     {
-        $article = $this->getArticle($articleId);
         $comment = new Comment();
-        $comment->setArticle($article);
-        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
-        $form->handleRequest($request);
+        $comment->setArticle($article = $this->getArticle($articleId));
+        $form = $this->formFactory
+            ->create('ExNihilo\BlogBundle\Form\CommentType', $comment
+                ->handleRequest($request));
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->persist($comment);
-            $em = $this->em->flush($comment);
+            $this->em->persist($comment);
+            $this->em->flush();
         }
 
         return [$comment, $form];
@@ -83,8 +82,9 @@ class ManageComment
     public function commentEdit ($request, $comment)
     {
 
-        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\BlogBundle\Form\CommentType', $comment
+            )->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 

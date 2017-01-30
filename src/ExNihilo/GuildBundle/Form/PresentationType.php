@@ -13,11 +13,7 @@ class PresentationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('content',                CkeditorType::class)
-            ->add('imagePresentation',      ImagePresentationType::class)
-            ->add('image2Presentation',     Image2PresentationType::class)
-            ->add('image3Presentation',     Image3PresentationType::class)
-            ->add('image4Presentation',     Image4PresentationType::class);
+            ->add('content',                CkeditorType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

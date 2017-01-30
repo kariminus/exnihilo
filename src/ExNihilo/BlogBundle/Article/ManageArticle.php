@@ -32,18 +32,18 @@ class ManageArticle
     {
         return $this->em->getRepository('ExNihiloBlogBundle:Article')->findAll();
 
-
     }
 
     public function articleNew($request)
     {
         $article = new Article();
-        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\ArticleType', $article);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\BlogBundle\Form\ArticleType', $article)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->persist($article);
-            $em = $this->em->flush($article);
+            $this->em->persist($article);
+            $this->em->flush();
         }
 
         return [$article, $form];
@@ -56,12 +56,13 @@ class ManageArticle
 
         $comment = new Comment();
         $comment->setArticle($article);
-        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\CommentType', $comment);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\BlogBundle\Form\CommentType', $comment)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->persist($comment);
-            $em = $this->em->flush($comment);
+            $this->em->persist($comment);
+            $this->em->flush();
         }
 
         $comments = $this->em->getRepository('ExNihiloBlogBundle:Comment')
@@ -97,8 +98,9 @@ class ManageArticle
      */
     public function articleEdit ($request, $article)
     {
-        $form = $this->formFactory->create('ExNihilo\BlogBundle\Form\ArticleType', $article);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\BlogBundle\Form\ArticleType', $article)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 

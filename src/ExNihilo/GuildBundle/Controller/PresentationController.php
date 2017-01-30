@@ -15,7 +15,6 @@ class PresentationController extends Controller
 
     public function indexAction()
     {
-
         return $this->render('ExNihiloGuildBundle:presentation:index.html.twig', array(
             'presentation' => $this->get('manage_presentation')->PresentationIndex(),
         ));
@@ -24,8 +23,7 @@ class PresentationController extends Controller
 
     public function newAction(Request $request)
     {
-        $managePresentation = $this->get('manage_presentation');
-        $array = $managePresentation->PresentationNew($request);
+        $array = $this->get('manage_presentation')->PresentationNew($request);
 
         return $this->render('ExNihiloGuildBundle:presentation:new.html.twig', array(
             'presentation' => $array[0],
@@ -36,9 +34,7 @@ class PresentationController extends Controller
 
     public function editAction(Request $request, Presentation $presentation)
     {
-
-        $managePresentation = $this->get('manage_presentation');
-        $array = $managePresentation->presentationEdit($request, $presentation);
+        $array = $this->get('manage_presentation')->presentationEdit($request, $presentation);
 
         return $this->render('ExNihiloGuildBundle:presentation:edit.html.twig', array(
             'presentation' => $array[0],

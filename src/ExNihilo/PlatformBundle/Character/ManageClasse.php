@@ -36,12 +36,13 @@ class ManageClasse
     public function classeNew($request)
     {
         $classe = new Classe();
-        $form = $this->formFactory->create('ExNihilo\PlatformBundle\Form\ClasseType', $classe);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\PlatformBundle\Form\ClasseType', $classe)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->persist($classe);
-            $em = $this->em->flush($classe);
+            $this->em->persist($classe);
+            $this->em->flush();
         }
 
         return [$classe, $form];
@@ -50,9 +51,7 @@ class ManageClasse
     public function classeView ($id)
     {
 
-        $classe = $this->em->getRepository('ExNihiloPlatformBundle:Classe')->find($id);
-
-        return $classe;
+        return $this->em->getRepository('ExNihiloPlatformBundle:Classe')->find($id);
     }
 
     /**
@@ -79,8 +78,9 @@ class ManageClasse
      */
     public function classeEdit ($request, $classe)
     {
-        $form = $this->formFactory->create('ExNihilo\PlatformBundle\Form\ClasseType', $classe);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\PlatformBundle\Form\ClasseType', $classe)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 

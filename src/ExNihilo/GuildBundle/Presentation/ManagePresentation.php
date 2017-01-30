@@ -27,21 +27,20 @@ class ManagePresentation
      */
     public function presentationIndex()
     {
-        $presentation = $this->em->getRepository('ExNihiloGuildBundle:Presentation')->find(1);
-
-        return $presentation;
+        return $this->em->getRepository('ExNihiloGuildBundle:Presentation')->find(1);
 
     }
 
     public function presentationNew($request)
     {
         $presentation = new Presentation();
-        $form = $this->formFactory->create('ExNihilo\GuildBundle\Form\PresentationType', $presentation);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\GuildBundle\Form\PresentationType', $presentation)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->em->persist($presentation);
-            $em = $this->em->flush($presentation);
+            $this->em->persist($presentation);
+            $this->em->flush();
         }
 
         return [$presentation, $form];
@@ -55,8 +54,9 @@ class ManagePresentation
     public function presentationEdit ($request, $presentation)
     {
 
-        $form = $this->formFactory->create('ExNihilo\GuildBundle\Form\PresentationType', $presentation);
-        $form->handleRequest($request);
+        $form = $this->formFactory
+            ->create('ExNihilo\GuildBundle\Form\PresentationType', $presentation)
+            ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
