@@ -4,7 +4,7 @@
     <h1>{{ event.title }}</h1>
     <p>{{ event.content }}</p>
 
-
+    <h2>Liste des inscrits</h2>
     <ul>
         {% for user in event.users %}
             <li>{{ user.username }}</li>
@@ -15,7 +15,6 @@
         <form action="" method="POST">
             <button type="submit" class="btn btn-lg btn-primary">S'inscrire</button>
         </form>
-
     {% else %}
         <form action="" method="POST">
             <button type="submit" class="btn btn-lg btn-primary" disabled>S'inscrire</button>

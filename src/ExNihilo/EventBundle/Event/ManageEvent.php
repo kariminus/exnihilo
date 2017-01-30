@@ -63,7 +63,7 @@ class ManageEvent
         return [$event, $this->createDeleteForm($event)];
     }
 
-    public function eventView ($id, User $user)
+    public function eventView ($id, $user)
     {
         $request = $this->requestStack->getCurrentRequest();
         $event = $this->em->getRepository('ExNihiloEventBundle:Event')->find($id);

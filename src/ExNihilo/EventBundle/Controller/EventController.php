@@ -45,7 +45,7 @@ class EventController extends Controller
     }
 
 
-    public function viewAction($id, UserInterface $user)
+    public function viewAction($id)
     {
         $user = $this->get('security.token_storage')->getToken()->getUser();
         $array = $this->get('manage_event')->EventView($id, $user);
