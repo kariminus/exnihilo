@@ -5,6 +5,7 @@ namespace ExNihilo\EventBundle\Controller;
 use ExNihilo\EventBundle\Entity\Event;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Event controller.
@@ -36,13 +37,15 @@ class EventController extends Controller
     }
 
 
-    public function viewAction($id)
+    public function viewAction($id, UserInterface $user)
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
         $manageEvent = $this->get('manage_event');
-        $event = $manageEvent->EventView($id);
+        $array = $manageEvent->EventView($id, $user);
 
         return $this->render('ExNihiloEventBundle:event:view.html.twig', array(
-            'event' => $event,
+            'event' => $array[0],
+            'users' => $array[1]
         ));
     }
 
@@ -65,6 +68,14 @@ class EventController extends Controller
         $manageEvent->eventDelete($id);
 
         return $this->redirectToRoute('admin_event_index');
+    }
+
+    public function bookingAction()
+    {
+        $manageEvent = $this->get('manage_event');
+        $manageEvent->eventBooking();
+
+        return $this->redirectToRoute('event_view');
     }
 
 }

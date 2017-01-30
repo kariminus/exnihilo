@@ -4,4 +4,24 @@
     <h1>{{ event.title }}</h1>
     <p>{{ event.content }}</p>
 
+
+    <ul>
+        {% for user in event.users %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if is_granted('ROLE_USER') %}
+        <form action="" method="POST">
+            <button type="submit" class="btn btn-lg btn-primary">S'inscrire</button>
+        </form>
+
+    {% else %}
+        <form action="" method="POST">
+            <button type="submit" class="btn btn-lg btn-primary" disabled>S'inscrire</button>
+            <p>Veuillez vous connecter pour vous inscrire à cet événement</p>
+        </form>
+
+    {% endif %}
+
 {% endblock %}
