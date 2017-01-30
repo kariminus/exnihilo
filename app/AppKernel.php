@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new ExNihilo\EventBundle\ExNihiloEventBundle(),
             new ExNihilo\GuildBundle\ExNihiloGuildBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

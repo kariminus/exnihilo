@@ -8,3 +8,4 @@ services:
         class:        ExNihilo\PlatformBundle\Character\ManageRace
         arguments:
             ["@doctrine.orm.entity_manager", "@form.factory", "@router"]
+
