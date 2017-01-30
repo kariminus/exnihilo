@@ -50,9 +50,14 @@ class ArticleController extends Controller
         $array = $this->get('manage_article')->ArticleView($request, $id);
 
         return $this->render('ExNihiloBlogBundle:article:view.html.twig', array(
-            'article'  => $array[0],
-            'comments' => $array[1],
-            'form'     => $array[2]->createView(),
+
+            'article'           => $array[0],
+            'comments'          => $array[1],
+            'form'              => $array[2]->createView(),
+            'next'              => $array[3],
+            'before'            => $array[4],
+            'nextTitle'         => $array[5],
+            'beforeTitle'       => $array[6],
         ));
     }
 

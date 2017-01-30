@@ -8,4 +8,17 @@
         <h3>Commentaires</h3>
         {% include 'ExNihiloBlogBundle:Comment:view.html.twig' with { 'comments': comments } %}
     </section>
+
+    {% if before == 0 %}
+    {% else %}
+        <a href="{{ path('article_view', {'id': before}) }}">Article précédent</a>
+        <p>{{ beforeTitle }}</p>
+    {% endif %}
+
+    {% if next == 0 %}
+        {% else %}
+            <a href="{{ path('article_view', {'id': next}) }}">Article suivant</a>
+            <p>{{ nextTitle }}</p>
+    {% endif %}
+
 {% endblock %}

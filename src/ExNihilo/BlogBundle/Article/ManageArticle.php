@@ -53,6 +53,24 @@ class ManageArticle
     {
 
         $article = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id);
+        $articleNext = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id+1);
+        $articleBefore = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id-1);
+
+        if ($articleNext == null ) {
+            $next = 0;
+            $nextTitle = 0;
+        } else {
+            $next = $articleNext->getId();
+            $nextTitle = $articleNext->getTitle();
+        }
+
+        if ($articleBefore == null ) {
+            $before = 0;
+            $beforeTitle = 0;
+        } else {
+            $before = $articleBefore->getId();
+            $beforeTitle = $articleBefore->getTitle();
+        }
 
         $comment = new Comment();
         $comment->setArticle($article);
@@ -71,7 +89,7 @@ class ManageArticle
 
 
 
-        return [$article, $comments, $form];
+        return [$article, $comments, $form, $next, $before, $nextTitle, $beforeTitle];
     }
 
     /**
