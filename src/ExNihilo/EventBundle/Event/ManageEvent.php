@@ -4,6 +4,7 @@ namespace ExNihilo\EventBundle\Event;
 
 use Doctrine\ORM\EntityManager;
 use ExNihilo\EventBundle\Entity\Event;
+use ExNihilo\UserBundle\Entity\User;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class ManageEvent
@@ -62,17 +63,23 @@ class ManageEvent
         return [$event, $deleteForm];
     }
 
-    public function eventView ($id, $user)
+    public function eventView ($id, User $user)
     {
         $request = $this->requestStack->getCurrentRequest();
+        $event = $this->em->getRepository('ExNihiloEventBundle:Event')->find($id);
+        $users = $this->em->getRepository('ExNihiloEventBundle:Event')->getUserswithEvent($id);
 
 
         if ($request->isMethod('POST')) {
 
+            $event->addUser($user);
+            $user->addEvent($event);
+            $this->em->persist($event);
+            $this->em->persist($user);
+            $this->em->flush();
 
         }
-        $event = $this->em->getRepository('ExNihiloEventBundle:Event')->find($id);
-        $users = $this->em->getRepository('ExNihiloEventBundle:Event')->getUserswithEvent($id);
+
 
         return [$event, $users];
     }
