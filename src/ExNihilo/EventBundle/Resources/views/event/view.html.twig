@@ -11,10 +11,12 @@
         {% endfor %}
     </ul>
 
-    {% if is_granted('ROLE_USER') %}
+    {% if is_granted('ROLE_USER') and booked == 0 %}
         <form action="" method="POST">
             <button type="submit" class="btn btn-lg btn-primary">S'inscrire</button>
         </form>
+        {% elseif booked > 0 %}
+
     {% else %}
         <form action="" method="POST">
             <button type="submit" class="btn btn-lg btn-primary" disabled>S'inscrire</button>

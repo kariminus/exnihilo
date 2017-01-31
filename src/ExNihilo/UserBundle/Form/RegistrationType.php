@@ -46,7 +46,7 @@ class RegistrationType extends AbstractType
             ->add('isGuildMember')
             ->add('roles', ChoiceType::class, [
                 'multiple' => true,
-                'expanded' => true, // render check-boxes
+                'expanded' => true,
                 'choices' => [
                     'Admin' => 'ROLE_ADMIN',
                     'Membre' => 'ROLE_USER',

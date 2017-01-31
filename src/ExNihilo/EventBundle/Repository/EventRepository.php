@@ -30,4 +30,24 @@ class EventRepository extends EntityRepository
             ->getResult()
             ;
     }
+
+    public function checkEvent($eventId, $userId)
+    {
+        $qb = $this->createQueryBuilder('e');
+
+        $qb
+            ->innerJoin('e.users', 'u')
+            ->select('e')
+            ->addSelect('u')
+        ;
+        $qb
+            ->where($qb->expr()->in('e.id', $eventId))
+            ->andWhere($qb->expr()->in('u.id', $userId))
+        ;
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

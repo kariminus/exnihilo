@@ -69,6 +69,8 @@ class ManageEvent
         $event = $this->em->getRepository('ExNihiloEventBundle:Event')->find($id);
         $users = $this->em->getRepository('ExNihiloEventBundle:Event')->getUserswithEvent($id);
 
+        $booked = $this->em->getRepository('ExNihiloEventBundle:Event')->checkEvent($id, $user->getId());
+
 
         if ($request->isMethod('POST')) {
 
@@ -80,8 +82,7 @@ class ManageEvent
 
         }
 
-
-        return [$event, $users];
+        return [$event, $users, $booked];
     }
 
 

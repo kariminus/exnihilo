@@ -52,7 +52,8 @@ class EventController extends Controller
 
         return $this->render('ExNihiloEventBundle:event:view.html.twig', array(
             'event' => $array[0],
-            'users' => $array[1]
+            'users' => $array[1],
+            'booked' => $array[1]
         ));
     }
 

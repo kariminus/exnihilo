@@ -120,7 +120,6 @@ class User implements UserInterface
         return $this->username;
     }
 
-
     public function setUsername($username)
     {
         $this->username = $username;
@@ -143,7 +142,6 @@ class User implements UserInterface
     public function getRoles()
     {
         $roles = $this->roles;
-        // give everyone ROLE_USER!
         if (!in_array('ROLE_USER', $roles)) {
             $roles[] = 'ROLE_USER';
         }
