@@ -90,10 +90,13 @@ class ManageArticle
         $comments = $this->em->getRepository('ExNihiloBlogBundle:Comment')
             ->getCommentsForArticle($article->getId());
 
+        $commentNumber = $this->em->getRepository('ExNihiloBlogBundle:Comment')
+            ->countCommentsForArticle($article->getId());
 
 
 
-        return [$article, $comments, $form, $next, $before, $nextTitle, $beforeTitle];
+
+        return [$article, $comments, $form, $next, $before, $nextTitle, $beforeTitle, $commentNumber];
     }
 
     /**

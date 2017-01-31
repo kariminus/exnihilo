@@ -1,6 +1,18 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
+    {% if article.image is not null %}
+        <img
+                src="{{ asset(article.image.webPath) }}"
+                alt="{{ article.image.alt }}"
+                height="60"
+        />
+    {% endif %}
+    <p>{{ commentNumber }}
+        {% if commentNumber > 1 %} commentaires
+            {% else %} commentaire
+        {% endif %}
+    </p>
     <h1>{{ article.title }}</h1>
     <h3>{{ article.createdAt | date ("d/m/Y") }}</h3>
     <p>{{ article.content }}</p>

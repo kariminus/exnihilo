@@ -58,6 +58,7 @@ class ArticleController extends Controller
             'before'            => $array[4],
             'nextTitle'         => $array[5],
             'beforeTitle'       => $array[6],
+            'commentNumber'     => $array[7],
         ));
     }
 
