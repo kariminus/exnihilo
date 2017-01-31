@@ -148,7 +148,7 @@ class Event
     /**
      * @param User $user
      */
-    public function removeEvent(User $user)
+    public function removeUser(User $user)
     {
         $this->users->removeElement($user);
     }

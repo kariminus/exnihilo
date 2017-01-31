@@ -47,13 +47,13 @@ class EventController extends Controller
 
     public function viewAction($id)
     {
-        $user = $this->get('security.token_storage')->getToken()->getUser();
-        $array = $this->get('manage_event')->EventView($id, $user);
+        $array = $this->get('manage_event')->EventView($id);
 
         return $this->render('ExNihiloEventBundle:event:view.html.twig', array(
             'event' => $array[0],
             'users' => $array[1],
-            'booked' => $array[1]
+            'booked' => $array[2],
+            'connected' => $array[3]
         ));
     }
 

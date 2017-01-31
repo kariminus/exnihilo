@@ -10,6 +10,7 @@
                         height="60"
                 />
             {% endif %}
+            <h3>{{ article.createdAt | date ("d/m/Y")}}</h3>
             <h1>{{ article.title }}</h1>
             <p>{{ article.content|slice(0,100) }}...
                 <a href="{{ path('article_view', {id: article.id }) }}">read more</a></p>
@@ -18,4 +19,5 @@
     <div class="navigation">
         {{ knp_pagination_render(articles) }}
     </div>
+
 {% endblock %}

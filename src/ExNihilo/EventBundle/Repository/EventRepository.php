@@ -47,7 +47,7 @@ class EventRepository extends EntityRepository
 
         return $qb
             ->getQuery()
-            ->getResult()
+            ->getOneOrNullResult()
             ;
     }
 }

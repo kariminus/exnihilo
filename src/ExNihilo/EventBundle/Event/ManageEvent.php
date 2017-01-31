@@ -6,6 +6,8 @@ use Doctrine\ORM\EntityManager;
 use ExNihilo\EventBundle\Entity\Event;
 use ExNihilo\UserBundle\Entity\User;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 
 class ManageEvent
 {
@@ -18,12 +20,18 @@ class ManageEvent
 
     protected $requestStack;
 
-    public function __construct(EntityManager $em, $formFactory, $router, RequestStack $requestStack)
+    protected $authorizationChecker;
+
+
+
+    public function __construct(EntityManager $em, $formFactory, $router, RequestStack $requestStack, TokenStorage $tokenStorage, AuthorizationCheckerInterface $authorizationChecker)
     {
         $this->em = $em;
         $this->formFactory = $formFactory;
         $this->router = $router;
         $this->requestStack = $requestStack;
+        $this->tokenStorage = $tokenStorage;
+        $this->authorizationChecker = $authorizationChecker;
     }
 
     /**
@@ -63,26 +71,34 @@ class ManageEvent
         return [$event, $this->createDeleteForm($event)];
     }
 
-    public function eventView ($id, $user)
+    public function eventView ($id)
     {
         $request = $this->requestStack->getCurrentRequest();
+        $user = $this->tokenStorage->getToken()->getUser();
         $event = $this->em->getRepository('ExNihiloEventBundle:Event')->find($id);
         $users = $this->em->getRepository('ExNihiloEventBundle:Event')->getUserswithEvent($id);
+        //$booked = 0;
 
-        $booked = $this->em->getRepository('ExNihiloEventBundle:Event')->checkEvent($id, $user->getId());
 
-
-        if ($request->isMethod('POST')) {
-
-            $event->addUser($user);
-            $user->addEvent($event);
-            $this->em->persist($event);
-            $this->em->persist($user);
-            $this->em->flush();
-
+        if ($this->authorizationChecker->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            $booked = $this->em->getRepository('ExNihiloEventBundle:Event')->checkEvent($id, $user->getId());
+            $connected = 1;
+        } else {
+            $booked = 0;
+            $connected = 0;
         }
 
-        return [$event, $users, $booked];
+            if ($request->isMethod('POST')) {
+
+                $event->addUser($user);
+                $user->addEvent($event);
+                $this->em->persist($event);
+                $this->em->persist($user);
+                $this->em->flush();
+            }
+
+
+        return [$event, $users, $booked, $connected];
     }
 
 

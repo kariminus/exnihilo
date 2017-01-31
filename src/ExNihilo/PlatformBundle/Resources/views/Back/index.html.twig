@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <h1>Administration du site</h1>
+    <div id="nav">
+        <a href="{{ path('admin_article_index') }}">Articles</a>
+        <a href="{{ path('admin_comment_index') }}">Commentaires</a>
+        <a href="{{ path('admin_user_index') }}">Membres</a>
+        <a href="{{ path('admin_event_index') }}">Evénements</a>
+        <a href="{{ path('admin_presentation_index') }}">Présentation</a>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+
+{% endblock %}

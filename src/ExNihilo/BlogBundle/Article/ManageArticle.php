@@ -52,7 +52,6 @@ class ManageArticle
 
     public function articleView ($request, $user, $id)
     {
-
         $article = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id);
         $articleNext = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id+1);
         $articleBefore = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id-1);

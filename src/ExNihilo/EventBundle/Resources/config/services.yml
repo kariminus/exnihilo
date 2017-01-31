@@ -2,4 +2,4 @@ services:
     manage_event:
         class:        ExNihilo\EventBundle\Event\ManageEvent
         arguments:
-            ["@doctrine.orm.entity_manager", "@form.factory", "@router", "@request_stack"]
+            ["@doctrine.orm.entity_manager", "@form.factory", "@router", "@request_stack", "@security.token_storage", "@security.authorization_checker"]

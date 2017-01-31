@@ -27,5 +27,10 @@
     {% block body %}{% endblock %}
     {% block javascripts %}{% endblock %}
 </div>
+<footer>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('admin_article_index') }}">Administration du site</a>
+    {% endif %}
+</footer>
 </body>
 </html>

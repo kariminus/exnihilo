@@ -15,15 +15,15 @@ user_register:
     defaults: { _controller: ExNihiloUserBundle:User:register }
 
 ex_nihilo_platform_presentation:
-    path:     /presentation
+    path:     /presentation/
     defaults: { _controller: ExNihiloPlatformBundle:Presentation:index }
 
 ex_nihilo_platform_members:
-    path:     /members
+    path:     /members/
     defaults: { _controller: ExNihiloPlatformBundle:Members:index }
 
 ex_nihilo_platform_events:
-    path:     /events
+    path:     /events/
     defaults: { _controller: ExNihiloPlatformBundle:Events:index }
 
 
