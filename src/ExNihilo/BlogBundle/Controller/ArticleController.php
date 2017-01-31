@@ -47,7 +47,7 @@ class ArticleController extends Controller
 
     public function viewAction(Request $request, $id)
     {
-        $array = $this->get('manage_article')->ArticleView($request, $id);
+        $array = $this->get('manage_article')->ArticleView($request, $this->getUser(), $id);
 
         return $this->render('ExNihiloBlogBundle:article:view.html.twig', array(
 

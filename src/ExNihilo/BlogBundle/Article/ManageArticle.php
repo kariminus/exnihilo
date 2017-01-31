@@ -5,8 +5,8 @@ namespace ExNihilo\BlogBundle\Article;
 use Doctrine\ORM\EntityManager;
 use ExNihilo\BlogBundle\Entity\Article;
 use ExNihilo\BlogBundle\Entity\Comment;
-use ExNihilo\BlogBundle\Form\ArticleType;
-use ExNihilo\BlogBundle\Form\CommentType;
+use ExNihilo\UserBundle\Entity\User;
+
 
 class ManageArticle
 {
@@ -16,6 +16,7 @@ class ManageArticle
     private $formFactory;
 
     private $router;
+
 
     public function __construct(EntityManager $em, $formFactory, $router)
     {
@@ -49,7 +50,7 @@ class ManageArticle
         return [$article, $form];
     }
 
-    public function articleView ($request, $id)
+    public function articleView ($request, $user, $id)
     {
 
         $article = $this->em->getRepository('ExNihiloBlogBundle:Article')->find($id);
@@ -74,14 +75,18 @@ class ManageArticle
 
         $comment = new Comment();
         $comment->setArticle($article);
+        $comment->setAuthor($user->getUsername());
         $form = $this->formFactory
             ->create('ExNihilo\BlogBundle\Form\CommentType', $comment)
             ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $this->em->persist($comment);
             $this->em->flush();
         }
+
+
 
         $comments = $this->em->getRepository('ExNihiloBlogBundle:Comment')
             ->getCommentsForArticle($article->getId());
