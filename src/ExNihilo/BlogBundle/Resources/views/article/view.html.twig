@@ -1,37 +1,65 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    {% if article.image is not null %}
-        <img
-                src="{{ asset(article.image.webPath) }}"
-                alt="{{ article.image.alt }}"
-                height="60"
-        />
-    {% endif %}
-    <p>{{ commentNumber }}
-        {% if commentNumber > 1 %} commentaires
-            {% else %} commentaire
-        {% endif %}
-    </p>
-    <h1>{{ article.title }}</h1>
-    <h3>{{ article.createdAt | date ("d/m/Y") }}</h3>
-    <p>{{ article.content }}</p>
+    <div class="container">
+        <div class="holder">
+            <div class="holder-content">
+                <article class="box-page">
+                    <div class="box-alpha">
+                        {% if article.image is not null %}
+                        <figure class="featured-image">
+                            <img src="{{ asset(article.image.webPath) }}" width="756" height="425"
+                                 srcset="{{ asset(article.image.webPath) }} 756w, {{ asset(article.image.webPath) }} 1512w"
+                                 sizes="(max-width: 767px) 100vw, 756px" alt="{{ article.image.alt }}"/>
+                        </figure>
+                        {% endif %}
+                    </div>
+                    <div class="box-beta">
+                        <ul class="tags">
+                            <li class="tag-comments"><a href="#comments"><span data-hover="{{ commentNumber }}
+                                {% if commentNumber > 1 %} commentaires
+                                {% else %} commentaire
+                                {% endif %}">
+                                        {{ commentNumber }}
+                                        {% if commentNumber > 1 %} commentaires
+                                        {% else %} commentaire
+                                        {% endif %}</span></a>
+                            </li>
+                        </ul>
+                        <div class="box-content">
+                            <h2 class="box-title">{{ article.title }}</h2>
+                            <p class="small-title"><span>Publié le {{ article.createdAt | date ("d/m/Y") }}</span></p>
+                            <p>{{ article.content }}</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <section id="comments" class="box-comments">
+                {% include 'ExNihiloBlogBundle:Comment:view.html.twig' with { 'comments': comments } %}
+        </section>
+        <div class="box">
+            <div class="box-content">
+                <div class="navigation">
+                    <div>
+                        {% if before == 0 %}
+                        {% else %}
+                            <a href="{{ path('article_view', {'id': before}) }}" class="prev">
+                                <span class="nav-link"><span>Article précédent</span><p>{{ beforeTitle }}</p></span>
+                            </a>
+                        {% endif %}
 
-    <section>
-        <h3>Commentaires</h3>
-        {% include 'ExNihiloBlogBundle:Comment:view.html.twig' with { 'comments': comments } %}
-    </section>
+                        {% if next == 0 %}
+                        {% else %}
+                            <a href="{{ path('article_view', {'id': next}) }}" class="next">
+                                <span class="nav-link"><span>Article suivant</span><p>{{ nextTitle }}</p></span>
+                            </a>
+                        {% endif %}
 
-    {% if before == 0 %}
-    {% else %}
-        <a href="{{ path('article_view', {'id': before}) }}">Article précédent</a>
-        <p>{{ beforeTitle }}</p>
-    {% endif %}
-
-    {% if next == 0 %}
-        {% else %}
-            <a href="{{ path('article_view', {'id': next}) }}">Article suivant</a>
-            <p>{{ nextTitle }}</p>
-    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

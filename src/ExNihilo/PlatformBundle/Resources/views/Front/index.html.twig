@@ -2,22 +2,37 @@
 
 {% block body %}
     {% for article in articles %}
-        <div class="page">
-            {% if article.image is not null %}
-                <img
-                        src="{{ asset(article.image.webPath) }}"
-                        alt="{{ article.image.alt }}"
-                        height="60"
-                />
-            {% endif %}
-            <h3>{{ article.createdAt | date ("d/m/Y")}}</h3>
-            <h1>{{ article.title }}</h1>
-            <p>{{ article.content|slice(0,100) }}...
-                <a href="{{ path('article_view', {id: article.id }) }}">read more</a></p>
-        </div>
+        <div class="container">
+        <article class="box-post">
+            <div class="box-alpha">
+                {% if article.image is not null %}
+                    <figure class="featured-image">
+                        <a href="{{ path('article_view', {id: article.id }) }}">
+                            <img src="{{ asset(article.image.webPath) }}" width="767" height="431"
+                                 srcset="{{ asset(article.image.webPath) }}767w, {{ asset(article.image.webPath) }} 1534w"
+                                 sizes="(max-width: 767px) 100vw, 767px" alt="{{ article.image.alt }}"/>
+                            <img src="{{ asset(article.image.webPath) }}" width="350" height="438"
+                                 srcset="{{ asset(article.image.webPath) }} 350w, {{ asset(article.image.webPath) }} 700w"
+                                 sizes="(max-width: 767px) 100vw, 350px" alt="{{ article.image.alt }}"/>
+                        </a>
+                    </figure>
+                {% endif %}
+            </div>
+            <div class="box-beta">
+                <ul class="tags">
+                    <li class="tag-timestamp">{{ article.createdAt | date ("d/m/Y") }}</li>
+                </ul>
+                <div class="box-content">
+                    <h2 class="box-title"><a href="{{ path('article_view', {id: article.id }) }}">{{ article.title }}</a></h2>
+                    {{ article.content|slice(0,500) }}
+                </div>
+                <div class="meta">
+                    <a class="more-link" href="{{ path('article_view', {id: article.id }) }}"><span data-hover="Voir plus">Voir plus</span></a>
+                </div>
+            </div>
+        </article>
     {% endfor %}
     <div class="navigation">
         {{ knp_pagination_render(articles) }}
     </div>
-
 {% endblock %}

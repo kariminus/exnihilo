@@ -1,18 +1,39 @@
 {% for comment in comments %}
-    <p>{{ comment.author }} {{ comment.createdAt|date("d/m/Y") }}</time></p>
-    <p>{{ comment.content }}</p>
-{% else %}
-    <p>Soyez le premier à commenter...</p>
+    <section id="comments" class="box-comments">
+        <div class="box-content">
+            <h3 class="box-title"><span>Commentaires</span></h3>
+            <ul class="comments">
+                <li class="comment">
+                    <div class="body">
+                        <cite class="author">{{ comment.author }} <span class="timestamp">Publié le {{ comment.createdAt|date("d/m/Y") }}</span></cite>
+                        <div class="comment-content">
+                            <p>{{ comment.content }}</p>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    {#<p>Soyez le premier à commenter...</p>#}
 {% endfor %}
 
-<h3>Ajouter un commentaire</h3>
 
 {% if is_granted('ROLE_USER') %}
     {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Valider" />
-    {{ form_end(form) }}
+        <div class="flex-columns">
+            <h3>Laisser un commentaire</h3>
+            <div class="row">
+                {{ form_widget(form) }}
+                <div class="cell-1-1 text-align-center"><input type="submit" value="Valider" /></div>
+                {{ form_end(form) }}
+            </div>
+        </div>
 {% else %}
-    <p>Connectez-vous pour laisser un commentaire</p>
+    <div class="flex-columns">
+        <div class="row">
+            <a href="{{ path("security_login") }}"> <p>Connectez-vous pour laisser un commentaire</p></a>
+        </div>
+    </div>
 
 {% endif %}

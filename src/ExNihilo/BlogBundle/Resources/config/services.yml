@@ -2,7 +2,7 @@ services:
     manage_article:
         class:        ExNihilo\BlogBundle\Article\ManageArticle
         arguments:
-            ["@doctrine.orm.entity_manager", "@form.factory", "@router"]
+            ["@doctrine.orm.entity_manager", "@form.factory", "@router", "@security.authorization_checker"]
 
     manage_comment:
         class:        ExNihilo\BlogBundle\Comment\ManageComment

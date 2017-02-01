@@ -6,6 +6,7 @@ use Doctrine\ORM\EntityManager;
 use ExNihilo\BlogBundle\Entity\Article;
 use ExNihilo\BlogBundle\Entity\Comment;
 use ExNihilo\UserBundle\Entity\User;
+use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 
 
 class ManageArticle
@@ -17,12 +18,15 @@ class ManageArticle
 
     private $router;
 
+    protected $authorizationChecker;
 
-    public function __construct(EntityManager $em, $formFactory, $router)
+
+    public function __construct(EntityManager $em, $formFactory, $router, AuthorizationCheckerInterface $authorizationChecker)
     {
         $this->em = $em;
         $this->formFactory = $formFactory;
         $this->router = $router;
+        $this->authorizationChecker = $authorizationChecker;
     }
 
     /**
@@ -74,7 +78,11 @@ class ManageArticle
 
         $comment = new Comment();
         $comment->setArticle($article);
-        $comment->setAuthor($user->getUsername());
+
+        if ($this->authorizationChecker->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            $comment->setAuthor($user->getUsername());
+            }
+
         $form = $this->formFactory
             ->create('ExNihilo\BlogBundle\Form\CommentType', $comment)
             ->handleRequest($request);
@@ -84,7 +92,6 @@ class ManageArticle
             $this->em->persist($comment);
             $this->em->flush();
         }
-
 
 
         $comments = $this->em->getRepository('ExNihiloBlogBundle:Comment')

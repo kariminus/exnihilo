@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js no-touch" lang="en">
 
-<!-- Mirrored from themes.kubasto.com/template/live/sportsman-index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jan 2017 19:05:48 GMT -->
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,12 +8,14 @@
     <meta name="msapplication-TileImage" content="content/live/thumbs/favicon-270x270.png" />
     <title>{% block title %}Ex Nihilo{% endblock %}</title>
     {% block stylesheets %}
-        <link rel="icon" href="{{ asset('content/live/thumbs/favicon-32x32.png') }}" sizes="32x32" />
-        <link rel="icon" href="{{ asset('content/live/thumbs/favicon-192x192.png') }}" sizes="192x192" />
-        <link rel="apple-touch-icon-precomposed" href="{{ asset('content/live/thumbs/favicon-180x180.png') }}" />
+        {#<link rel="icon" href="{{ asset('content/live/thumbs/favicon-32x32.png') }}" sizes="32x32" />#}
+        {#<link rel="icon" href="{{ asset('content/live/thumbs/favicon-192x192.png') }}" sizes="192x192" />#}
+        {#<link rel="apple-touch-icon-precomposed" href="{{ asset('content/live/thumbs/favicon-180x180.png') }}" />#}
+        {#<link rel="stylesheet" href="{{ asset('css/main.css')}}" />#}
         <link rel="stylesheet" href="{{ asset('css/demo-switcher.min.css')}}" />
         <link rel="stylesheet" href="{{ asset('css/style-active.min.css')}}" />
         <link rel="stylesheet" href="{{ asset('css/typo-open-sans-oswald.min.css')}}" />
+
         <style>
             body {
                 background-color: #102A10;
@@ -59,8 +60,13 @@
             </div>
         </div>
     </header>
-    {% block body %}{% endblock %}
+    {% block body %}
+    {% endblock %}
+
     {% block javascripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="{{ asset ( 'js/app.min.js')}}"></script>
+        <script src="{{ asset ('js/demo-switcher.min.js')}}"></script>
     {% endblock %}
 </div>
 <footer>
