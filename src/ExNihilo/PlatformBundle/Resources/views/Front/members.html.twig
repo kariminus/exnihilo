@@ -1,11 +1,13 @@
+<ul>
 {% for user in users %}
-    <tr>
-        <td>{{ user.username }}</td>
+    <li>
+    {{ user.username }}
         {% if user.gender == 0 %}
-            <td><img src="{{ asset('/images/logos/races/hommes/') }}{{ user.race.name }}.png" alt="{{ user.race.name }}"/></td>
-        {% else %}
-            <td><img src="{{ asset('/images/logos/races/femmes/') }}{{ user.race.name }}.png" alt="{{ user.race.name }}"/></td>
-        {% endif %}
-        <td><a href="http://eu.battle.net/wow/fr/character/hyjal/{{ user.username }}/simple">Armurerie</a></td>
-    </tr>
+        <img src="{{ asset('/images/logos/races/hommes/') }}{{ user.race.name }}.png" alt="{{ user.race.name }}"/>
+{% else %}
+        <img src="{{ asset('/images/logos/races/femmes/') }}{{ user.race.name }}.png" alt="{{ user.race.name }}"/>
+{% endif %}
+    <a href="http://eu.battle.net/wow/fr/character/hyjal/{{ user.username }}/simple">Armurerie</a>
+    </li>
 {% endfor %}
+</ul>

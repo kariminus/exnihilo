@@ -1,26 +1,56 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% for classe in classes %}
-        <li>
-            <table>
-                <tbody>
-                <tr>
-                    <td><img
-                                src="{{ asset(classe.imageClasse.webPath) }}"
-                                alt="{{ classe.imageClasse.alt }}"
-                                height="60"
-                        /></td>
-                    <td>
-                        {{ render(controller(
-                        'ExNihiloPlatformBundle:Members:getUsers',
-                        { 'id': classe.id }
-                        )) }}
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </li>
+    <body class="background-dots">
+    <div id="wrapper">
+        <div class="container">
+            <div class="holder">
+                <div class="holder-content">
+                    <article class="box-page">
+                        <div class="box-beta">
+                            <div class="box-content">
+                                {% for classe in classes %}
+                                    <table class="width-full">
+                                        <tbody>
+                                    <tr>
+                                       <td> <img src="{{ asset(classe.imageClasse.webPath) }}"
+                                                alt="{{ classe.imageClasse.alt }}"
+                                                width="200"
+                                        />
+                                       </td>
+                                        <td>
+                                                {{ render(controller(
+                                                'ExNihiloPlatformBundle:Members:getUsers',
+                                                { 'id': classe.id }
+                                                )) }}
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                        </table>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </article>
+                </div>
 
-    {% endfor %}
-{%  endblock %}
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                var
+                    pn = window.location.pathname + window.location.search,
+                    fn = pn.slice(pn.lastIndexOf('http://themes.kubasto.com/') + 1);
+                $('#header nav li:has(> a[href="' + fn + '"])')
+                    .addClass('current')
+                    .parents('li')
+                    .addClass('current');
+            });
+        })(jQuery);
+    </script>
+    </body>
+
+{% endblock %}
