@@ -61,16 +61,6 @@ class ManageEvent
         return [$event, $form];
     }
 
-    /**
-     * Finds and displays an event entity.
-     *
-     */
-    public function eventShow ($event)
-    {
-
-        return [$event, $this->createDeleteForm($event)];
-    }
-
     public function eventView ($id)
     {
         $request = $this->requestStack->getCurrentRequest();
