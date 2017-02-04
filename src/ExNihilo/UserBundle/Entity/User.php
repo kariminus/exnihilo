@@ -19,6 +19,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Entity(repositoryClass="ExNihilo\UserBundle\Repository\UserRepository")
  * @UniqueEntity(fields={"email"}, message="Ce mail est déjà utilisé")
  * @UniqueEntity(fields={"username"}, message="Ce membre existe déjà")
+ * @ORM\HasLifecycleCallbacks()
  */
 class User implements UserInterface
 {
@@ -69,8 +70,8 @@ class User implements UserInterface
     private $classe;
 
     /**
-     * @ORM\OneToOne(targetEntity="ExNihilo\PlatformBundle\Entity\Race", cascade={"persist", "remove"})
-     *
+     * @ORM\ManyToOne(targetEntity="ExNihilo\PlatformBundle\Entity\Race", inversedBy="users")
+     * @ORM\JoinColumn(name="race_id", referencedColumnName="id")
      */
     protected $race;
 
@@ -273,6 +274,15 @@ class User implements UserInterface
     public function getEvents()
     {
         return $this->events;
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updateName()
+    {
+        $this->setUsername(ucfirst($this->getUsername()));
     }
 
 }

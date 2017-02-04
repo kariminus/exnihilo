@@ -4,6 +4,8 @@ namespace ExNihilo\PlatformBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
+use ExNihilo\UserBundle\Entity\User;
 
 /**
  * Race
@@ -28,6 +30,17 @@ class Race
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="ExNihilo\UserBundle\Entity\User", mappedBy="race")
+     */
+    private $users;
+
+    public function __construct() {
+
+        $this->users = new ArrayCollection();
+    }
 
 
     /**
@@ -64,5 +77,28 @@ class Race
         return $this->name;
     }
 
+    /**
+     * @param User $user
+     */
+    public function addUser(User $user)
+    {
+        $this->users[] = $user;
+        $user->setrace($this);
+    }
+    /**
+     * @param User $user
+     */
+    public function removeUser(User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
 }
 
