@@ -2,15 +2,20 @@
 
 {% block content %}
     <h1>Presentation creation</h1>
-
+<div class="well">
     {{ form_start(form) }}
         {{ form_widget(form) }}
+    <a href="#" id="add_imagePresentation" class="btn btn-default">Ajouter une image de présentation</a>
         <input type="submit" value="Create" />
-    {{ form_end(form) }}
 
+    {{ form_end(form) }}
+</div>
     <ul>
         <li>
             <a href="{{ path('admin_presentation_index') }}">Back to the list</a>
         </li>
     </ul>
+
+    <script src="https:ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ asset ('js/addImagePresentation.js')}}"></script>
 {% endblock %}

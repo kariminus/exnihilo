@@ -39,6 +39,12 @@ class ManagePresentation
             ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $imagePresentations = $presentation->getImagePresentations();
+
+            foreach ($imagePresentations as $imagePresentation)
+            {
+                $imagePresentation->setPresentation($presentation);
+            }
             $this->em->persist($presentation);
             $this->em->flush();
         }
