@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Table(name="image_presentation")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ExNihilo\GuildBundle\Repository\ImagePresentationRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class ImagePresentation

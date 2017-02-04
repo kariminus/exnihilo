@@ -9,9 +9,11 @@ class PresentationController extends Controller
 {
     public function indexAction()
     {
+        $array = $this->get('manage_presentation')->presentationView();
 
         return $this->render('ExNihiloPlatformBundle:Front:presentation.html.twig', array(
-            'presentation'=> $this->get('manage_presentation')->presentationIndex()
+            'presentation' => $array[0],
+            'images' => $array[1],
         ));
     }
 

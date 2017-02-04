@@ -52,12 +52,20 @@ class ManagePresentation
         return [$presentation, $form];
     }
 
+    public function presentationView()
+    {
+        $presentation = $this->em->getRepository('ExNihiloGuildBundle:Presentation')->find(1);
+
+        $images = $presentation->getImagePresentations();
+
+        return [$presentation, $images];
+    }
 
     /**
      * Displays a form to edit an existing presentation entity.
      *
      */
-    public function presentationEdit ($request, $presentation)
+    public function presentationEdit ($request, Presentation $presentation)
     {
 
         $form = $this->formFactory
@@ -66,6 +74,13 @@ class ManagePresentation
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            $imagePresentations = $presentation->getImagePresentations();
+
+            foreach ($imagePresentations as $imagePresentation)
+            {
+                $imagePresentation->setPresentation($presentation);
+            }
+            $this->em->persist($presentation);
             $this->em->flush();
         }
 

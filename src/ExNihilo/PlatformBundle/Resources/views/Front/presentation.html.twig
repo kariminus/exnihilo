@@ -1,19 +1,23 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <div>
-        {{ presentation.content }}
+    <div class="container">
+        <div class="holder">
+            <div class="holder-content">
+                <article class="box-page">
+                    <div class="box-alpha">
+                    </div>
+                    <div class="box-beta">
+                        <div class="box-content">
+                            <p>{{ presentation.content }}</p>
+                        </div>
+                        {% for image in images %}
+                                <img src="{{ asset(image.webPath) }}" alt="{{ image.alt }}"/>
+                        {% endfor %}
+                    </div>
+                </article>
+            </div>
+        </div>
     </div>
-    <div>
 
-    </div>
-    <div>
-
-    </div>
-    <div>
-
-    </div>
-    <div>
-
-    </div>
 {% endblock %}

@@ -31,6 +31,11 @@ class PresentationController extends Controller
         ));
     }
 
+    public function viewAction ()
+    {
+
+    }
+
 
     public function editAction(Request $request, Presentation $presentation)
     {

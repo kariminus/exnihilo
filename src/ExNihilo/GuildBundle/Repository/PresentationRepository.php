@@ -10,4 +10,5 @@ namespace ExNihilo\GuildBundle\Repository;
  */
 class PresentationRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }

@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="holder">
+            <div class="holder-content">
+                <article class="box-page">
+                    <div class="box-alpha">
+                    </div>
+                    <div class="box-beta">
+                        <div class="box-content">
+                            <p>{{ article.content }}</p>
+                        </div>
+                        {% for images as image %}
+                            <figure class="featured-image">
+                                <img src="{{ asset(presentation.image.webPath) }}" width="756" height="425"
+                                     srcset="{{ asset(article.image.webPath) }} 756w, {{ asset(presentation.image.webPath) }} 1512w"
+                                     sizes="(max-width: 767px) 100vw, 756px" alt="{{ presentation.image.alt }}"/>
+                            </figure>
+                            {% endfor %}
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

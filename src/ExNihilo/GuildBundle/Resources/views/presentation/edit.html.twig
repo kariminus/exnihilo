@@ -5,6 +5,7 @@
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
+    <a href="#" id="add_imagePresentation" class="btn btn-default">Ajouter une image de présentation</a>
         <input type="submit" value="Edit" />
     {{ form_end(edit_form) }}
 
@@ -13,4 +14,7 @@
             <a href="{{ path('admin_presentation_index') }}">Back to the list</a>
         </li>
     </ul>
+
+    <script src="https:ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ asset ('js/addImagePresentation.js')}}"></script>
 {% endblock %}
