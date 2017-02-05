@@ -29,7 +29,7 @@
                         <div class="box-content">
                             <h2 class="box-title">{{ article.title }}</h2>
                             <p class="small-title"><span>Publié le {{ article.createdAt | date ("d/m/Y") }}</span></p>
-                            <p>{{ article.content }}</p>
+                            <p>{{ article.content | raw }}</p>
                         </div>
                     </div>
                 </article>

@@ -2,7 +2,7 @@
 
 {% block body %}
     <h1>{{ event.title }}</h1>
-    <p>{{ event.content }}</p>
+    <p>{{ event.content | raw }}</p>
 
     <h2>Liste des inscrits</h2>
     <ul>
