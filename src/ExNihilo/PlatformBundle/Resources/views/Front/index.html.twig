@@ -24,7 +24,7 @@
                 </ul>
                 <div class="box-content">
                     <h2 class="box-title"><a href="{{ path('article_view', {id: article.id }) }}">{{ article.title }}</a></h2>
-                    {{ article.content|slice(0,500) }}
+                    {{ article.content|slice(0,500) | raw }}
                 </div>
                 <div class="meta">
                     <a class="more-link" href="{{ path('article_view', {id: article.id }) }}"><span data-hover="Voir plus">Voir plus</span></a>

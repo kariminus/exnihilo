@@ -17,7 +17,7 @@
             <tr>
                 <td>{{ event.id }}</td>
                 <td>{{ event.title }}</td>
-                <td>{{ event.content | slice(0,60)}}...</td>
+                <td>{{ event.content | slice(0,60) | raw }}</td>
                 <td>
                     <ul>
                         <li>

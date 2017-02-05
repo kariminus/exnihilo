@@ -9,7 +9,7 @@
                     </div>
                     <div class="box-beta">
                         <div class="box-content">
-                            <p>{{ presentation.content }}</p>
+                            <p>{{ presentation.content | raw }}</p>
                         </div>
                         {% for image in images %}
                                 <img src="{{ asset(image.webPath) }}" alt="{{ image.alt }}"/>
