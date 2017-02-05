@@ -50,4 +50,28 @@ class EventRepository extends EntityRepository
             ->getOneOrNullResult()
             ;
     }
+
+    public function getMonthEvents()
+    {
+        $date = new \DateTime();
+        $month = $date->format('m');
+        $year = $date->format('Y');
+
+        $emConfig = $this->getEntityManager()->getConfiguration();
+        $emConfig->addCustomDatetimeFunction('YEAR', 'DoctrineExtensions\Query\Mysql\Year');
+        $emConfig->addCustomDatetimeFunction('MONTH', 'DoctrineExtensions\Query\Mysql\Month');
+
+        $qb = $this->createQueryBuilder('e');
+        $qb->select('e')
+            ->where('YEAR(e.date) = :year')
+            ->andWhere('MONTH(e.date) = :month');
+
+        $qb->setParameter('year', $year)
+            ->setParameter('month', $month);
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

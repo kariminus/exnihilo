@@ -11,7 +11,7 @@ class EventsController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $events = $this->get('manage_event')->eventIndex();
+        $events = $this->get('manage_event')->eventMonthIndex();
 
         /**
          * @var $paginator \Knp\Component\Pager\Paginator

@@ -46,6 +46,18 @@ class ManageEvent
 
     }
 
+    /**
+     * Lists all event entities in the month.
+     *
+     */
+    public function eventMonthIndex()
+    {
+        $events = $this->em->getRepository('ExNihiloEventBundle:Event')->getMonthEvents();
+
+        return $events;
+
+    }
+
     public function eventNew($request)
     {
         $event = new Event();
