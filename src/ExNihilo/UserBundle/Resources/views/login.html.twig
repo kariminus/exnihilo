@@ -2,22 +2,29 @@
 
 {% block body %}
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1>Login!</h1>
+        <div class="holder">
+            <div class="holder-content">
+                <article class="box-page">
+                    <div class="box-beta">
+                        <div class="box-content text-center">
+                            <h1>Connexion</h1>
 
-                {% if error %}
-                    <div class="alert alert-danger">
-                        {{ error.messageKey|trans(error.messageData, 'security') }}
+                            {% if error %}
+                                <div class="alert alert-danger">
+                                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                                </div>
+                            {% endif %}
+                            {{ form_start(form) }}
+                            {{ form_row(form._username) }}
+                            {{ form_row(form._password) }}
+                            <p>
+                            <button type="submit" class="btn btn-success">Connexion</button>
+                            <a href="{{ path('user_register') }}">Inscription</a>
+                            </p>
+                            {{ form_end(form) }}
+                        </div>
                     </div>
-                {% endif %}
-                {{ form_start(form) }}
-                {{ form_row(form._username) }}
-                {{ form_row(form._password) }}
-                <button type="submit" class="btn btn-success">Connexion <span class="fa fa-lock"></span></button>
-                &nbsp;
-                <a href="{{ path('user_register') }}">Inscription</a>
-                {{ form_end(form) }}
+                </article>
             </div>
         </div>
     </div>

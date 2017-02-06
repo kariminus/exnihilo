@@ -1,33 +1,36 @@
 {% extends 'ExNihiloPlatformBundle:Back:index.html.twig' %}
 
 {% block content %}
-    <h1>Users list</h1>
-
-    <table>
-        <thead>
+    <h1>Liste des membres</h1>
+<div class="flex-columns">
+    <div class="row">
+        <table>
+            <thead>
             <tr>
                 <th>Id</th>
                 <th>Pseudo</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for user in users %}
-            <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.username }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('admin_user_edit', { 'id': user.id }) }}">modifier</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('admin_user_delete', { 'id': user.id }) }}">supprimer</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('admin_user_edit', { 'id': user.id }) }}">modifier</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('admin_user_delete', { 'id': user.id }) }}"><span class="supprimer">supprimer</span></a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

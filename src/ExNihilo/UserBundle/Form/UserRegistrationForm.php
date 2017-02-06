@@ -3,6 +3,7 @@
 
 namespace ExNihilo\UserBundle\Form;
 
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -21,20 +22,34 @@ class UserRegistrationForm extends AbstractType
     {
 
         $builder
-            ->add('username', TextType::class)
-            ->add('email', EmailType::class)
+            ->add('username', TextType::class, array(
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'Nom d\'utilisateur',
+                )
+            ))
+            ->add('email', EmailType::class, array(
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'Email',
+                )
+            ))
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class
             ])
             ->add('classe', EntityType::class, array(
-            'class' => 'ExNihiloPlatformBundle:Classe',
-            'query_builder' => function (EntityRepository $er) {
-                return $er->createQueryBuilder('n')
-                    ->orderBy('n.name', 'ASC');
-            },
-            'choice_label' => 'name',
-        ))
+                'label' => false,
+                'placeholder' => 'Classe du personage',
+                'class' => 'ExNihiloPlatformBundle:Classe',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('n')
+                        ->orderBy('n.name', 'ASC');
+                },
+                'choice_label' => 'name',
+            ))
             ->add('race', EntityType::class, array(
+                'label' => false,
+                'placeholder' => 'Race du personage',
                 'class' => 'ExNihiloPlatformBundle:Race',
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('n')
@@ -43,12 +58,16 @@ class UserRegistrationForm extends AbstractType
                 'choice_label' => 'name',
             ))
             ->add('gender', ChoiceType::class, array(
+                'label' => false,
+                'placeholder' => 'Genre du personage',
                 'choices' => array(
                     'Homme' => 0,
                     'Femme' => 1,
                 ),
             ))
-            ->add('isGuildMember');
+            ->add('isGuildMember', CheckboxType::class, array(
+                'label' => 'Etes vous membre de la guilde ? '
+            ));
     }
 
     public function configureOptions(OptionsResolver $resolver)

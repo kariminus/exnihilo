@@ -723,7 +723,7 @@ p {
 a, .navigation .post-title {
     outline: none;
     transition: color 0.1s;
-    color: #33a6cf;
+    color: #fff;
     text-decoration: none
 }
 
@@ -1065,7 +1065,7 @@ tr.highlight td {
     background: rgba(255, 255, 255, .06)
 }
 
-input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select {
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea {
     line-height: 2em;
     font-size: .9375rem;
     box-sizing: border-box;
@@ -1076,7 +1076,24 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
     color: #f3f3f3;
     margin: 0;
     padding: .4em .8em;
-    width: 20rem;
+    width: 30rem;
+    max-width: 100%;
+    min-height: calc(2.8em + 2px);
+    vertical-align: middle
+}
+
+select {
+    line-height: 2em;
+    font-size: .9375rem;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: 1px solid;
+    border-color: #0e0e0e #313131 #313131 #0e0e0e;
+    background: #272727;
+    color: #f3f3f3;
+    margin: 0;
+    padding: .4em .8em;
+    width: 15rem;
     max-width: 100%;
     min-height: calc(2.8em + 2px);
     vertical-align: middle
@@ -6376,4 +6393,8 @@ body.hidden-scroll {
 .sk-wave .sk-rect {
     margin: 0 2px;
     width: 3px
+}
+
+.supprimer {
+    color: #c9302c;
 }

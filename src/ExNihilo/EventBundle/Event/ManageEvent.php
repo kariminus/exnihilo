@@ -97,6 +97,7 @@ class ManageEvent
                 $this->em->persist($event);
                 $this->em->persist($user);
                 $this->em->flush();
+
             }
 
 

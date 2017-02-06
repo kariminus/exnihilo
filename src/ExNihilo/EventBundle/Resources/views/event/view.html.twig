@@ -1,24 +1,32 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <h1>{{ event.title }}</h1>
-    <p>{{ event.content | raw }}</p>
+    <div class="container">
+        <div class="holder">
+            <div class="holder-content">
+                <article class="box-page">
+                    <div class="box-content">
+                        <h2 class="box-title">{{ event.title }}</h2>
+                        <p>{{ event.content | raw }}</p>
+                        <h4>Liste des inscrits</h4>
+                        <ul>
+                            {% for user in event.users %}
+                                <li>{{ user.username }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% if is_granted('ROLE_USER') and booked is null %}
+                            <form action="" method="POST" name="book">
+                                <button type="submit" class="btn btn-lg btn-primary">S'inscrire</button>
+                            </form>
 
-    <h2>Liste des inscrits</h2>
-    <ul>
-        {% for user in event.users %}
-            <li>{{ user.username }}</li>
-        {% endfor %}
-    </ul>
-    {% if is_granted('ROLE_USER') and booked is null %}
-        <form action="" method="POST" name="book">
-            <button type="submit" class="btn btn-lg btn-primary">S'inscrire</button>
-        </form>
-
-    {% elseif is_granted('ROLE_USER') and booked is not null %}
-        <p>Vous êtes déjà inscrit à cet événement</p>
-    {% else %}
-            <p>Veuillez vous connecter pour vous inscrire à cet événement</p>
-    {% endif %}
-
+                        {% elseif is_granted('ROLE_USER') and booked is not null %}
+                            <p>Vous êtes déjà inscrit à cet événement</p>
+                        {% else %}
+                            <p>Veuillez vous connecter pour vous inscrire à cet événement</p>
+                        {% endif %}
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
 {% endblock %}

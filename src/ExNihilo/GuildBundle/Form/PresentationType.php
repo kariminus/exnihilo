@@ -15,8 +15,11 @@ class PresentationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('content',                CkeditorType::class)
+            ->add('content',                CkeditorType::class, array(
+                'label' => false
+            ))
             ->add('imagePresentations', CollectionType::class, array(
+                'label' => false,
                 'entry_type'   => ImagePresentationType::class,
                 'allow_add'    => true,
                 'allow_delete' => true

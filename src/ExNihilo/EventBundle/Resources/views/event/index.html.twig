@@ -1,14 +1,15 @@
 {% extends 'ExNihiloPlatformBundle:Back:index.html.twig' %}
 
 {% block content %}
-    <h1>Events list</h1>
-
+    <h1>Liste des événements</h1>
+<div class="flex-columns">
+    <div class="row">
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
+                <th>Titre</th>
+                <th>Contenu</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -17,14 +18,14 @@
             <tr>
                 <td>{{ event.id }}</td>
                 <td>{{ event.title }}</td>
-                <td>{{ event.content | slice(0,60) | raw }}</td>
+                <td>{{ event.content | slice(0,100) | raw }} ...</td>
                 <td>
                     <ul>
                         <li>
                             <a href="{{ path('admin_event_edit', { 'id': event.id }) }}">modifier</a>
                         </li>
                         <li>
-                            <a href="{{ path('admin_event_delete', { 'id': event.id }) }}">supprimer</a>
+                            <a href="{{ path('admin_event_delete', { 'id': event.id }) }}"><span class="supprimer">supprimer</span></a>
                         </li>
                     </ul>
                 </td>
@@ -32,14 +33,16 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('admin_event_new') }}">Create a new event</a>
-        </li>
-    </ul>
+    </div>
+</div>
 
     <div class="navigation">
         {{ knp_pagination_render(events) }}
     </div>
+
+    <ul style="list-style: none">
+        <li>
+            <a href="{{ path('admin_event_new') }}">Créer un nouvel événement</a>
+        </li>
+    </ul>
 {% endblock %}

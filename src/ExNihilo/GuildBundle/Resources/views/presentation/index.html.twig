@@ -1,12 +1,12 @@
 {% extends 'ExNihiloPlatformBundle:Back:index.html.twig' %}
 
 {% block content %}
-    <h1>Presentation de la guilde</h1>
+    <h1>Présentation de la guilde</h1>
 
     <table>
         <tbody>
             <tr>
-                <td>{{ presentation.content | raw }}</td>
+                <td>{{ presentation.content | slice (0,500) | raw }} ...</td>
                 <td>
                     <ul>
                         <li>

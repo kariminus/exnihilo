@@ -12,7 +12,7 @@
         {#<link rel="icon" href="{{ asset('content/live/thumbs/favicon-192x192.png') }}" sizes="192x192" />#}
         {#<link rel="apple-touch-icon-precomposed" href="{{ asset('content/live/thumbs/favicon-180x180.png') }}" />#}
         {#<link rel="stylesheet" href="{{ asset('css/main.css')}}" />#}
-        {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{ asset('css/demo-switcher.min.css')}}" />
         <link rel="stylesheet" href="{{ asset('css/style-active.min.css')}}" />
         <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
@@ -21,7 +21,7 @@
         <style>
             body {
                 background-color: #102A10;
-                {#background-image: url("{{ asset('images/background.jpg') }}");#}
+                background-image: url("{{ asset('images/background.jpg') }}");
             }
         </style>
     {% endblock %}
@@ -29,12 +29,16 @@
 <div id="container">
     <header id="header" class="ratio-2-1">
         <div class="container">
+            <ul style="list-style: none">
             {% if is_granted('ROLE_USER') %}
                 <li><a href="{{ path('security_logout') }}">Deconnexion</a></li>
             {% else %}
-                <li><a href="{{ path('security_login') }}">Connexion</a><a href="{{ path('user_register') }}">Inscription</a></li>
-
+                <li><a href="{{ path('security_login') }}">Connexion</a><a href="{{ path('user_register') }}" style="margin-left: 10px">Inscription</a></li>
             {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href="{{ path('admin_article_index') }}">Administration du site</a></li>
+                {% endif %}
+            </ul>
             <div class="main vertical-align-middle horizontal-align-center">
                 <div class="logo">
                     <a href="{{ path('ex_nihilo_platform_blog') }}" title="Live">
@@ -66,15 +70,12 @@
     {% endblock %}
 
     {% block javascripts %}
-        {#<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>#}
-        <script src="{{ asset ( 'js/app.min.js')}}"></script>
-        <script src="{{ asset ('js/demo-switcher.min.js')}}"></script>
+        <script src="{{ asset ('components/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset ( 'js/app.min.js') }}"></script>
+        <script src="{{ asset ('js/demo-switcher.min.js') }}"></script>
     {% endblock %}
 </div>
 <footer>
-    {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('admin_article_index') }}">Administration du site</a>
-    {% endif %}
 </footer>
 </body>
 </html>

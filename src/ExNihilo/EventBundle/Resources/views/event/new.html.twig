@@ -1,16 +1,16 @@
 {% extends 'ExNihiloPlatformBundle:Back:index.html.twig' %}
 
 {% block content %}
-    <h1>Event creation</h1>
-
-    {{ form_start(form) }}
+    <h1>Nouvel événement</h1>
+    <div class="row">
+        {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
+        <div class="cell-1-1 text-align-center"><input type="submit" value="Valider"/></div>
+        {{ form_end(form) }}
+    </div>
     <ul>
         <li>
-            <a href="{{ path('admin_event_index') }}">Back to the list</a>
+            <a href="{{ path('admin_event_index') }}">Revenir à la liste des événements</a>
         </li>
     </ul>
 {% endblock %}

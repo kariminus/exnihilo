@@ -2,10 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5727993f-889d-4395-af31-9467c03366e9" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/wallpaper.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/background.jpg" afterPath="$PROJECT_DIR$/web/images/background.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/view.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ArticleType.php" afterPath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ArticleType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ImageType.php" afterPath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ImageType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/edit.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/index.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/new.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/edit.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/index.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Form/EventType.php" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Form/EventType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/edit.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/index.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/new.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/new.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/ImagePresentationType.php" afterPath="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/ImagePresentationType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/PresentationType.php" afterPath="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/PresentationType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/edit.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/edit.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/index.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Back/index.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Back/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/events.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/events.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/presentation.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/presentation.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/LoginForm.php" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/LoginForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/UserRegistrationForm.php" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/UserRegistrationForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/login.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/index.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/register.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/register.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style-active.min.css" afterPath="$PROJECT_DIR$/web/css/style-active.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/addImagePresentation.js" afterPath="$PROJECT_DIR$/web/js/addImagePresentation.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,20 +53,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1221">
-              <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="19" column="59" lean-forward="false" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+            <state relative-caret-position="1254">
+              <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -53,71 +72,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/view.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1023">
-              <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/classe/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="891">
+              <caret line="27" column="121" lean-forward="false" selection-start-line="27" selection-start-column="121" selection-end-line="27" selection-end-column="121" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/classe/index.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1188">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style-active.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/style-active.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2635">
+              <caret line="6398" column="18" lean-forward="false" selection-start-line="6398" selection-start-column="18" selection-end-line="6398" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/edit.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="693">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PresentationType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/PresentationType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addImagePresentation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/addImagePresentation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="927">
+              <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImagePresentationType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/ImagePresentationType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlogController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Controller/BlogController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1188">
+              <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -144,6 +173,7 @@
       <find>.js</find>
       <find>figure, i</find>
       <find>box-alpha</find>
+      <find>&lt;!DOCTYPE html&gt; &lt;html class=&quot;no-js no-touch&quot; lang=&quot;en&quot;&gt;  &lt;!-- Mirrored from themes.kubasto.com/template/live/sportsman-about.html by HTTrack Website Copier/3.x [XR&amp;CO'2014], Mon, 30 Jan 2017 19:11:11 GMT --&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot; /&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt; &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt; &lt;meta name=&quot;msapplication-TileImage&quot; content=&quot;content/live/thumbs/favicon-270x270.png&quot; /&gt; &lt;link rel=&quot;icon&quot; href=&quot;content/live/thumbs/favicon-32x32.png&quot; sizes=&quot;32x32&quot; /&gt; &lt;link rel=&quot;icon&quot; href=&quot;content/live/thumbs/favicon-192x192.png&quot; sizes=&quot;192x192&quot; /&gt; &lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;content/live/thumbs/favicon-180x180.png&quot; /&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;css/demo-switcher.min.css&quot; /&gt; &lt;script&gt; (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-403159-6', 'auto'); ga('send', 'pageview'); &lt;/script&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style-active.min.css&quot; /&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;css/typo-open-sans-oswald.min.css&quot; /&gt; &lt;style&gt; body { background-color: #5d7684; background-image: url(&quot;content/sportsman/background-me.jpg&quot;); } &lt;/style&gt; &lt;title&gt;About me | Sportsman Live&lt;/title&gt; &lt;/head&gt; &lt;body class=&quot;background-dots&quot;&gt; &lt;div id=&quot;wrapper&quot;&gt; &lt;header id=&quot;header&quot; class=&quot;ratio-2-1&quot;&gt; &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;share&quot;&gt; &lt;ul&gt; &lt;li&gt;&lt;a data-icon=&quot;twitter&quot; href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a data-icon=&quot;facebook&quot; href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a data-icon=&quot;youtube&quot; href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;main vertical-align-middle horizontal-align-center&quot;&gt; &lt;div class=&quot;logo&quot;&gt; &lt;a href=&quot;sportsman-index.html&quot; title=&quot;Live&quot;&gt; &lt;img src=&quot;content/sportsman/thumbs/logo-303x103.png&quot; width=&quot;303&quot; height=&quot;103&quot; srcset=&quot;content/sportsman/thumbs/logo-303x103.png 303w, content/sportsman/thumbs/logo-606x206.png 606w&quot; sizes=&quot;(max-width: 303px) 100vw, 303px&quot; alt=&quot;Sportsman Live logo&quot; /&gt; &lt;/a&gt; &lt;/div&gt; &lt;nav class=&quot;back-shadow&quot;&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;sportsman-index.html&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-about.html&quot;&gt;About me&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;media-regular-none-important&quot;&gt;&lt;a href=&quot;sportsman-gallery-classic.html&quot;&gt;Gallery&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;media-regular-none-important&quot;&gt; &lt;a href=&quot;#&quot;&gt;Pages&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;sportsman-typography.html&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-video.html&quot;&gt;Video&lt;/a&gt;&lt;/li&gt; &lt;li&gt; &lt;a href=&quot;sportsman-gallery-classic.html&quot;&gt;Galleries&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;sportsman-gallery-classic.html&quot;&gt;Classic&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-gallery-with-sidebar.html&quot;&gt;With sidebar&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-gallery-masonry.html&quot;&gt;Masonry&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-widgets.html&quot;&gt;Widgets&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#log-in-form&quot;&gt;Log in form&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/nav&gt; &lt;nav&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;sportsman-gallery-classic.html&quot;&gt;Gallery&lt;/a&gt;&lt;/li&gt; &lt;li&gt; &lt;a href=&quot;#&quot;&gt;Pages&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;sportsman-typography.html&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-video.html&quot;&gt;Video&lt;/a&gt;&lt;/li&gt; &lt;li&gt; &lt;a href=&quot;sportsman-gallery-classic.html&quot;&gt;Galleries&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;sportsman-gallery-classic.html&quot;&gt;Classic&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-gallery-with-sidebar.html&quot;&gt;With sidebar&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-gallery-masonry.html&quot;&gt;Masonry&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-widgets.html&quot;&gt;Widgets&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;sportsman-about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#log-in-form&quot;&gt;Log in form&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/nav&gt; &lt;/div&gt; &lt;/div&gt; &lt;/header&gt; &lt;div class=&quot;container&quot;&gt; &lt;article class=&quot;box-page&quot;&gt; &lt;div class=&quot;box-beta&quot;&gt; &lt;div class=&quot;box-content&quot;&gt; &lt;h2 class=&quot;line&quot;&gt;&lt;span&gt;About me&lt;/span&gt;&lt;/h2&gt; &lt;div class=&quot;text-columns&quot;&gt; &lt;p&gt;Mattis felis non a lobortis leo risus augue sociis nibh. Lacus in feug euismod nisl pharetra mattis eiusmod esse nisi at. Pulvinar cupidatat cubilia netus aliqua cras tempus class. Volutpat massa donec sunt rhoncus.&lt;/p&gt; &lt;p&gt;Voluptate vel aliquip metus eros rutrum himenaeos. Cursus et dui facilisis nisl  nascetur quisque. dolore venenatis netus ullamco hendrerit ad fusce aliqua erat. Risus suspendisse &lt;a href=&quot;#example-hyperlink&quot;&gt;example hyperlink&lt;/a&gt; veniam lacus. Cupidatat pharetra esse sociosqu praesent. Ullamcorper deserunt per ligula semper eget blandit tempus porta sed facilisi quam. Eget consectetuer tristique dolor ridiculus varius ex parturient aliqua quam.&lt;/p&gt; &lt;img src=&quot;content/sportsman/thumbs/signature-anna-244x34.png&quot; width=&quot;244&quot; height=&quot;34&quot; srcset=&quot;content/sportsman/thumbs/signature-anna-244x34.png 244w, content/sportsman/thumbs/signature-anna-488x68.png 488w&quot; sizes=&quot;(max-width: 244px) 100vw, 244px&quot; alt=&quot;Signature anna&quot; /&gt; &lt;/div&gt; &lt;h4 class=&quot;line&quot;&gt;&lt;span&gt;A few photographs of me&lt;/span&gt;&lt;/h4&gt; &lt;div class=&quot;gallery width-over&quot; data-gallery-columns=&quot;4&quot;&gt; &lt;a href=&quot;content/sportsman/thumbs/run-1920x1080.jpg&quot;&gt; &lt;img src=&quot;content/sportsman/thumbs/run-307x173.jpg&quot; width=&quot;307&quot; height=&quot;173&quot; srcset=&quot;content/sportsman/thumbs/run-307x173.jpg 307w, content/sportsman/thumbs/run-614x346.jpg 614w&quot; sizes=&quot;(max-width: 307px) 100vw, 307px&quot; alt=&quot;Run&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;content/sportsman/thumbs/hood-1920x1080.jpg&quot;&gt; &lt;img src=&quot;content/sportsman/thumbs/hood-307x173.jpg&quot; width=&quot;307&quot; height=&quot;173&quot; srcset=&quot;content/sportsman/thumbs/hood-307x173.jpg 307w, content/sportsman/thumbs/hood-614x346.jpg 614w&quot; sizes=&quot;(max-width: 307px) 100vw, 307px&quot; alt=&quot;Hood&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;content/sportsman/thumbs/think-1920x1080.jpg&quot;&gt; &lt;img src=&quot;content/sportsman/thumbs/think-307x173.jpg&quot; width=&quot;307&quot; height=&quot;173&quot; srcset=&quot;content/sportsman/thumbs/think-307x173.jpg 307w, content/sportsman/thumbs/think-614x346.jpg 614w&quot; sizes=&quot;(max-width: 307px) 100vw, 307px&quot; alt=&quot;Think&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;content/sportsman/thumbs/avatar-1920x1080.jpg&quot;&gt; &lt;img src=&quot;content/sportsman/thumbs/avatar-307x173.jpg&quot; width=&quot;307&quot; height=&quot;173&quot; srcset=&quot;content/sportsman/thumbs/avatar-307x173.jpg 307w, content/sportsman/thumbs/avatar-614x346.jpg 614w&quot; sizes=&quot;(max-width: 307px) 100vw, 307px&quot; alt=&quot;Avatar&quot; /&gt; &lt;/a&gt; &lt;/div&gt; &lt;h4 class=&quot;line&quot;&gt;&lt;span&gt;My location&lt;/span&gt;&lt;/h4&gt; &lt;div class=&quot;embed width-over&quot;&gt; &lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.3255852164734!2d12.59108521607375!3d55.6833270048154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253224dc2928f%3A0xada4867a5a52ffc!2sAmalienborg+Slotsplads+2C%2C+1257+K%C3%B8benhavn+K%2C+Dania!5e0!3m2!1spl!2spl!4v1455835425046&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border:0&quot; allowfullscreen&gt;&lt;/iframe&gt; &lt;/div&gt; &lt;h4 class=&quot;line&quot;&gt;&lt;span&gt;Write to me&lt;/span&gt;&lt;/h4&gt; &lt;form action=&quot;http://themes.kubasto.com/template/live/php/contact_form.php&quot; method=&quot;post&quot; class=&quot;contact-form&quot;&gt; &lt;div class=&quot;flex-columns&quot;&gt; &lt;div class=&quot;row&quot;&gt; &lt;div class=&quot;cell-1-2&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;your name*&quot; required /&gt;&lt;/div&gt; &lt;div class=&quot;cell-1-2&quot;&gt;&lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;your e-mail address*&quot; required /&gt;&lt;/div&gt; &lt;div class=&quot;cell-1-1&quot;&gt;&lt;textarea name=&quot;message&quot; placeholder=&quot;message&quot; required&gt;&lt;/textarea&gt;&lt;/div&gt; &lt;div class=&quot;cell-1-1 text-align-center&quot;&gt; &lt;input type=&quot;submit&quot; value=&quot;Send message&quot; /&gt; &lt;small class=&quot;contact-form-message&quot;&gt;&lt;/small&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/form&gt; &lt;/div&gt; &lt;/div&gt; &lt;/article&gt; &lt;/div&gt; &lt;footer id=&quot;footer&quot;&gt; &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;end-note&quot;&gt; &lt;div class=&quot;align-left&quot;&gt; &lt;p&gt;&amp;copy; Your name here, 2016&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;align-right&quot;&gt; &lt;p&gt;&lt;a href=&quot;sportsman-contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;a class=&quot;back&quot; href=&quot;#wrapper&quot; title=&quot;Back to top&quot;&gt;&lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;/footer&gt; &lt;/div&gt; &lt;div id=&quot;log-in-form&quot; class=&quot;modal&quot;&gt; &lt;div class=&quot;modal-content&quot;&gt; &lt;img src=&quot;content/sportsman/thumbs/logo-212x72.png&quot; width=&quot;212&quot; height=&quot;72&quot; srcset=&quot;content/sportsman/thumbs/logo-212x72.png 212w, content/sportsman/thumbs/logo-424x144.png 424w&quot; sizes=&quot;(max-width: 212px) 100vw, 212px&quot; class=&quot;align-center&quot; alt=&quot;Logo&quot; /&gt; &lt;form action=&quot;http://themes.kubasto.com/template/live/sportsman-about.html&quot; method=&quot;post&quot;&gt; &lt;p&gt;&lt;input type=&quot;email&quot; placeholder=&quot;e-mail&quot; class=&quot;width-full&quot; required /&gt;&lt;/p&gt; &lt;p&gt;&lt;input type=&quot;password&quot; placeholder=&quot;password&quot; class=&quot;width-full&quot; required /&gt;&lt;/p&gt; &lt;p&gt;&lt;input type=&quot;submit&quot; class=&quot;width-full&quot; value=&quot;Log in&quot; /&gt;&lt;/p&gt; &lt;p class=&quot;form-links&quot;&gt; &lt;a href=&quot;sportsman-about.html&quot;&gt;Sign up &amp;rsaquo;&lt;/a&gt; &lt;a href=&quot;sportsman-about.html&quot;&gt;Forget password?&lt;/a&gt; &lt;/p&gt; &lt;/form&gt; &lt;/div&gt; &lt;a class=&quot;close&quot;&gt;&lt;/a&gt; &lt;/div&gt; &lt;div class=&quot;demo-switcher&quot;&gt; &lt;div class=&quot;demos&quot;&gt; &lt;ul&gt; &lt;li&gt; &lt;a href=&quot;neutral-index.html&quot; title=&quot;Neutral&quot;&gt; &lt;span&gt;&lt;strong&gt;1&lt;/strong&gt; Neutral&lt;/span&gt; &lt;img src=&quot;content/live/thumbs/neutral-200x236.jpg&quot; width=&quot;200&quot; height=&quot;236&quot; srcset=&quot;content/live/thumbs/neutral-200x236.jpg 200w, content/live/thumbs/neutral-400x472.jpg 400w&quot; sizes=&quot;(max-width: 200px) 100vw, 200px&quot; alt=&quot;Neutral&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&quot;radio-index.html&quot; title=&quot;Radio&quot;&gt; &lt;span&gt;&lt;strong&gt;2&lt;/strong&gt; Radio&lt;/span&gt; &lt;img src=&quot;content/live/thumbs/radio-200x236.jpg&quot; width=&quot;200&quot; height=&quot;236&quot; srcset=&quot;content/live/thumbs/radio-200x236.jpg 200w, content/live/thumbs/radio-400x472.jpg 400w&quot; sizes=&quot;(max-width: 200px) 100vw, 200px&quot; alt=&quot;Radio&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&quot;traveler-index.html&quot; title=&quot;Traveler&quot;&gt; &lt;span&gt;&lt;strong&gt;3&lt;/strong&gt; Traveler&lt;/span&gt; &lt;img src=&quot;content/live/thumbs/traveler-200x236.jpg&quot; width=&quot;200&quot; height=&quot;236&quot; srcset=&quot;content/live/thumbs/traveler-200x236.jpg 200w, content/live/thumbs/traveler-400x472.jpg 400w&quot; sizes=&quot;(max-width: 200px) 100vw, 200px&quot; alt=&quot;Traveler&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&quot;sportsman-index.html&quot; title=&quot;Sportsman&quot;&gt; &lt;span&gt;&lt;strong&gt;4&lt;/strong&gt; Sportsman&lt;/span&gt; &lt;img src=&quot;content/live/thumbs/sportsman-200x236.jpg&quot; width=&quot;200&quot; height=&quot;236&quot; srcset=&quot;content/live/thumbs/sportsman-200x236.jpg 200w, content/live/thumbs/sportsman-400x472.jpg 400w&quot; sizes=&quot;(max-width: 200px) 100vw, 200px&quot; alt=&quot;Sportsman&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&quot;corporation-index.html&quot; title=&quot;Corporation&quot;&gt; &lt;span&gt;&lt;strong&gt;5&lt;/strong&gt; Corporation&lt;/span&gt; &lt;img src=&quot;content/live/thumbs/corporation-200x236.jpg&quot; width=&quot;200&quot; height=&quot;236&quot; srcset=&quot;content/live/thumbs/corporation-200x236.jpg 200w, content/live/thumbs/corporation-400x472.jpg 400w&quot; sizes=&quot;(max-width: 200px) 100vw, 200px&quot; alt=&quot;Corporation&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&quot;kitchenolog-index.html&quot; title=&quot;Kitchenolog&quot;&gt; &lt;span&gt;&lt;strong&gt;6&lt;/strong&gt; Kitchenolog&lt;/span&gt; &lt;img src=&quot;content/live/thumbs/kitchenolog-200x236.jpg&quot; width=&quot;200&quot; height=&quot;236&quot; srcset=&quot;content/live/thumbs/kitchenolog-200x236.jpg 200w, content/live/thumbs/kitchenolog-400x472.jpg 400w&quot; sizes=&quot;(max-width: 200px) 100vw, 200px&quot; alt=&quot;Kitchenolog&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;tab&quot;&gt; &lt;div data-svg=&quot;res/demo.svg&quot;&gt;&lt;/div&gt; Demo&lt;br /&gt;&lt;span class=&quot;index&quot;&gt;&lt;/span&gt; &lt;/div&gt; &lt;/div&gt; &lt;script src=&quot;components/jquery/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;js/app.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;js/demo-switcher.min.js&quot;&gt;&lt;/script&gt; &lt;script&gt; (function($) { $(document).ready(function() { var pn = window.location.pathname + window.location.search, fn = pn.slice(pn.lastIndexOf('http://themes.kubasto.com/')+1); $('#header nav li:has(&gt; a[href=&quot;' + fn + '&quot;])') .addClass('current') .parents('li') .addClass('current'); }); })(jQuery); &lt;/script&gt; &lt;script&gt; new Live; &lt;/script&gt; &lt;/body&gt;  &lt;!-- Mirrored from themes.kubasto.com/template/live/sportsman-about.html by HTTrack Website Copier/3.x [XR&amp;CO'2014], Mon, 30 Jan 2017 19:11:18 GMT --&gt; &lt;/html&gt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,34 +182,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/classe/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/classe/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/race/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/race/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/race/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Controller/ArticleController.php" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Repository/CommentRepository.php" />
-        <option value="$USER_HOME$/Desktop/theme/sportman/themes.kubasto.com/template/live/sportsman-index.html" />
-        <option value="$USER_HOME$/Desktop/theme/sportman/themes.kubasto.com/template/live/sportsman-post-1.html" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Article/ManageArticle.php" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Comment/ManageComment.php" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/CommentType.php" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/view.html.twig" />
-        <option value="$USER_HOME$/Desktop/theme/sportman/themes.kubasto.com/template/live/sportsman-post-2.html" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/web/css/style-active.min.css" />
         <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/members.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Entity/Presentation.php" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/ImagePresentationType.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/new.html.twig" />
-        <option value="$PROJECT_DIR$/web/js/addImagePresentation.js" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/PresentationType.php" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Controller/PresentationController.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/view.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Controller/PresentationController.php" />
@@ -191,18 +196,43 @@
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/web/bundles/ivoryckeditor/build-config.js" />
         <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Controller/EventsController.php" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Repository/EventRepository.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/events.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/presentation.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/users.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/index.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/view.html.twig" />
+        <option value="$USER_HOME$/Desktop/theme/sportman/themes.kubasto.com/template/live/sportsman-about.html" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/presentation.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/events.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/LoginForm.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/register.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Back/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ImageType.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ArticleType.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/UserRegistrationForm.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Form/EventType.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/config/routing/presentation.yml" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/ImagePresentationType.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/PresentationType.php" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/edit.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/addImagePresentation.js" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/style-active.min.css" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/index.html.twig" />
       </list>
     </option>
   </component>
@@ -240,8 +270,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,6 +294,38 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -285,26 +347,8 @@
               <option name="myItemId" value="ExNihilo" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExNihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlatformBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,7 +370,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PlatformBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -356,7 +400,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PlatformBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -368,7 +412,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Front" />
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -390,11 +434,29 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PlatformBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExNihilo" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -477,6 +539,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExNihilo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuildBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -613,6 +701,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comment" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -671,60 +763,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exnihilo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -841,15 +879,17 @@
       <workItem from="1486038519217" duration="5962000" />
       <workItem from="1486199901349" duration="11130000" />
       <workItem from="1486297252785" duration="2876000" />
-      <workItem from="1486300278309" duration="59000" />
+      <workItem from="1486300278309" duration="658000" />
+      <workItem from="1486317155548" duration="455000" />
+      <workItem from="1486375553873" duration="12511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218100000" />
+    <option name="totallyTimeSpent" value="231665000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
+    <frame x="-13" y="-13" width="3866" height="2106" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -870,6 +910,25 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -882,272 +941,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Entity/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1244">
-          <caret line="152" column="4" lean-forward="false" selection-start-line="152" selection-start-column="4" selection-end-line="159" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ArticleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/CommentType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1287">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Entity/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Entity/Presentation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/addImagePresentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="32" column="51" lean-forward="false" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/PresentationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ImageType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/ImagePresentationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Controller/ArticleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="43" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/config/routing/presentation.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Controller/CommentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Controller/PresentationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Repository/PresentationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Comment/ManageComment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Article/ManageArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Repository/CommentRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Entity/ImagePresentation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="81" lean-forward="false" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Controller/PresentationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1089">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Repository/ImagePresentationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Presentation/ManagePresentation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="881">
-          <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Entity/Classe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Entity/Race.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3333">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8844">
-          <caret line="276" column="5" lean-forward="false" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/ivoryckeditor/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/ivoryckeditor/build-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/beberlei/DoctrineExtensions/config/mysql.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Controller/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1409">
-          <caret line="52" column="30" lean-forward="false" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Repository/EventRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1145">
-          <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1574">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/events.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/presentation.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/members.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1159,15 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
           <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Back/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,35 +959,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/classe/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Controller/BlogController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1219,10 +978,349 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Controller/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/theme/sportman/themes.kubasto.com/template/live/sportsman-about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="269" column="0" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/events.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Controller/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1221">
+          <caret line="49" column="60" lean-forward="false" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/config/routing/event.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="41" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="23" column="78" lean-forward="false" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#1;n#li#1;n#ul#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Front/presentation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="22" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/LoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
-          <caret line="19" column="59" lean-forward="false" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+          <caret line="19" column="17" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#44#84#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ImageType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/UserRegistrationForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1617">
+          <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="69" selection-end-column="15" />
+          <folding>
+            <element signature="e#45#105#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding>
+            <element signature="e#44#100#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="25" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Form/EventType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="e#45#85#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ArticleType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/PlatformBundle/Resources/views/Back/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/config/routing/presentation.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Controller/PresentationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/ImagePresentationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Form/PresentationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/views/presentation/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/addImagePresentation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="927">
+          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style-active.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="6398" column="18" lean-forward="false" selection-start-line="6398" selection-start-column="18" selection-end-line="6398" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1235,18 +1333,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="891">
+          <caret line="27" column="121" lean-forward="false" selection-start-line="27" selection-start-column="121" selection-end-line="27" selection-end-column="121" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/view.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/UserBundle/Resources/views/user/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+        <state relative-caret-position="1188">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
           <folding />
         </state>
       </provider>

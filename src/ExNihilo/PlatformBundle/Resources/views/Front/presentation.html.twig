@@ -11,9 +11,11 @@
                         <div class="box-content">
                             <p>{{ presentation.content | raw }}</p>
                         </div>
-                        {% for image in images %}
-                                <img src="{{ asset(image.webPath) }}" alt="{{ image.alt }}"/>
-                        {% endfor %}
+                        <div class="gallery width-over" data-gallery-columns="4">
+                            {% for image in images %}
+                                <img src="{{ asset(image.webPath) }}"  alt="{{ image.alt }}"/>
+                            {% endfor %}
+                        </div>
                     </div>
                 </article>
             </div>

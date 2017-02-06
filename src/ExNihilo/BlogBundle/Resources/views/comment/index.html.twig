@@ -1,39 +1,43 @@
 {% extends 'ExNihiloPlatformBundle:Back:index.html.twig' %}
 
 {% block content %}
-    <h1>Comments list</h1>
-
-    <table>
-        <thead>
+    <h1>Liste des commentaires</h1>
+<div class="flex-columns">
+    <div class="row">
+        <table>
+            <thead>
             <tr>
                 <th>Id</th>
-                <th>Author</th>
-                <th>Content</th>
+                <th>Autheur</th>
+                <th>Contenu</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for comment in comments %}
-            <tr>
-                <td>{{ comment.id }}</td>
-                <td>{{ comment.author }}</td>
-                <td>{{ comment.content }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('admin_comment_edit', { 'id': comment.id }) }}">modifier</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('admin_comment_delete', { 'id': comment.id }) }}">supprimer</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <div class="navigation">
-        {{ knp_pagination_render(comments) }}
+            </thead>
+            <tbody>
+            {% for comment in comments %}
+                <tr>
+                    <td>{{ comment.id }}</td>
+                    <td>{{ comment.author }}</td>
+                    <td>{{ comment.content | slice (0,200)}} ...</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('admin_comment_edit', { 'id': comment.id }) }}">modifier</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('admin_comment_delete', { 'id': comment.id }) }}"><span class="supprimer">supprimer</span></a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
+</div>
+        <div class="row">
+            <div class="navigation">
+                {{ knp_pagination_render(comments) }}
+            </div>
+        </div>
 {% endblock %}
