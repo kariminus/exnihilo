@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <article class="box-post">
+            <h1 class="text-center"> Page introuvable </h1>
+            <div class="box-beta">
+                <div class="box-content">
+                    <p>La page demandée n'a pas pu être retrouvée. Vérifiez l'URL ou <a href="{{ path('ex_nihilo_platform_blog') }}">retournez à l'accueil</a>.</p>
+                </div>
+            </div>
+        </article>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <article class="box-post">
+            <h1 class="text-center"> Erreur </h1>
+            <div class="box-beta">
+                <div class="box-content">
+                <h2>Le serveur a retourné une erreur : "500 Internal Server Error".</h2>
+        <p>Une erreur est survenue. Veuillez nous contacter pour que nous puissons régler le problème au plus vite. Désolé pour la gêne occasionnée.</p>
+        <p><a href="{{ path('ex_nihilo_platform_blog') }}">retournez à l'accueil</a>.</p>
+                </div>
+            </div>
+        </article>
+{% endblock %}
