@@ -10,32 +10,27 @@
                         <div class="box-beta">
                             <div class="box-content">
                                 {% for classe in classes %}
-                                    <table class="width-full">
-                                        <tbody>
-                                    <tr>
-                                       <td> <img src="{{ asset(classe.imageClasse.webPath) }}"
-                                                alt="{{ classe.imageClasse.alt }}"
-                                                width="200"
-                                        />
-                                       </td>
-                                        <td>
-                                                {{ render(controller(
-                                                'ExNihiloPlatformBundle:Members:getUsers',
-                                                { 'id': classe.id }
-                                                )) }}
-                                        </td>
-                                    </tr>
-                                        </tbody>
-                                        </table>
-                                {% endfor %}
+                                <div class="row" style="border: solid #d3cfd5; margin-bottom: 20px">
+                                    <div class="col-md-4 text-center">
+                                        <img src="{{ asset(classe.imageClasse.webPath) }}"
+                                             alt="{{ classe.imageClasse.alt }}"
+                                             width="200" />
+                                    </div>
+                                    <div class="col-md-8 text-center">
+                                    {{ render(controller(
+                                    'ExNihiloPlatformBundle:Members:getUsers',
+                                    { 'id': classe.id }
+                                    )) }}
+                                </div>
                             </div>
+                            {% endfor %}
                         </div>
-                    </article>
-                </div>
-
+                </article>
             </div>
 
         </div>
+
+    </div>
     </div>
     </body>
 
