@@ -13,7 +13,7 @@ class ImageType extends AbstractType
     {
         $builder
             ->add('file', FileType::class, array(
-                'label' => 'Image de l\'article'
+                'label' => false
             ))
         ;
     }

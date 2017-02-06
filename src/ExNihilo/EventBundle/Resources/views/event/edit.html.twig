@@ -1,14 +1,14 @@
 {% extends 'ExNihiloPlatformBundle:Back:index.html.twig' %}
 
 {% block content %}
-    <h1>Modifier l'événement</h1>
-    <div class="row">
+    <h3>Modifier l'événement</h3>
+    <div class="row text-center">
         {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
         <div class="cell-1-1 text-align-center"><input type="submit" value="Modifier"/></div>
         {{ form_end(edit_form) }}
     </div>
-    <ul>
+    <ul style="list-style: none">
         <li>
             <a href="{{ path('admin_event_index') }}">Retour à la liste des événements</a>
         </li>

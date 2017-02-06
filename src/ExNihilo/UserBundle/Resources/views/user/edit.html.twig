@@ -1,8 +1,8 @@
 {% extends 'ExNihiloPlatformBundle:Back:index.html.twig' %}
 
 {% block content %}
-    <h1>Modifier le membre</h1>
-    <div class="row">
+    <h3>Modifier le membre</h3>
+    <div class="row text-center">
         {{ form_start(form) }}
         {{ form_row(form.username, {}) }}
         {{ form_row(form.email) }}
@@ -19,7 +19,7 @@
         <div class="cell-1-1 text-align-center"><input type="submit" value="Modifier"/></div>
         {{ form_end(form) }}
     </div>
-    <ul>
+    <ul style="list-style: none">
         <li>
             <a href="{{ path('admin_user_index') }}">Retour à la liste des membres</a>
         </li>
