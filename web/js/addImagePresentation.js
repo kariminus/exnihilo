@@ -49,7 +49,7 @@ $(document).ready(function() {
     // La fonction qui ajoute un lien de suppression d'une catégorie
     function addDeleteLink($prototype) {
         // Création du lien
-        var $deleteLink = $('<p><button type="button" class="btn btn-danger">Supprimer</button></p>');
+        var $deleteLink = $('<p><input type="submit" value="Supprimer" /></p>');
 
         // Ajout du lien
         $prototype.append($deleteLink);

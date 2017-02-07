@@ -3,53 +3,38 @@
 namespace ExNihilo\GuildBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class PresentationControllerTest extends WebTestCase
 {
-    /*
-    public function testCompleteScenario()
+    public function testEditPresentation()
     {
-        // Create a new client to browse the application
         $client = static::createClient();
+        $client->followRedirects();
 
-        // Create a new entry in the database
-        $crawler = $client->request('GET', '/admin/presentation/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /admin/presentation/");
-        $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
+        $crawler = $client->request('GET', '/login');
 
-        // Fill in the form and submit it
-        $form = $crawler->selectButton('Create')->form(array(
-            'exnihilo_guildbundle_presentation[field_name]'  => 'Test',
-            // ... other fields to fill
-        ));
 
-        $client->submit($form);
-        $crawler = $client->followRedirect();
+        $formLogin = $crawler->filter('button')->form();
 
-        // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('td:contains("Test")')->count(), 'Missing element td:contains("Test")');
+        $formLogin['login_form[_username]'] = 'admin';
+        $formLogin['login_form[_password]'] = 'admin';
+        $client->submit($formLogin);
 
-        // Edit the entity
-        $crawler = $client->click($crawler->selectLink('Edit')->link());
 
-        $form = $crawler->selectButton('Update')->form(array(
-            'exnihilo_guildbundle_presentation[field_name]'  => 'Foo',
-            // ... other fields to fill
-        ));
+        $crawler = $client->request('GET', '/admin/presentation/new');
 
-        $client->submit($form);
-        $crawler = $client->followRedirect();
+        $form = $crawler->filter('button')->form();
+        $form['presentation[content]'] = 'test';
 
-        // Check the element contains an attribute with value equals "Foo"
-        $this->assertGreaterThan(0, $crawler->filter('[value="Foo"]')->count(), 'Missing element [value="Foo"]');
+        $values = $form->getPhpValues();
 
-        // Delete the entity
-        $client->submit($crawler->selectButton('Delete')->form());
-        $crawler = $client->followRedirect();
+        $values['presentation']['imagePresentations'][0]['file'] = '';
 
-        // Check the entity has been delete on the list
-        $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
+        $crawler = $client->request($form->getMethod(), $form->getUri(), $values,
+            $form->getPhpFiles());
+
+        $this->assertEquals(1, $crawler->filter('ul.imagePresentations > li')->count());
+
     }
-
-    */
 }

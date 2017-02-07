@@ -29,7 +29,7 @@ class PresentationType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ExNihilo\guildBundle\Entity\Presentation'
+            'data_class' => 'ExNihilo\GuildBundle\Entity\Presentation'
         ));
     }
 }
