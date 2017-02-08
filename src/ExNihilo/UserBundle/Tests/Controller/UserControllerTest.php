@@ -6,50 +6,96 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class UserControllerTest extends WebTestCase
 {
-    /*
-    public function testCompleteScenario()
+    public function testRegister()
     {
-        // Create a new client to browse the application
         $client = static::createClient();
+        $client->followRedirects();
 
-        // Create a new entry in the database
-        $crawler = $client->request('GET', '/admin/user/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /admin/user/");
-        $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
+        $crawler = $client->request('GET', '/register');
 
-        // Fill in the form and submit it
-        $form = $crawler->selectButton('Create')->form(array(
-            'exnihilo_userbundle_user[field_name]'  => 'Test',
-            // ... other fields to fill
-        ));
 
+        $form = $crawler->filter('button')->form();
+
+        $form['user_registration_form[username]'] = 'register';
+        $form['user_registration_form[email]'] = 'register@mail.com';
+        $form['user_registration_form[plainPassword][first]'] = 'test';
+        $form['user_registration_form[plainPassword][second]'] = 'test';
+        $form['user_registration_form[classe]']->select('1');
+        $form['user_registration_form[race]']->select('1');
+        $form['user_registration_form[gender]']->select('0');
+        $form['user_registration_form[isGuildMember]']->tick();
         $client->submit($form);
-        $crawler = $client->followRedirect();
 
-        // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('td:contains("Test")')->count(), 'Missing element td:contains("Test")');
+        $this->assertEquals(
+            200,
+            $client->getResponse()->getStatusCode()
+        );
 
-        // Edit the entity
-        $crawler = $client->click($crawler->selectLink('Edit')->link());
-
-        $form = $crawler->selectButton('Update')->form(array(
-            'exnihilo_userbundle_user[field_name]'  => 'Foo',
-            // ... other fields to fill
-        ));
-
-        $client->submit($form);
-        $crawler = $client->followRedirect();
-
-        // Check the element contains an attribute with value equals "Foo"
-        $this->assertGreaterThan(0, $crawler->filter('[value="Foo"]')->count(), 'Missing element [value="Foo"]');
-
-        // Delete the entity
-        $client->submit($crawler->selectButton('Delete')->form());
-        $crawler = $client->followRedirect();
-
-        // Check the entity has been delete on the list
-        $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
     }
 
-    */
+    public function testEdit()
+    {
+        $client = static::createClient();
+        $client->followRedirects();
+
+        $crawler = $client->request('GET', '/login');
+
+
+        $formLogin = $crawler->filter('button')->form();
+
+        $formLogin['login_form[_username]'] = 'admin';
+        $formLogin['login_form[_password]'] = 'admin';
+        $client->submit($formLogin);
+
+        $crawler = $client->request('GET', '/admin/user/');
+
+        $link = $crawler->selectLink('modifier')->last()->link();
+
+        $client->click($link);
+
+        $newCrawler = $client->request('GET', $client->getRequest()->getUri());
+        $form = $newCrawler->filter('button')->form();
+
+
+        $form['registration[username]'] = 'register';
+        $form['registration[email]'] = 'register@mail.com';
+        $form['registration[plainPassword]'] = 'test';
+        $form['registration[classe]']->select('2');
+        $form['registration[race]']->select('3');
+        $form['registration[gender]']->select('1');
+        $form['registration[isGuildMember]']->tick();
+        $client->submit($form);
+
+        $this->assertEquals(
+            200,
+            $client->getResponse()->getStatusCode()
+        );
+
+    }
+
+    public function testDelete()
+    {
+        $client = static::createClient();
+        $client->followRedirects();
+
+        $crawler = $client->request('GET', '/login');
+
+
+        $formLogin = $crawler->filter('button')->form();
+
+        $formLogin['login_form[_username]'] = 'admin';
+        $formLogin['login_form[_password]'] = 'admin';
+        $client->submit($formLogin);
+
+        $crawler = $client->request('GET', '/admin/user/');
+
+        $link = $crawler->selectLink('supprimer')->last()->link();
+
+        $client->click($link);
+
+        $this->assertEquals(
+            200,
+            $client->getResponse()->getStatusCode()
+        );
+    }
 }

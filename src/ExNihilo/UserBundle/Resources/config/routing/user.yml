@@ -16,4 +16,4 @@ admin_user_edit:
 admin_user_delete:
     path:     /{id}/delete
     defaults: { _controller: "ExNihiloUserBundle:User:delete" }
-    methods:  DELETE
+    methods:  [GET, DELETE]
