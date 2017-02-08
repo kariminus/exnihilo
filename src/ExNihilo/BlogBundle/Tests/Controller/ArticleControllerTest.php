@@ -63,9 +63,11 @@ class ArticleControllerTest extends WebTestCase
         $newCrawler = $client->request('GET', $client->getRequest()->getUri());
         $form = $newCrawler->filter('button')->form();
 
+        $file = new UploadedFile('C:\Users\karim\Desktop\images\test.png', 'test.png');
+
         $form['exnihilo_blogbundle_article[title]'] = 'Bienvenue';
         $form['exnihilo_blogbundle_article[content]'] = 'Bienvenue';
-        $form['exnihilo_blogbundle_article[image][file]']->upload('%kernel.root_dir%/../web/images/img.jpg');
+        $form['exnihilo_blogbundle_article[image][file]'] = $file;
 
         $client->submit($form);
 

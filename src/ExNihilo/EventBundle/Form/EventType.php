@@ -25,7 +25,8 @@ class EventType extends AbstractType
 
             ))
             ->add('date', DateTimeType::class, array(
-                'label' => false
+                'label' => false,
+                'format' => 'dd-MM-yyyy HH:mm',
             ))
             ->add('content', CkeditorType::class, array(
                 'label' => false
