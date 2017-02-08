@@ -22,19 +22,31 @@ class PresentationControllerTest extends WebTestCase
         $client->submit($formLogin);
 
 
-        $crawler = $client->request('GET', '/admin/presentation/new');
+        $crawler = $client->request('GET', '/admin/presentation/1/edit');
 
         $form = $crawler->filter('button')->form();
-        $form['presentation[content]'] = 'test';
+
+
+        $file = new UploadedFile('C:\Users\karim\Desktop\images\guilde\illidan.jpg', 'illidan.jpg');
+
+
+        $form->setValues(array(
+            'presentation[content]' => 'Presentation test',
+            'presentation[imagePresentations][0][file]' => $file,
+            'presentation[imagePresentations][1][file]' => $file,
+
+        ));
 
         $values = $form->getPhpValues();
 
-        $values['presentation']['imagePresentations'][0]['file'] = '';
-
-        $crawler = $client->request($form->getMethod(), $form->getUri(), $values,
+        $client->request($form->getMethod(), $form->getUri(), $values,
             $form->getPhpFiles());
 
-        $this->assertEquals(1, $crawler->filter('ul.imagePresentations > li')->count());
+
+        $this->assertEquals(
+            200,
+            $client->getResponse()->getStatusCode()
+        );
 
     }
 }

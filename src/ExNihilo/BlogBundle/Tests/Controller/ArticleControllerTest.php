@@ -3,6 +3,7 @@
 namespace ExNihilo\BlogBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class ArticleControllerTest extends WebTestCase
 {
@@ -24,10 +25,11 @@ class ArticleControllerTest extends WebTestCase
 
 
         $form = $crawler->filter('button')->form();
+        $file = new UploadedFile('C:\Users\karim\Desktop\images\test.png', 'test.png');
 
         $form['exnihilo_blogbundle_article[title]'] = 'Bienvenue';
         $form['exnihilo_blogbundle_article[content]'] = 'Bienvenue';
-        $form['exnihilo_blogbundle_article[image][file]']->upload('%kernel.root_dir%/../web/images/img.jpg');
+        $form['exnihilo_blogbundle_article[image][file]'] = $file;
 
         $client->submit($form);
 
