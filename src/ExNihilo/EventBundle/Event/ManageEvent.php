@@ -23,7 +23,6 @@ class ManageEvent
     protected $authorizationChecker;
 
 
-
     public function __construct(EntityManager $em, $formFactory, $router, RequestStack $requestStack, TokenStorage $tokenStorage, AuthorizationCheckerInterface $authorizationChecker)
     {
         $this->em = $em;
@@ -92,14 +91,17 @@ class ManageEvent
 
             if ($request->isMethod('POST')) {
 
-                $event->addUser($user);
-                $user->addEvent($event);
-                $this->em->persist($event);
-                $this->em->persist($user);
-                $this->em->flush();
-
+                try {
+                    $event->addUser($user);
+                    $user->addEvent($event);
+                    $this->em->persist($event);
+                    $this->em->persist($user);
+                    $this->em->flush();
+                } catch (\Exception $e){
+                    $event->removeUser($user);
+                    $user->removeEvent($event);
+                }
             }
-
 
         return [$event, $users, $booked, $connected];
     }

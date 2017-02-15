@@ -16,7 +16,7 @@
                         </ul>
                         {% if is_granted('ROLE_USER') and booked is null %}
                             <form action="" method="POST" name="book">
-                                <button type="submit" class="btn btn-lg btn-primary">S'inscrire</button>
+                                <button type="submit" class="btn btn-lg btn-success">S'inscrire</button>
                             </form>
 
                         {% elseif is_granted('ROLE_USER') and booked is not null %}

@@ -75,11 +75,4 @@ class EventController extends Controller
         return $this->redirectToRoute('admin_event_index');
     }
 
-    public function bookingAction()
-    {
-        $this->get('manage_event')->eventBooking();
-
-        return $this->redirectToRoute('event_view');
-    }
-
 }
