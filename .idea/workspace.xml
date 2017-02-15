@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5727993f-889d-4395-af31-9467c03366e9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Controller/EventController.php" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Controller/EventController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig" afterPath="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,14 +41,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManageEvent.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManageEvent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1584">
-              <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+              <caret line="114" column="5" lean-forward="false" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
               <folding>
                 <element signature="e#46#77#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,7 +76,7 @@
       <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Controller/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1739">
+            <state relative-caret-position="2376">
               <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
               <folding />
             </state>
@@ -125,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ExNihilo/BlogBundle/Form/ArticleType.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/UserRegistrationForm.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/UserBundle/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/GuildBundle/Resources/config/routing/presentation.yml" />
@@ -176,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Controller/EventController.php" />
         <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/views/event/view.html.twig" />
         <option value="$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       </list>
     </option>
   </component>
@@ -213,7 +221,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -488,9 +496,49 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exnihilo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -619,15 +667,16 @@
       <workItem from="1487090498705" duration="816000" />
       <workItem from="1487091364036" duration="604000" />
       <workItem from="1487147673563" duration="32000" />
-      <workItem from="1487156691310" duration="924000" />
+      <workItem from="1487156691310" duration="1053000" />
+      <workItem from="1487158277748" duration="658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277008000" />
+    <option name="totallyTimeSpent" value="277795000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
+    <frame x="-13" y="-13" width="3866" height="2106" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -679,13 +728,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/comment/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="27" column="121" lean-forward="false" selection-start-line="27" selection-start-column="121" selection-end-line="27" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Resources/views/article/view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -990,6 +1032,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExNihilo/BlogBundle/Repository/ArticleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -998,10 +1047,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1584">
+          <caret line="114" column="5" lean-forward="false" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+          <folding>
+            <element signature="e#46#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Controller/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1009,14 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1023">
           <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Controller/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1739">
-          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1029,21 +1089,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Resources/config/services.yml">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="594">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExNihilo/EventBundle/Event/ManageEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-          <folding>
-            <element signature="e#46#77#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
