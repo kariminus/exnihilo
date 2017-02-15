@@ -1,8 +1,8 @@
-{% for comment in comments %}
     <section id="comments" class="box-comments">
         <div class="box-content">
             <h3 class="box-title"><span>Commentaires</span></h3>
             <ul class="comments">
+                {% for comment in comments %}
                 <li class="comment">
                     <div class="body">
                         <cite class="author">{{ comment.author }} <span class="timestamp">Publié le {{ comment.createdAt|date("d/m/Y") }}</span></cite>
@@ -11,11 +11,10 @@
                         </div>
                     </div>
                 </li>
+                {% endfor %}
             </ul>
         </div>
     </section>
-    {#<p>Soyez le premier à commenter...</p>#}
-{% endfor %}
 
 
 {% if is_granted('ROLE_USER') %}
